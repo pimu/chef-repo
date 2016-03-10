@@ -6,9 +6,9 @@
 #
 
 # start of "attributi per questa recipe di questa release"
-node.normal['bpoint']['thisrelease'] = "16.01.10"
+node.normal['bpoint']['thisrelease'] = "16.10.20"
 #default['bpoint']['thisrelease_sourcedir'] = '%16.01' -- NB il carattere %hh sta per hexadecimal character, quindi %25 e' %
-node.normal['bpoint']['thisrelease_sourcedir'] = "%251601.10"
+node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.20"
 
 node.normal['bpoint']['thisambrelease'] = "xc8n20"
 

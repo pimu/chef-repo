@@ -52,13 +52,3 @@ suites:
     run_list:
     - recipe[bpoint::default]
     attributes:
-
-  - name: 16.01.00
-    run_list:
-    - recipe[bpoint::release-16.01.00]
-    attributes:
-
-  - name: 16.01.10
-    run_list:
-    - recipe[bpoint::release-16.01.10]
-    attributes:

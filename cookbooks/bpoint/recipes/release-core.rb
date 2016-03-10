@@ -1,22 +1,5 @@
 #
 # Cookbook Name:: bpoint
-# Recipe:: release-16.01.10
-#
-# Copyright (c) 2016 The Authors, All Rights Reserved.
-#
-
-# start of "attributi per questa recipe di questa release"
-node.normal['bpoint']['thisrelease'] = "16.01.10"
-#default['bpoint']['thisrelease_sourcedir'] = '%16.01' -- NB il carattere %hh sta per hexadecimal character, quindi %25 e' %
-node.normal['bpoint']['thisrelease_sourcedir'] = "%251601.10"
-
-node.normal['bpoint']['thisambrelease'] = "xc8n20"
-
-# end of "attributi per questa recipe di questa release"
-
-
-#
-# Cookbook Name:: bpoint
 # Recipe:: release-core
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
@@ -41,12 +24,10 @@ remote_file "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease
   mode '0755'
 end
 
-
-bash "install_bpoint_release-#{node.bpoint.thisrelease}" do
+bash 'install_bpoint_release' do
 
    Chef::Log.info("chef::log current version: #{node.bpoint.release}")
    Chef::Log.info("chef::log next version: #{desired_version}")
-   notifies :run, 'ruby_block[log_versions]', :immediately
 
    if node.bpoint.release < desired_version
 
@@ -60,12 +41,8 @@ bash "install_bpoint_release-#{node.bpoint.thisrelease}" do
        echo "version #{desired_version} installed"
      EOH
 
+#     log "version #{desired_version} installed"
      Chef::Log.info("version #{desired_version} installed")
-     notifies :run, 'ruby_block[log_versions]', :immediately
-
-
-# rem: per fare refresh dei valori degli attributi di bpoint..
-     notifies :reload, 'ohai[reload_bpoint]', :immediately
 
    else
 
@@ -73,8 +50,8 @@ bash "install_bpoint_release-#{node.bpoint.thisrelease}" do
        echo "version #{desired_version} not to be installed (present #{node.bpoint.release})"
      EOH
 
+#     log "version #{desired_version} not to be installed (#{node.bpoint.release})"
      Chef::Log.info("version #{desired_version} not to be installed (present #{node.bpoint.release})")
-     notifies :run, 'ruby_block[log_versions]', :immediately
 
    end
 
