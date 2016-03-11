@@ -19,12 +19,14 @@ Ohai.plugin(:Bpoint) do
   def init_bpoints
     bpoint Mash.new
     [['cat /usr1/prg/etc/sisver', :release, 0], ['cat /usr1/prg/etc/ambver', :ambrelease, 0], 
-     ['cat /usr1/prg/etc/ambver', :ambdate, 1], ['cat /usr1/prg/etc/ambver', :ambtime, 2]].each do |cmd, property, idx|
+     ['cat /usr1/prg/etc/ambver', :ambdate, 1], ['cat /usr1/prg/etc/ambver', :ambtime, 2], ['date +%s -r  /var/tmp/wkisetup-last.log', :lastmodifiedtime, 0]].each do |cmd, property, idx|
       so = shell_out(cmd)
       bpoint[property] = so.stdout.split(' ')[idx]
     end
 
     bpoint[:fullrelease] = from_cmdfull('cat /usr1/prg/etc/ambver')
+
+    bpoint[:lastmodified] = from_cmdfull('date -r /var/tmp/wkisetup-last.log')
 
     bpoint
   end
