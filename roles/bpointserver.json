@@ -13,7 +13,7 @@
     "dev": [ "recipe[first-cookbook]" ]
     },
 
-  "run_list": [ "recipe[ohai::default]" ],
+  "run_list": [ "recipe[ohai::default]", "recipe[nfs::default]" ],
 
   "description": "The bpointserver role...",
   "chef_type": "role",

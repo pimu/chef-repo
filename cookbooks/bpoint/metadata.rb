@@ -7,3 +7,5 @@ long_description 'Installs/Configures bpoint'
 version '0.1.0'
 
 depends "ohai"
+
+depends "nfs"

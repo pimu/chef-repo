@@ -8,7 +8,8 @@
 # start of "attributi per questa recipe di questa release"
 node.normal['bpoint']['thisrelease'] = "16.10.40"
 #default['bpoint']['thisrelease_sourcedir'] = '%16.01' -- NB il carattere %hh sta per hexadecimal character, quindi %25 e' %
-node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
+#node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
+node.normal['bpoint']['thisrelease_sourcedir'] = "16.10.40"
 
 node.normal['bpoint']['thisambrelease'] = "xc8n20"
 
@@ -37,7 +38,8 @@ end
 
 # crea il file sisagg sotto la directory f(thisrelease) prendendolo da un repository temporaneo
 remote_file "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}/sisagg" do
-  source "file:/tmp/repository/rilasci/#{node.bpoint.thisrelease_sourcedir}/sisagg"
+#  source "file:/tmp/repository/rilasci/#{node.bpoint.thisrelease_sourcedir}/sisagg"
+  source "file:/var/nfs_share/bpoint/#{node.bpoint.thisrelease_sourcedir}/sisagg"
   mode '0755'
 end
 

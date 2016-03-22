@@ -12,6 +12,14 @@ ohai 'reload_bpoint' do
   plugin 'bpoint'
 end
 
+
+mount '/var/nfs_share/' do
+  device '10.11.0.49:/var/chef_share/'
+  fstype 'nfs'
+  options 'rw'
+  action [:mount, :enable]
+end
+
 # per fare log a tempo di converge (execution) e non di prepare (compilation)
 ruby_block 'log_versions' do
   block do
@@ -36,6 +44,7 @@ include_recipe 'bpoint::release-16.10.20'
 
 include_recipe 'bpoint::release-16.10.40'
 
+include_recipe 'bpoint::release-16.20.00'
 
 # 
 # in attesa di capire meglio il razionale ...
