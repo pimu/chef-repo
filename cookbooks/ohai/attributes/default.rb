@@ -23,10 +23,10 @@ when 'windows'
   default['ohai']['plugin_path'] = "#{ENV['systemdrive']}/chef/ohai_plugins"
   default['ohai']['hints_path'] = "#{ENV['systemdrive']}/chef/ohai/hints"
 else
-#  default['ohai']['plugin_path'] = '/etc/chef/ohai_plugins'
-#  default['ohai']['hints_path'] = '/etc/chef/ohai/hints'
-  default['ohai']['plugin_path'] = '/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.8.1/lib/ohai/plugins'
-  default['ohai']['hints_path'] = '/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.8.1/lib/ohai/hints'
+  default['ohai']['plugin_path'] = '/etc/chef/ohai_plugins'
+  default['ohai']['hints_path'] = '/etc/chef/ohai/hints'
+#    default['ohai']['plugin_path'] = '/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.8.1/lib/ohai/plugins'
+#    default['ohai']['hints_path'] = '/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.8.1/lib/ohai/hints'
 end
 # The list of plugins and their respective file locations
 default['ohai']['plugins']['ohai'] = 'plugins'

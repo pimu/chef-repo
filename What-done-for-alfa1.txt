@@ -1,0 +1,1 @@
+knife bootstrap alfa1.siaer.prv -x example_chef --sudo --node-name alfa1 --run-list 'role[bpointserver],' --environment 'preprod'  --verbose --verbose

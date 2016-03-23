@@ -16,7 +16,7 @@ end
 mount '/var/nfs_share/' do
   device '10.11.0.49:/var/chef_share/'
   fstype 'nfs'
-  options 'rw'
+  options 'ro'
   action [:mount, :enable]
 end
 

@@ -8,7 +8,7 @@
 
   "env_run_lists": {
     "production": [],
-    "preprod": [],
+    "preprod": [ "recipe[ohai::default]", "recipe[nfs::default]" ],
     "test": [ "recipe[ohai::default]", "recipe[first-cookbook]" ],
     "dev": [ "recipe[first-cookbook]" ]
     },
