@@ -15,6 +15,13 @@ ohai 'reload_bpoint' do
 end
 
 
+directory '/var/nfs_share' do
+#  owner 'root'
+#  group 'root'
+#  mode '0755'
+  action :create
+end
+
 mount '/var/nfs_share/' do
   device '10.11.0.49:/var/chef_share/'
   fstype 'nfs'
@@ -38,9 +45,9 @@ end
 #   action :stop
 # end
 
-include_recipe 'bpoint::release-16.01.00'
+#include_recipe 'bpoint::release-16.01.00'
 
-include_recipe 'bpoint::release-16.01.10'
+#include_recipe 'bpoint::release-16.01.10'
 
 include_recipe 'bpoint::release-16.10.20'
 
