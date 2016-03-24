@@ -55,6 +55,8 @@ include_recipe 'bpoint::release-16.10.40'
 
 include_recipe 'bpoint::release-16.20.00'
 
+include_recipe 'bpoint::release-16.20.10'
+
 # 
 # in attesa di capire meglio il razionale ...
 # 
