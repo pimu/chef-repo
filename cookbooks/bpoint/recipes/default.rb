@@ -7,6 +7,8 @@
 # rem: per fare refresh dei valori degli attributi di bpoint..
 #      ovvero, quando si fa install si deve fare
 #           notifies :reload, 'ohai[reload_bpoint]', :immediately
+include_recipe 'ohai'
+
 ohai 'reload_bpoint' do
   action :nothing
   plugin 'bpoint'

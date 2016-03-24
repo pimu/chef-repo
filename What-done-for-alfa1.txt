@@ -1,1 +1,5 @@
 knife bootstrap alfa1.siaer.prv -x example_chef --sudo --node-name alfa1 --run-list 'role[bpointserver],' --environment 'preprod'  --verbose --verbose
+berks.bat install  -b .\cookbooks\cookbook-nfs\Berksfile --config .\config.json
+berks.bat install  -b .\cookbooks\bpoint\Berksfile --config .\config.json
+berks.bat update  -b .\cookbooks\cookbook-nfs\Berksfile --config .\config.json
+berks.bat update  -b .\cookbooks\bpoint\Berksfile --config .\config.json

@@ -20,16 +20,10 @@
 reload_ohai = false
 # Add plugin_path from node attributes if missing, and ensure a reload of
 # ohai in that case
-# 
-# so it was before today, 23 marzo 2016 - obsolete Ohai::Config[:plugin_path] ...
 unless Ohai::Config[:plugin_path].include?(node['ohai']['plugin_path'])
   Ohai::Config[:plugin_path] = [node['ohai']['plugin_path'], Ohai::Config[:plugin_path]].flatten.compact
   reload_ohai ||= true
 end
-# unless ohai.plugin_path.include?(node['ohai']['plugin_path'])
-#   ohai.plugin_path = [node['ohai']['plugin_path'], ohai.plugin_path].flatten.compact
-#   reload_ohai ||= true
-# end
 Chef::Log.info("ohai plugins will be at: #{node['ohai']['plugin_path']}")
 
 # This is done during the compile phase so new plugins can be used in
