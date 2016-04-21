@@ -14,6 +14,15 @@ ohai 'reload_bpoint' do
   plugin 'bpoint'
 end
 
+cookbook_file "#{node[:ohai][:plugin_path]}/bpoint.rb" do
+  source 'plugins/bpoint.rb'
+  action :create
+  owner 'root'
+  group 'root'
+  mode 0644
+  notifies :reload, 'ohai[reload_bpoint]', :immediately
+end
+
 
 directory '/var/nfs_share' do
 #  owner 'root'
