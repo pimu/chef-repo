@@ -14,7 +14,7 @@ describe command('vim --version') do
 end
 
 describe command('cat /usr1/prg/etc/sisver') do
-  its(:stdout) { should match /16.20.10/ }
+  its(:stdout) { should match /16.20.20/ }
 end
 
 describe command('cat /usr1/prg/etc/ambver') do
