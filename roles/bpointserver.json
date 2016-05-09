@@ -7,8 +7,8 @@
   "json_class": "Chef::Role",
 
   "env_run_lists": {
-    "production": [],
-    "preprod": [ "recipe[ohai::default]", "recipe[nfs::default]", "recipe[bpoint::default]" ],
+    "prod": [ "recipe[tabelle::RecipeDTBTabelle]" ],
+    "preprod": [ "recipe[ohai::default]", "recipe[nfs::default]", "recipe[bpoint::default]", "recipe[tabelle::recipeDTBTabelle]" ],
     "test": [ "recipe[first-cookbook]", "recipe[ohai::default]", "recipe[nfs::default]" ],
     "dev": [ "recipe[first-cookbook]" ]
     },

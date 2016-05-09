@@ -8,6 +8,7 @@
     "override_attributes": {
     },
     "cookbook_versions": {
-       "bpoint": "= 16.20.20"
+       "bpoint": "= 16.20.20",
+       "tabelle": "= 0.1.1"
     }
 }
