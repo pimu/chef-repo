@@ -9,6 +9,6 @@
     },
     "cookbook_versions": {
        "bpoint": "= 16.20.20",
-       "tabelle": "= 0.1.1"
+       "tabelle": "= 0.1.2"
     }
 }

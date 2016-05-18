@@ -10,6 +10,6 @@
 
     "cookbook_versions": {
       "bpoint": "= 0.1.0",
-      "tabelle": "= 0.1.1"
+      "tabelle": "= 0.1.2"
       }
 }
