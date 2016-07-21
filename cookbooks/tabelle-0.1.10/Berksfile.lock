@@ -1,0 +1,16 @@
+DEPENDENCIES
+  nfs
+  tabelle
+    path: .
+    metadata: true
+
+GRAPH
+  line (0.6.3)
+  nfs (2.2.8)
+    line (>= 0.0.0)
+    sysctl (>= 0.0.0)
+  ohai (3.0.1)
+  sysctl (0.7.5)
+    ohai (~> 3.0)
+  tabelle (0.1.10)
+    nfs (>= 0.0.0)
