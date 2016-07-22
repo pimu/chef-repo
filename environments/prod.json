@@ -1,15 +1,8 @@
 {
-    "name": "prod",
-    "description": "ambiente di produzione dove vi finiranno tutte le macchine di produzione",
-    "chef_type": "environment",
-    "json_class": "Chef::Environment",
-    "default_attributes": {
-    },
-    "override_attributes": {
-    },
-
-    "cookbook_versions": {
-      "bpoint": "= 0.1.0",
-      "tabelle": "= 0.1.2"
-      }
+  "name": "prod",
+  "description": "ambiente di produzione dove vi finiranno tutte le macchine di produzione",
+  "cookbook_versions": {
+    "bpoint": "= 0.1.0",
+    "tabelle": "= 0.1.10"
+  }
 }

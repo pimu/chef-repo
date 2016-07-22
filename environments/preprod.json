@@ -1,14 +1,8 @@
 {
-    "name": "preprod",
-    "description": "ambiente di pre-produzione dove vi finiranno macchine quasi di produzione (alias di ambiente beta alias ..alias), per esempio la macchina alfa1 - ad oggi, 21 marzo 2016",
-    "chef_type": "environment",
-    "json_class": "Chef::Environment",
-    "default_attributes": {
-    },
-    "override_attributes": {
-    },
-    "cookbook_versions": {
-       "bpoint": "= 16.20.20",
-       "tabelle": "= 0.1.2"
-    }
+  "name": "preprod",
+  "description": "ambiente di pre-produzione dove vi finiranno macchine quasi di produzione (alias di ambiente beta alias ..alias), per esempio la macchina alfa1 - ad oggi, 21 marzo 2016",
+  "cookbook_versions": {
+    "bpoint": "= 16.20.20",
+    "tabelle": "= 0.1.10"
+  }
 }

@@ -1,23 +1,30 @@
 {
-
   "name": "bpointserver",
-  "default_attributes": {
-  },
-
-  "json_class": "Chef::Role",
-
-  "env_run_lists": {
-    "prod": [ "recipe[tabelle::RecipeDTBTabelle]" ],
-    "preprod": [ "recipe[ohai::default]", "recipe[nfs::default]", "recipe[bpoint::default]", "recipe[tabelle::recipeDTBTabelle]" ],
-    "test": [ "recipe[first-cookbook]", "recipe[ohai::default]", "recipe[nfs::default]" ],
-    "dev": [ "recipe[first-cookbook]" ]
-    },
-
-  "run_list": [ "recipe[ohai::default]", "recipe[nfs::default]" ],
-
   "description": "The bpointserver role...",
-  "chef_type": "role",
-  "override_attributes": {
+  "run_list": [
+    "recipe[ohai::default]",
+    "recipe[nfs::default]"
+  ],
+  "env_run_lists": {
+    "prod": [
+      "recipe[tabelle::RecipeDTBTabelle]"
+    ],
+    "preprod": [
+      "recipe[ohai::default]",
+      "recipe[nfs::default]",
+      "recipe[bpoint::default]",
+      "recipe[tabelle::RecipeDTBTabelle]"
+    ],
+    "test": [
+      "recipe[first-cookbook]",
+      "recipe[ohai::default]",
+      "recipe[nfs::default]"
+    ],
+    "dev": [
+      "recipe[first-cookbook]"
+    ],
+    "testfirenze": [
+      "recipe[tabelle::RecipeExample]"
+    ]
   }
-
 }
