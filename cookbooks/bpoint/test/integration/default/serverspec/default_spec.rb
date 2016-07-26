@@ -13,8 +13,14 @@ describe command('vim --version') do
   its(:stdout) { should match /VIM - Vi IMproved 7.4/ }
 end
 
+# versione "ufficiale"
+describe command('ohai -d /etc/chef/ohai_plugins bpoint/release') do
+  its(:stdout) { should match /16.30.00/ }
+end
+
+# cosa accade dietro le quinte...
 describe command('cat /usr1/prg/etc/sisver') do
-  its(:stdout) { should match /16.20.20/ }
+  its(:stdout) { should match /16.30.00/ }
 end
 
 describe command('cat /usr1/prg/etc/ambver') do

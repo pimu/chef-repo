@@ -68,7 +68,10 @@ include_recipe 'bpoint::release-16.20.10'
 
 include_recipe 'bpoint::release-16.20.20'
 
-# 
+# last 
+include_recipe 'bpoint::release-16.30.00'
+
+#
 # in attesa di capire meglio il razionale ...
 # 
 # service 'krun_cnaco_start' do
