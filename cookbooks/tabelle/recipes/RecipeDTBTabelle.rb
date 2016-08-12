@@ -38,6 +38,7 @@ mount '/var/nfs_share/' do
   fstype 'nfs'
   options 'ro'
   action [:mount, :enable]
+  only_if { node[:platform] == 'redhat' }
 end
 
 #definisce la lista di province, fa intersezione con ls di usr2 e copia #ricorsivamente il contenuto di nfs dtb/tabelle

@@ -6,11 +6,32 @@ provisioner:
   name: chef_solo
 
 platforms:
+
   - name: ubuntu-14.04
+
   - name: centos-7.1
+
+  - name: rhel67test
+
+    provisioner:
+      name: chef_zero
+
+    driver:
+      name: ssh
+      hostname: 10.13.6.81
+      port: 35781
+      username: example_chef
+      password: chef_example
+#      ssh_key: "/c/Users/Munari/.ssh/id_rsa_example_chef"
+      ssh_key: "c:\\Users\\Munari\\.ssh\\id_rsa_example_chef"
+
+      synced_folders:
+         - ["data", "/opt/instance_data"]
+
 
 suites:
   - name: default
     run_list:
       - recipe[tabelle::default]
+      - recipe[tabelle::RecipeDTBTabelle]
     attributes:
