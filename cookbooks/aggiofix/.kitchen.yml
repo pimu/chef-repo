@@ -3,7 +3,13 @@ driver:
   name: vagrant
 
 provisioner:
+#  name: chef_zero ????
   name: chef_solo
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
 
 platforms:
 
@@ -38,6 +44,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[tabelle::default]
-      - recipe[tabelle::RecipeDTBTabelle]
+      - recipe[aggiofix::default]
     attributes:

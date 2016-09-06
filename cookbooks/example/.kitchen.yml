@@ -38,6 +38,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[tabelle::default]
-      - recipe[tabelle::RecipeDTBTabelle]
+      - recipe[example::aggiofix]
     attributes:
