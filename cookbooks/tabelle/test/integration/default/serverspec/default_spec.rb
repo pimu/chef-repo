@@ -62,13 +62,11 @@ end
 # 
 # 
 
-
 provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/usr2/fe','/usr2/il','/usr2/mc','/usr2/mn','/usr2/mo','/usr2/pc','/usr2/pr','/usr2/pv','/usr2/pu','/usr2/ra','/usr2/re','/usr2/rn','/usr2/ro','/usr2/umbria']
 
 
 # the right way, probably
 (Dir['/usr2/*'] & provlist).each do |file_name| 
-
 
 
 
