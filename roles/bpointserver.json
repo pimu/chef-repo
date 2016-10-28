@@ -13,7 +13,9 @@
       "recipe[ohai::default]",
       "recipe[nfs::default]",
       "recipe[bpoint::default]",
-      "recipe[tabelle::RecipeDTBTabelle]"
+      "recipe[tabelle::RecipeDTBTabelle]",
+      "recipe[aggiofix::default]",
+      "recipe[chef-client::default]"
     ],
     "test": [
       "recipe[first-cookbook]",

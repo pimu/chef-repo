@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: bpoint
-# Recipe:: release-16.10.20
+# Recipe:: release-16.40.20
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 #
@@ -12,13 +12,13 @@
 
 # start of "attributi per questa recipe di questa release"
 
-node.normal['bpoint']['thisrelease'] = "16.10.20"
+node.normal['bpoint']['thisrelease'] = "16.40.20"
 
 #default['bpoint']['thisrelease_sourcedir'] = '%16.01' -- NB il carattere %hh sta per hexadecimal character, quindi %25 e' %
 #node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
-node.normal['bpoint']['thisrelease_sourcedir'] = "16.10.20"
+node.normal['bpoint']['thisrelease_sourcedir'] = "16.40.20"
 
-node.normal['bpoint']['thisambrelease'] = "xyza12"
+node.normal['bpoint']['thisambrelease'] = "xyzbce"
 
 # end of "attributi per questa recipe di questa release"
 

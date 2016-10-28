@@ -4,14 +4,21 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 #
+#  file has been created by the chef recipe "bpoint-generator::bpoint"
+#              node ip address is "10.11.200.19"
+#              node fully qualified domain name is "munariw8.siaer.prv"
+#
+#
 
 # start of "attributi per questa recipe di questa release"
+
 node.normal['bpoint']['thisrelease'] = "16.20.10"
+
 #default['bpoint']['thisrelease_sourcedir'] = '%16.01' -- NB il carattere %hh sta per hexadecimal character, quindi %25 e' %
 #node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
 node.normal['bpoint']['thisrelease_sourcedir'] = "16.20.10"
 
-node.normal['bpoint']['thisambrelease'] = "xekq26"
+node.normal['bpoint']['thisambrelease'] = "xyzb12"
 
 # end of "attributi per questa recipe di questa release"
 
