@@ -8,8 +8,8 @@
 node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
 
 node.normal['lastdesiredrelease'] = {
-	'version' => "16.30.00",
-	'versioncode' => "xyzbcd"
+	'version' => "16.50.00",
+	'versioncode' => "xyzbcf"
 }
 
 node.normal['release_list'] = ['16.10.20','16.10.40','16.20.00','16.20.10','16.20.20','16.30.00','16.40.20','16.50.00']
