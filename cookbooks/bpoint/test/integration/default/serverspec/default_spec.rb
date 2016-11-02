@@ -15,12 +15,12 @@ end
 
 # versione "ufficiale"
 describe command('ohai -d /etc/chef/ohai_plugins bpoint/release') do
-  its(:stdout) { should match /16.50.00/ }
+  its(:stdout) { should match /16.70.10/ }
 end
 
 # cosa accade dietro le quinte...
 describe command('cat /usr1/prg/etc/sisver') do
-  its(:stdout) { should match /16.50.00/ }
+  its(:stdout) { should match /16.70.10/ }
 end
 
 describe command('cat /usr1/prg/etc/ambver') do

@@ -2,7 +2,7 @@
   "name": "preprod",
   "description": "ambiente di pre-produzione dove vi finiranno macchine quasi di produzione (alias di ambiente beta alias ..alias), per esempio la macchina alfa1 - ad oggi, 21 marzo 2016",
   "cookbook_versions": {
-    "bpoint": "= 16.50.00",
+    "bpoint": "= 16.70.10",
     "tabelle": "= 0.1.10",
     "aggiofix": "= 0.1.1"
   }

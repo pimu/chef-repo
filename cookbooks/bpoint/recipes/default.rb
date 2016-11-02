@@ -46,9 +46,9 @@ ruby_block 'log_versions' do
   action :nothing
 end
 
-# 
+#
 # in attesa di capire meglio il razionale ...
-# 
+#
 # service 'krun_cnaco_stop' do
 #   service_name 'krun_cnaco'
 #   action :stop
@@ -60,17 +60,20 @@ include_recipe 'bpoint::release-16.10.40'
 include_recipe 'bpoint::release-16.20.00'
 include_recipe 'bpoint::release-16.20.10'
 include_recipe 'bpoint::release-16.20.20'
-# last
 include_recipe 'bpoint::release-16.30.00'
 include_recipe 'bpoint::release-16.40.00'
 include_recipe 'bpoint::release-16.40.10'
 include_recipe 'bpoint::release-16.40.20'
 include_recipe 'bpoint::release-16.50.00'
+include_recipe 'bpoint::release-16.60.00'
+include_recipe 'bpoint::release-16.70.00'
+# last
+include_recipe 'bpoint::release-16.70.10'
 
 
 #
 # in attesa di capire meglio il razionale ...
-# 
+#
 # service 'krun_cnaco_start' do
 #   service_name 'krun_cnaco'
 #   action :start

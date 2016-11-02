@@ -64,8 +64,11 @@ include_recipe 'bpoint::release-16.30.00'
 include_recipe 'bpoint::release-16.40.00'
 include_recipe 'bpoint::release-16.40.10'
 include_recipe 'bpoint::release-16.40.20'
-# last
 include_recipe 'bpoint::release-16.50.00'
+include_recipe 'bpoint::release-16.60.00'
+include_recipe 'bpoint::release-16.70.00'
+# last
+include_recipe 'bpoint::release-16.70.10'
 
 
 #
