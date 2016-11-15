@@ -4,6 +4,9 @@ driver:
 
 provisioner:
   name: chef_zero
+# to enable chef audit mode (default: disabled)
+  client_rb:
+    audit_mode: :enabled
 
 # Uncomment the following verifier to leverage Inspec instead of Busser (the
 # default verifier)

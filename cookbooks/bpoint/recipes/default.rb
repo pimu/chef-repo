@@ -71,6 +71,42 @@ include_recipe 'bpoint::release-16.70.00'
 include_recipe 'bpoint::release-16.70.10'
 
 
+
+case node[:platform]
+
+when 'redhat', 'centos'
+
+ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
+
+control_group 'Audit Mode bpoint' do
+
+  # versione "ufficiale"
+  control 'bpoint version by ohai' do
+    it 'should be version 16.70.10' do
+      expect(ohaioutput).to  match(/16\.70\.10/)
+    end
+  end
+
+  control 'sisver file' do
+    let(:sisver_file) { file('/usr1/prg/etc/sisver') }
+
+    it 'should contain required version 16.70.10' do
+      expect(sisver_file.content).to match(/16\.70\.10/)
+    end
+  end
+
+  control 'ambver file' do
+    let(:ambver_file) { file('/usr1/prg/etc/ambver') }
+
+    it 'should contain start with x' do
+      expect(ambver_file.content).to match(/x/)
+    end
+  end
+
+end
+
+end
+
 #
 # in attesa di capire meglio il razionale ...
 #
