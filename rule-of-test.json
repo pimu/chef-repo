@@ -1,0 +1,16 @@
+{
+  "name": "Rule name.",
+  "modified_by": "munari",
+  "with": {
+    "priority": 0
+  },
+  "active":true,
+  "rule":"rules 'Rule group 10'\n
+    rule on action\n
+    when\n
+      true\n
+    then\n
+      noop()\n
+    end\n
+  end"
+}

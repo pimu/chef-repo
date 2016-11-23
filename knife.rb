@@ -10,3 +10,6 @@ validation_key           "#{current_dir}/../.keys/sixtema-validator.pem"
 chef_server_url          "https://chefserver.siaer.prv/organizations/sixtema"
 cookbook_path            ["#{current_dir}/cookbooks"]
 trusted_certs_dir        "#{current_dir}/../.keys/trusted_certs"
+
+# ssl_verify_mode         :verify_none
+analytics_server_url      "https://chefnfs.siaer.prv/organizations/sixtema"

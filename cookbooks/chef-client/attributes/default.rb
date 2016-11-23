@@ -35,7 +35,8 @@ default['chef_client']['config']['client_fork'] = true
 
 # log_file has no effect when using runit
 default['chef_client']['log_file']    = 'client.log'
-default['chef_client']['interval']    = '1800'
+#default['chef_client']['interval']    = '1800'
+default['chef_client']['interval']    = '3600'
 default['chef_client']['splay']       = '300'
 default['chef_client']['conf_dir']    = '/etc/chef'
 default['chef_client']['bin']         = '/usr/bin/chef-client'
@@ -75,7 +76,8 @@ default['chef_client']['reload_config'] = true
 
 # Any additional daemon options can be set as an array. This will be
 # join'ed in the relevant service configuration.
-default['chef_client']['daemon_options'] = []
+#before my modifiy:  default['chef_client']['daemon_options'] = []
+default['chef_client']['daemon_options'] = ["--audit-mode enabled"]
 
 # Ohai plugins to be disabled are configured in /etc/chef/client.rb,
 # so they can be set as an array in this attribute.
