@@ -14,14 +14,14 @@ ohai 'reload_bpoint' do
   plugin 'bpoint'
 end
 
-cookbook_file "#{node[:ohai][:plugin_path]}/bpoint.rb" do
-  source 'plugins/bpoint.rb'
-  action :create
-  owner 'root'
-  group 'root'
-  mode 0644
-  notifies :reload, 'ohai[reload_bpoint]', :immediately
-end
+#cookbook_file "#{node[:ohai][:plugin_path]}/bpoint.rb" do
+#  source 'plugins/bpoint.rb'
+#  action :create
+#  owner 'root'
+#  group 'root'
+#  mode 0644
+#  notifies :reload, 'ohai[reload_bpoint]', :immediately
+#end
 
 
 directory '/var/nfs_share' do
@@ -55,52 +55,55 @@ end
 # end
 
 
-include_recipe 'bpoint::release-16.10.20'
-include_recipe 'bpoint::release-16.10.40'
-include_recipe 'bpoint::release-16.20.00'
-include_recipe 'bpoint::release-16.20.10'
-include_recipe 'bpoint::release-16.20.20'
-include_recipe 'bpoint::release-16.30.00'
-include_recipe 'bpoint::release-16.40.00'
-include_recipe 'bpoint::release-16.40.10'
-include_recipe 'bpoint::release-16.40.20'
-include_recipe 'bpoint::release-16.50.00'
-include_recipe 'bpoint::release-16.60.00'
-include_recipe 'bpoint::release-16.70.00'
+include_recipe 'bpoint::release-17.00.00'
+include_recipe 'bpoint::release-17.10.00'
 # last
-include_recipe 'bpoint::release-16.70.10'
-
+include_recipe 'bpoint::release-17.10.10'
 
 
 case node[:platform]
 
 when 'redhat', 'centos'
 
-ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
 
 control_group 'Audit Mode bpoint' do
 
-  # versione "ufficiale"
-  control 'bpoint version by ohai' do
-    it 'should be version 16.70.10' do
-      expect(ohaioutput).to  match(/16\.70\.10/)
+  ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
+
+  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointX`
+  bpointstatus = JSON.parse(bpointoutput)
+
+  bpointstatus.keys.each do |prgroot|
+
+    prgenv = bpointstatus[prgroot]
+
+#    Chef::Log.info("chef::log::audit: access to release  -> #{prgenv[:release]}")
+#    Chef::Log.info("chef::log::audit: |ohai -d /etc/chef/ohai_plugins bpointX|  -> #{bpointoutput}")
+#    Chef::Log.info("chef::log::audit: |JSON.parse(...)|  -> #{bpointstatus}")
+
+    # versione "ufficiale"
+    control "bpoint version by ohai - #{prgroot}" do
+      it 'should be version 17.10.10' do
+        expect(bpointstatus[prgroot]['release']).to  match(/17\.10\.10/)
+      end
     end
-  end
 
-  control 'sisver file' do
-    let(:sisver_file) { file('/usr1/prg/etc/sisver') }
+    control "sisver file - #{prgroot}" do
+      let(:sisver_file) { file("#{prgroot}/prg/etc/sisver") }
 
-    it 'should contain required version 16.70.10' do
-      expect(sisver_file.content).to match(/16\.70\.10/)
+      it 'should contain required version 17.10.10' do
+        expect(sisver_file.content).to match(/17\.10\.10/)
+      end
     end
-  end
 
-  control 'ambver file' do
-    let(:ambver_file) { file('/usr1/prg/etc/ambver') }
+    control "ambver file - #{prgroot}" do
+      let(:ambver_file) { file("#{prgroot}/prg/etc/ambver") }
 
-    it 'should contain start with x' do
-      expect(ambver_file.content).to match(/x/)
+      it 'should contain start with x' do
+        expect(ambver_file.content).to match(/x/)
+      end
     end
+
   end
 
 end

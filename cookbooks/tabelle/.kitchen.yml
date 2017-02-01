@@ -2,8 +2,13 @@
 driver:
   name: vagrant
 
+#provisioner:
+#  name: chef_solo
 provisioner:
-  name: chef_solo
+  name: chef_zero
+# to enable chef audit mode (default: disabled)
+  client_rb:
+    audit_mode: :enabled
 
 platforms:
 
@@ -19,8 +24,8 @@ platforms:
 
   - name: rhel67test
 
-    provisioner:
-      name: chef_zero
+#    provisioner:
+#      name: chef_zero
 
     driver:
       name: ssh

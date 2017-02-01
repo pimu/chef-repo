@@ -8,25 +8,20 @@
 node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
 
 node.normal['lastdesiredrelease'] = {
-	'version' => "16.70.10",
+	'version' => "17.10.10",
 	'versioncode' => "xyzbcf"
 }
 
-node.normal['release_list'] = ['16.10.20','16.10.40','16.20.00','16.20.10','16.20.20','16.30.00','16.40.20','16.50.00','16.60.00','16.70.00','16.70.10']
+#node.normal['release_list'] = ['16.50.00','16.60.00','16.70.00','16.70.10',"17.00.00","17.10.10"]
+node.normal['release_list'] = ["17.00.00","17.10.00","17.10.10"]
 node.normal['release_list_complex'] = [
-	{'version' => '16.10.20', 'versioncode' => "xyza12"},
-	{'version' => '16.10.40', 'versioncode' => "xyzab2"},
-	{'version' => '16.20.00', 'versioncode' => "xyzabc"},
-	{'version' => '16.20.10', 'versioncode' => "xyzb12"},
-	{'version' => '16.20.20', 'versioncode' => "xyzbc3"},
-	{'version' => '16.30.00', 'versioncode' => "xyzbcd"},
-	{'version' => '16.40.00', 'versioncode' => "xyzbc1"},
-	{'version' => '16.40.10', 'versioncode' => "xyzbc2"},
-	{'version' => '16.40.20', 'versioncode' => "xyzbce"},
-	{'version' => '16.50.00', 'versioncode' => "xyzbcf"},
-	{'version' => '16.60.00', 'versioncode' => "xyzbcg"},
-	{'version' => '16.70.00', 'versioncode' => "xyzbch"},
-	{'version' => '16.70.10', 'versioncode' => "xyzbci"}
+#	{'version' => '16.50.00', 'versioncode' => "xyzbcf"},
+#	{'version' => '16.60.00', 'versioncode' => "xyzbcg"},
+#	{'version' => '16.70.00', 'versioncode' => "xyzbch"},
+#	{'version' => '16.70.10', 'versioncode' => "xyzbch"},
+	{'version' => '17.00.00', 'versioncode' => "xyzbcl"},
+	{'version' => '17.10.00', 'versioncode' => "xyzbco"},
+	{'version' => '17.10.10', 'versioncode' => "xyzbcp"}
 ]
 
 

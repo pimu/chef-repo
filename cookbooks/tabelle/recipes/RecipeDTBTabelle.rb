@@ -46,7 +46,7 @@ end
 provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/usr2/fe','/usr2/il','/usr2/mc','/usr2/mn','/usr2/mo','/usr2/pc','/usr2/pr','/usr2/pv','/usr2/pu','/usr2/ra','/usr2/re','/usr2/rn','/usr2/ro','/usr2/umbria']
 
 
-(Dir['/usr2/*'] & provlist).each do |file_name| 
+(Dir['/usr2/*'] & provlist).each do |file_name|
 	remote_directory "#{file_name}/dtb/tabelle/" do
 #	source 'file:/var/nfs_share/tabelle/dtb/tabelle/'
         source 'dtb/tabelle'
@@ -60,7 +60,7 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 end
 
 
-(Dir['/usr2/*'] & provlist).each do |file_name| 
+(Dir['/usr2/*'] & provlist).each do |file_name|
 	remote_directory "#{file_name}/arc/condiv/" do
 #	source 'file:/var/nfs_share/tabelle/dtb/tabelle/'
         source 'arc/condiv'
@@ -73,3 +73,28 @@ end
 	end
 end
 
+
+
+case node[:platform]
+when 'redhat', 'centos'
+
+control_group 'Audit Mode tabelle' do
+
+#  # using sha256: ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/6/studi/jsdscon
+#  describe file("#{file_name}/arc/condiv/6/studi/jsdscon") do
+#    its(:sha256sum) { should eq 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18' }
+#  end
+(Dir['/usr2/*'] & provlist).each do |file_name|
+
+  control "#{file_name}/arc/condiv/6/studi/jsdscon" do
+    let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/arc/condiv/6/studi/jsdscon").hexdigest  }
+
+    it "/arc/condiv/6/studi/jsdscon should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
+      expect(thisfile_sha256).to match(/ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18/)
+    end
+  end
+
+end
+
+end
+end

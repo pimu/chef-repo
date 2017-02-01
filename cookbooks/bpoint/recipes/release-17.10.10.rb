@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: bpoint
-# Recipe:: release-16.70.00
+# Recipe:: release-17.10.10
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 #
@@ -12,13 +12,13 @@
 
 # start of "attributi per questa recipe di questa release"
 
-node.normal['bpoint']['thisrelease'] = "16.70.00"
+node.normal['bpoint']['thisrelease'] = "17.10.10"
 
 #default['bpoint']['thisrelease_sourcedir'] = '%16.01' -- NB il carattere %hh sta per hexadecimal character, quindi %25 e' %
 #node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
-node.normal['bpoint']['thisrelease_sourcedir'] = "16.70.00"
+node.normal['bpoint']['thisrelease_sourcedir'] = "17.10.10"
 
-node.normal['bpoint']['thisambrelease'] = "xyzbch"
+node.normal['bpoint']['thisambrelease'] = "xyzbcp"
 allprgroots = node.bpointX
 # end of "attributi per questa recipe di questa release"
 
@@ -31,7 +31,8 @@ allprgroots = node.bpointX
 #
 #desired_version = node['bpoint']['thisrelease']
 desired_version = node.bpoint.thisrelease
-desired_version_folder = "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}/sisagg"
+desired_version_folder = "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}"
+desired_version_package = "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}/sisagg"
 
 # Create the directory per i file.
 directory "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}" do
@@ -71,7 +72,7 @@ allprgroots.each do |prgroot,currentenv|
 #     group 'rbenv'
       code <<-EOH
         # command to install bpoint release...
-        #{prgroot}#{node.bpoint.installer} #{desired_version_folder}
+        #{prgroot}#{node.bpoint.installer} #{desired_version_package}
 
         echo "version #{desired_version} installed on #{prgroot}"
       EOH

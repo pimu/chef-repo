@@ -19,7 +19,7 @@ node.normal['bpoint']['thisrelease'] = "16.70.00"
 node.normal['bpoint']['thisrelease_sourcedir'] = "16.70.00"
 
 node.normal['bpoint']['thisambrelease'] = "xyzbch"
-
+allprgroots = node.bpointX
 # end of "attributi per questa recipe di questa release"
 
 
@@ -31,6 +31,7 @@ node.normal['bpoint']['thisambrelease'] = "xyzbch"
 #
 #desired_version = node['bpoint']['thisrelease']
 desired_version = node.bpoint.thisrelease
+desired_version_folder = "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}/sisagg"
 
 # Create the directory per i file.
 directory "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}" do
@@ -51,41 +52,44 @@ remote_file "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease
 end
 
 
+allprgroots.each do |prgroot,currentenv|
 
-bash "install_bpoint_release-#{node.bpoint.thisrelease}" do
+  prgroothuman = prgroot.sub('/','-')
 
-   Chef::Log.info("chef::log current version: #{node.bpoint.release}")
-   Chef::Log.info("chef::log next version: #{desired_version}")
-   notifies :run, 'ruby_block[log_versions]', :immediately
+  Chef::Log.info("chef::log current prgroot: #{prgroot} (#{prgroothuman})")
 
-   if node.bpoint.release < desired_version
+  bash "install_bpoint_release-#{desired_version}-#{prgroothuman}" do
 
-     cwd "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}"
+    Chef::Log.info("chef::log current version: #{currentenv.release}")
+    Chef::Log.info("chef::log next version: #{desired_version}")
+    notifies :run, 'ruby_block[log_versions]', :immediately
+
+    if currentenv.release < desired_version
+
+      cwd "#{desired_version_folder}"
 #     user 'rbenv'
 #     group 'rbenv'
-     code <<-EOH
-       # command to install bpoint release...
-       #{node.bpoint.installer} #{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}/sisagg
+      code <<-EOH
+        # command to install bpoint release...
+        #{prgroot}#{node.bpoint.installer} #{desired_version_folder}
 
-       echo "version #{desired_version} installed"
-     EOH
+        echo "version #{desired_version} installed on #{prgroot}"
+      EOH
 
-     Chef::Log.info("version #{desired_version} installed")
-     notifies :run, 'ruby_block[log_versions]', :immediately
+      Chef::Log.info("version #{desired_version} installed on #{prgroot}")
+      notifies :run, 'ruby_block[log_versions]', :immediately
 
-
-# rem: per fare refresh dei valori degli attributi di bpoint..
-     notifies :reload, 'ohai[reload_bpoint]', :immediately
+      # rem: per fare refresh dei valori degli attributi di bpoint..
+      notifies :reload, 'ohai[reload_bpoint]', :immediately
 
    else
 
-     code <<-EOH
-       echo "version #{desired_version} not to be installed (present #{node.bpoint.release})"
-     EOH
+      code <<-EOH
+        echo "version #{desired_version} not to be installed on #{prgroot} (present #{currentenv.release})"
+      EOH
 
-     Chef::Log.info("version #{desired_version} not to be installed (present #{node.bpoint.release})")
-     notifies :run, 'ruby_block[log_versions]', :immediately
-
-   end
-
+      Chef::Log.info("version #{desired_version} not to be installed on #{prgroot} (present #{currentenv.release})")
+      notifies :run, 'ruby_block[log_versions]', :immediately
+    end
+  end
 end
