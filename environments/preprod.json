@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "ohai": "= 3.0.2",
     "bpoint": "= 17.10.10",
-    "tabelle": "= 0.1.10",
+    "tabelle": "= 0.1.16",
     "aggiofix": "= 0.1.1"
   }
 }

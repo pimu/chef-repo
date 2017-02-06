@@ -46,3 +46,9 @@ suites:
       - recipe[tabelle::default]
       - recipe[tabelle::RecipeDTBTabelle]
     attributes:
+
+  - name: audit
+    run_list:
+      - recipe[tabelle::default]
+      - recipe[tabelle::AuditDTBTabelle]
+    attributes:
