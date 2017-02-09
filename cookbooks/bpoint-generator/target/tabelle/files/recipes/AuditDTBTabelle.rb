@@ -22,91 +22,47 @@ control_group 'Audit Mode tabelle' do
 
 
 
-# using sha256: e449438f5114adc588bfc037071e90d0100e6a6c167a1b4868691d96f5dce6a9 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/costant
-    control "#{file_name}/arc/condiv/costant" do
-      let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/arc/condiv/costant").hexdigest  }
-
-      it "/arc/condiv/costant should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/e449438f5114adc588bfc037071e90d0100e6a6c167a1b4868691d96f5dce6a9/)
-      end
-    end
 
 
-
-# using sha256: 11ef7434b9e33cb522158936c48e0461c9c5fa028a3adf81438f23d09f41997b * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/costant.idx
-    control "#{file_name}/arc/condiv/costant.idx" do
-      let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/arc/condiv/costant.idx").hexdigest  }
-
-      it "/arc/condiv/costant.idx should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/11ef7434b9e33cb522158936c48e0461c9c5fa028a3adf81438f23d09f41997b/)
-      end
-    end
-
-
-
-
-
-# using sha256: d1dc7e436d58e79c4c7c0e0c9803538092fbe83e1d0f74b09f2b4da091914e1f * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst
+# using sha256: fb021f301617f78a5c370621b7af4a5303492e10e46551a6c4127e39377a6a47 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst
     control "#{file_name}/dtb/tabelle/base/pconst" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/base/pconst").hexdigest  }
 
       it "/dtb/tabelle/base/pconst should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/d1dc7e436d58e79c4c7c0e0c9803538092fbe83e1d0f74b09f2b4da091914e1f/)
+        expect(thisfile_sha256).to match(/fb021f301617f78a5c370621b7af4a5303492e10e46551a6c4127e39377a6a47/)
       end
     end
 
 
 
-# using sha256: ef13b5a1fcc64c4b1eb828bcf1d25de5356a66518f642705ddb6d46a31c7edee * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst.idx
+# using sha256: 8a7b2612fe4e9dd52557790bd4e6ce26cacd3e573260625f83a109cb158ff83a * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst.idx
     control "#{file_name}/dtb/tabelle/base/pconst.idx" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/base/pconst.idx").hexdigest  }
 
       it "/dtb/tabelle/base/pconst.idx should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/ef13b5a1fcc64c4b1eb828bcf1d25de5356a66518f642705ddb6d46a31c7edee/)
+        expect(thisfile_sha256).to match(/8a7b2612fe4e9dd52557790bd4e6ce26cacd3e573260625f83a109cb158ff83a/)
       end
     end
 
 
 
-# using sha256: 4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut
-    control "#{file_name}/dtb/tabelle/base/pdcaut" do
-      let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/base/pdcaut").hexdigest  }
-
-      it "/dtb/tabelle/base/pdcaut should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a/)
-      end
-    end
-
-
-
-# using sha256: 0364d5b13ba648cb73cc8a0038ca9eceb09ed06bf48fb92ec55070a59b1ee2c7 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut.idx
-    control "#{file_name}/dtb/tabelle/base/pdcaut.idx" do
-      let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/base/pdcaut.idx").hexdigest  }
-
-      it "/dtb/tabelle/base/pdcaut.idx should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/0364d5b13ba648cb73cc8a0038ca9eceb09ed06bf48fb92ec55070a59b1ee2c7/)
-      end
-    end
-
-
-
-# using sha256: 00dbfb395e56f15f054783933b88fc685b7ca3ab2675732efd907ad78b5ca6a8 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi
+# using sha256: 7eeede605f1c70158ca1abbae6caf87aa5b211250f7968e141d33cb493af35cc * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi
     control "#{file_name}/dtb/tabelle/cont/bilabbi" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/cont/bilabbi").hexdigest  }
 
       it "/dtb/tabelle/cont/bilabbi should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/00dbfb395e56f15f054783933b88fc685b7ca3ab2675732efd907ad78b5ca6a8/)
+        expect(thisfile_sha256).to match(/7eeede605f1c70158ca1abbae6caf87aa5b211250f7968e141d33cb493af35cc/)
       end
     end
 
 
 
-# using sha256: 69387783a7d947d303ad57044fd65cb3345fd777f808efe63249bc01859b27a8 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi.idx
+# using sha256: 823c240aab4186b7b64d14e55f7753db4d8b48ac0a138d915472d92833171dbc * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi.idx
     control "#{file_name}/dtb/tabelle/cont/bilabbi.idx" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/cont/bilabbi.idx").hexdigest  }
 
       it "/dtb/tabelle/cont/bilabbi.idx should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
-        expect(thisfile_sha256).to match(/69387783a7d947d303ad57044fd65cb3345fd777f808efe63249bc01859b27a8/)
+        expect(thisfile_sha256).to match(/823c240aab4186b7b64d14e55f7753db4d8b48ac0a138d915472d92833171dbc/)
       end
     end
 

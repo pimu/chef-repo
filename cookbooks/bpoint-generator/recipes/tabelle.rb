@@ -45,6 +45,22 @@ directory "#{node['currentdir']['root']}/target/tabelle/files/test/integration/d
 	action :create
 end
 
+# recipe di audit mode costruito con sha256 di tutti i file dentro la recipe ...
+template "#{node['currentdir']['root']}/target/tabelle/files/recipes/RecipeDTBTabelle.rb" do
+  source "tabelle/RecipeDTBTabelle.rb.erb"
+  variables({
+
+	:recipe => node['recipes'][0],
+	:ipaddress => node['ipaddress'],
+	:fqdn => node['fqdn'],
+
+	:splitter => node['splitter'],
+	:filerootpath => node['filerootpath'],
+	:filerootpathlist => node['filerootpathlist']
+
+  })
+end
+
 # default test serverspec costruito con sha256 di tutti i file dentro la recipe ...
 template "#{node['currentdir']['root']}/target/tabelle/files/test/integration/default/serverspec/default_spec.rb" do
   source "tabelle/test-default_spec.rb.erb"

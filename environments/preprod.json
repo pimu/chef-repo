@@ -4,7 +4,13 @@
   "cookbook_versions": {
     "ohai": "= 3.0.2",
     "bpoint": "= 17.10.10",
-    "tabelle": "= 0.1.16",
+    "tabelle": "= 0.1.18",
     "aggiofix": "= 0.1.1"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
   }
 }

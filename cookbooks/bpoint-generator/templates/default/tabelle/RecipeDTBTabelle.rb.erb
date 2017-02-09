@@ -45,6 +45,18 @@ end
 
 provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/usr2/fe','/usr2/il','/usr2/mc','/usr2/mn','/usr2/mo','/usr2/pc','/usr2/pr','/usr2/pv','/usr2/pu','/usr2/ra','/usr2/re','/usr2/rn','/usr2/ro','/usr2/umbria']
 
+<% for @filerootpath in @filerootpathlist %>
+<%
+  found = false
+  Dir[@filerootpath.to_s().gsub('\\','/')].each do |filename|
+    puts filename
+    found=true if File.file? filename
+  end
+  puts found
+  if found
+    puts @filerootpath
+    if %r"default[/\\]dtb".match(@filerootpath) != nil
+  %>
 
 (Dir['/usr2/*'] & provlist).each do |file_name|
 	remote_directory "#{file_name}/dtb/tabelle/" do
@@ -59,5 +71,23 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 	end
 end
 
+<%  elsif %r"default[/\\].arc".match(@filerootpath) != nil  %>
+
+(Dir['/usr2/*'] & provlist).each do |file_name|
+	remote_directory "#{file_name}/arc/condiv/" do
+#	source 'file:/var/nfs_share/tabelle/dtb/tabelle/'
+  source 'arc/condiv'
+	files_mode '0777'
+#	files_owner 'siscna'
+	mode '0777'
+#	owner 'siscna'
+	action :create
+	overwrite
+	end
+end
+
+<%  end %>
+<% end %>
+<% end %>
 
 include_recipe 'tabelle::AuditDTBTabelle'
