@@ -9,21 +9,34 @@ node.default['aggiofixsourcefile'] = "aggiofix/aggiofixNN/aggiofix.gz"
 node.default['aggiofixlimitversion'] = '00.00.00'
 
 
-targetdir = node['targetdir'] 
-aggiofixname = node['aggiofixname'] 
-aggiofixsourcefile = node['aggiofixsourcefile'] 
-aggiofixlimitversion = node['aggiofixlimitversion'] 
+targetdir = node['targetdir']
+aggiofixname = node['aggiofixname']
+aggiofixsourcefile = node['aggiofixsourcefile']
+aggiofixlimitversion = node['aggiofixlimitversion']
 
 
 # in attesa di capire come fare ad usare directory di recipe
-node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+#node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+if platform?('windows')
+	cookbookdir = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+	cookbookdir = cookbookdir.to_s().gsub('/','\\\\') if platform?('windows')
+	parentcookbookdir = File.expand_path('..', cookbookdir)
+	parentcookbookdir = parentcookbookdir.to_s().gsub('/','\\\\') if platform?('windows')
+else
+	cookbookdir = ENV['HOME'] + '/chef-repo/cookbooks/bpoint-generator'
+	parentcookbookdir = File.expand_path('..', cookbookdir)
+end
+
+
+node.normal['currentdir']['root'] = "#{cookbookdir}"
+node.normal['currentdir']['parentroot'] = "#{parentcookbookdir}"
 
 node.normal['splitter'] = 'prg/'
 
-node.normal['filerootpath'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator\\files\\default\\aggiofix\\#{aggiofixname}\\**\\*"
+node.normal['filerootpath'] = "files/default/aggiofix/#{aggiofixname}/**/*"
 
 node.normal['filerootpathlist'] = [
-	"C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator\\files\\default\\aggiofix\\#{aggiofixname}\\**\\*"
+	"files/default/aggiofix/#{aggiofixname}/**/*"
 ]
 
 # qui andrebbe la parte di spacchettamento del file .gz sotto files/default
@@ -37,7 +50,7 @@ directory "#{node['currentdir']['root']}/target/aggiofix/#{aggiofixname}/files/d
 	action :create
 end
 
-# 
+#
 # remote_file "#{node['currentdir']['root']}/target/aggiofix/#{aggiofixname}/files/default/#{aggiofixname}/aggiofix.gz" do
 # 	source "file:#{aggiofixsourcefile}"
 # end

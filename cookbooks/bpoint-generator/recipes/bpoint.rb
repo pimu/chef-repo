@@ -5,7 +5,20 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 # in attesa di capire come fare ad usare directory di recipe
-node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+#node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+if platform?('windows')
+	cookbookdir = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+	cookbookdir = cookbookdir.to_s().gsub('/','\\\\') if platform?('windows')
+	parentcookbookdir = File.expand_path('..', cookbookdir)
+	parentcookbookdir = parentcookbookdir.to_s().gsub('/','\\\\') if platform?('windows')
+else
+	cookbookdir = ENV['HOME'] + '/chef-repo/cookbooks/bpoint-generator'
+	parentcookbookdir = File.expand_path('..', cookbookdir)
+end
+
+
+node.normal['currentdir']['root'] = "#{cookbookdir}"
+node.normal['currentdir']['parentroot'] = "#{parentcookbookdir}"
 
 node.normal['lastdesiredrelease'] = {
 	'version' => "17.10.10",

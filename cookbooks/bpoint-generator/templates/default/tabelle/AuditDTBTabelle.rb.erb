@@ -23,7 +23,7 @@ control_group 'Audit Mode tabelle' do
 
 <% for @filerootpath in @filerootpathlist %>
 
-<% (Dir[@filerootpath.to_s().gsub('\\','/')]).each do |file_name|
+<% (Dir[@filerootpath.to_s().gsub('\\','/')]).sort.each do |file_name|
   next if File.directory? file_name
   logical_file_name = (file_name.split @splitter)[1]
   %>

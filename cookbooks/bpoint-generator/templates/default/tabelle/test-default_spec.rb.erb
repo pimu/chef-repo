@@ -9,10 +9,10 @@ describe 'tabelle::default' do
 #  end
 end
 
-# 
+#
 # # the simple way, probably too much simple..
-# if File.directory?('/usr2/co') 
-# 
+# if File.directory?('/usr2/co')
+#
 # # file jvalcon
 # # using sha256: 3e792049551761ca13ede0199bff6b991ff9f7b5b5517974bccc37d3ebfe72ac files/default/arc/condiv/jvalcon
 # describe file('/usr2/co/arc/condiv/jvalcon') do
@@ -24,49 +24,49 @@ end
 # describe file('/usr2/co/arc/condiv/jvalcon.idx') do
 #   its(:sha256sum) { should eq 'e38ded3b6d401425acf2ea32b13bdfcc987aa7961a51c2138ed238bec99951c7' }
 # end
-# 
+#
 # end
-# 
+#
 # # file jvalcon
 # # using sha256: 3e792049551761ca13ede0199bff6b991ff9f7b5b5517974bccc37d3ebfe72ac files/default/arc/condiv/jvalcon
 # describe file("#{file_name}/arc/condiv/jvalcon") do
 #   its(:sha256sum) { should eq '3e792049551761ca13ede0199bff6b991ff9f7b5b5517974bccc37d3ebfe72ac' }
 # end
-# 
+#
 # # file jvalcon.idx
 # # using sha256: e38ded3b6d401425acf2ea32b13bdfcc987aa7961a51c2138ed238bec99951c7 files/default/arc/condiv/jvalcon.idx
 # describe file("#{file_name}/arc/condiv/jvalcon.idx") do
 #   its(:sha256sum) { should eq 'e38ded3b6d401425acf2ea32b13bdfcc987aa7961a51c2138ed238bec99951c7' }
 # end
-# 
-# 
+#
+#
 # # using sha256: \3e792049551761ca13ede0199bff6b991ff9f7b5b5517974bccc37d3ebfe72ac *C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\arc\\condiv\\jvalcon
 # describe file("#{file_name}/arc/condiv/jvalcon") do
 #   its(:sha256sum) { should eq '3e792049551761ca13ede0199bff6b991ff9f7b5b5517974bccc37d3ebfe72ac' }
 # end
-# 
+#
 # # using sha256: \e38ded3b6d401425acf2ea32b13bdfcc987aa7961a51c2138ed238bec99951c7 *C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\arc\\condiv\\jvalcon.idx
 # describe file("#{file_name}/arc/condiv/jvalcon.idx") do
 #   its(:sha256sum) { should eq 'e38ded3b6d401425acf2ea32b13bdfcc987aa7961a51c2138ed238bec99951c7' }
 # end
-# 
+#
 # # using sha256: \ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18 *C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\arc\\condiv\\6\\studi\\jsdscon
 # describe file("#{file_name}/arc/condiv/6/studi/jsdscon") do
 #   its(:sha256sum) { should eq 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18' }
 # end
-# 
+#
 # # using sha256: \e591f4c138dda2647d1315fed124e72d0d4ac5f6256b4f76140d2205b86f8beb *C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\arc\\condiv\\6\\studi\\jsdscon.idx
 # describe file("#{file_name}/arc/condiv/6/studi/jsdscon.idx") do
 #   its(:sha256sum) { should eq 'e591f4c138dda2647d1315fed124e72d0d4ac5f6256b4f76140d2205b86f8beb' }
 # end
-# 
-# 
+#
+#
 
 provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/usr2/fe','/usr2/il','/usr2/mc','/usr2/mn','/usr2/mo','/usr2/pc','/usr2/pr','/usr2/pv','/usr2/pu','/usr2/ra','/usr2/re','/usr2/rn','/usr2/ro','/usr2/umbria']
 
 
 # the right way, probably
-(Dir['/usr2/*'] & provlist).each do |file_name| 
+(Dir['/usr2/*'] & provlist).each do |file_name|
 
 
 <%# inizio zona parametrizzata %>
@@ -75,8 +75,8 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 
 <% for @filerootpath in @filerootpathlist %>
 
-<% (Dir[@filerootpath.to_s().gsub('\\','/')]).each do |file_name| 
-  next if File.directory? file_name 
+<% (Dir[@filerootpath.to_s().gsub('\\','/')]).sort.each do |file_name| 
+  next if File.directory? file_name
   logical_file_name = (file_name.split @splitter)[1]
   %>
 

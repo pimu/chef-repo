@@ -65,12 +65,12 @@ case node[:platform]
 
 when 'redhat', 'centos'
 
-ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
-
-bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointX`
-bpointstatus = JSON.parse(bpointoutput)
-
 control_group 'Audit Mode bpoint' do
+
+  ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
+
+  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointX`
+  bpointstatus = JSON.parse(bpointoutput)
 
   bpointstatus.keys.each do |prgroot|
 
