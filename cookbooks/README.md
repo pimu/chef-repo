@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This directory contains the cookbooks used to configure systems in your infrastructure with Chef.
+=======
+This directory contains the cookbooks used to configure systems in your infrastructure with Chef - an example basic cookbook called `example` has been automatically created for you.
+>>>>>>> 8c47ca713fc0916d1b1db0f9ab946c5cce1fe98d
 
 Knife needs to be configured to know where the cookbooks are located with the `cookbook_path` setting. If this is not set, then several cookbook operations will fail to work properly.
 
@@ -33,7 +37,11 @@ The first and recommended method is to use a vendor branch if you're using Git. 
 
 This will:
 
+<<<<<<< HEAD
 * Download the cookbook tarball from cookbooks.opscode.com.
+=======
+* Download the cookbook tarball from the Chef Supermarket.
+>>>>>>> 8c47ca713fc0916d1b1db0f9ab946c5cce1fe98d
 * Ensure its on the git master branch.
 * Checks for an existing vendor branch, and creates if it doesn't.
 * Checks out the vendor branch (chef-vendor-COOKBOOK).

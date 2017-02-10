@@ -1,0 +1,53 @@
+{
+  "create": {
+    "actors": [
+      "ilbpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "clients",
+      "users"
+    ]
+  },
+  "read": {
+    "actors": [
+      "ilbpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "clients",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "ilbpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "ilbpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "ilbpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

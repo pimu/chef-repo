@@ -1,0 +1,40 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+#  name: chef_solo
+  name: chef_zero
+# to enable chef audit mode (default: disabled)
+  client_rb:
+    audit_mode: :enabled
+
+
+platforms:
+  - name: ubuntu-14.04
+
+  - name: centos-7.1
+
+  - name: rhel67test
+    driver:
+      name: ssh
+      hostname: 10.13.6.81
+      port: 35781
+      username: example_chef
+      password: chef_example
+#      ssh_key: "/c/Users/Munari/.ssh/id_rsa_example_chef"
+      ssh_key: "c:\\Users\\Munari\\.ssh\\id_rsa_example_chef"
+
+suites:
+  - name: default
+    run_list:
+
+      - recipe[starter::default]
+      - recipe[starter::zabbix-agent]
+
+    attributes: { foo: "bar" }
+
+#  - name: onlyfortest
+#    run_list:
+#
+#    attributes: { foo: "baz" }

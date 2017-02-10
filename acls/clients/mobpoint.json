@@ -1,0 +1,49 @@
+{
+  "create": {
+    "actors": [
+      "mobpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "read": {
+    "actors": [
+      "mobpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "mobpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "mobpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "mobpoint",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

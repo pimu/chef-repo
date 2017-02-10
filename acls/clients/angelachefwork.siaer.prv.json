@@ -1,0 +1,49 @@
+{
+  "create": {
+    "actors": [
+      "angelachefwork.siaer.prv",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "read": {
+    "actors": [
+      "angelachefwork.siaer.prv",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "angelachefwork.siaer.prv",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "angelachefwork.siaer.prv",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "angelachefwork.siaer.prv",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "admins",
+  "users": [
+    "pivotal",
+    "turrini",
+    "munari",
+    "ceccherelli"
+  ]
+}

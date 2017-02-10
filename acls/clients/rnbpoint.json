@@ -1,0 +1,49 @@
+{
+  "create": {
+    "actors": [
+      "pivotal",
+      "rnbpoint"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "read": {
+    "actors": [
+      "pivotal",
+      "rnbpoint"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "pivotal",
+      "rnbpoint"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "pivotal",
+      "rnbpoint"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "pivotal",
+      "rnbpoint"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

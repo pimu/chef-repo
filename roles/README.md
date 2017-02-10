@@ -1,5 +1,6 @@
 Create roles here, in either the Role Ruby DSL (.rb) or JSON (.json) files. To install roles on the server, use knife.
 
+<<<<<<< HEAD
 For example, create `roles/base_example.rb`:
 
     name "base_example"
@@ -14,3 +15,12 @@ For example, create `roles/base_example.rb`:
 Then upload it to the Chef Server:
     
     knife role from file roles/base_example.rb
+=======
+For example, in this directory you'll find an example role file called `example.json` which can be uploaded to the Chef Server:
+
+    knife role from file roles/example.json
+
+For more information on roles, see the Chef wiki page:
+
+https://docs.chef.io/essentials_roles.html
+>>>>>>> 8c47ca713fc0916d1b1db0f9ab946c5cce1fe98d

@@ -1,0 +1,5 @@
+knife client delete chefbpoint
+
+knife bootstrap chefbpoint.siaer.prv -x example_chef --sudo --node-name chefbpoint --run-list 'role[bpointserver],' --environment 'dev'  --verbose --verbose
+# but bootstrap fails miserely on ssh .. sure when in VPN..
+# try when in simple LAN!!!

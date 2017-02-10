@@ -1,0 +1,52 @@
+#
+# Cookbook Name:: tabelle
+# Recipe:: AuditDTBTabelle
+#
+# Copyright (c) 2016 The Authors, All Rights Reserved.
+
+
+#definisce la lista di province, fa intersezione con ls di usr2 e copia #ricorsivamente il contenuto di nfs dtb/tabelle
+
+provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/usr2/fe','/usr2/il','/usr2/mc','/usr2/mn','/usr2/mo','/usr2/pc','/usr2/pr','/usr2/pv','/usr2/pu','/usr2/ra','/usr2/re','/usr2/rn','/usr2/ro','/usr2/umbria']
+
+
+case node[:platform]
+when 'redhat', 'centos'
+
+control_group 'Audit Mode tabelle' do
+
+  (Dir['/usr2/*'] & provlist).each do |file_name|
+
+<%# inizio zona parametrizzata %>
+
+<% require 'digest' %>
+
+<% for @filerootpath in @filerootpathlist %>
+
+<% (Dir[@filerootpath.to_s().gsub('\\','/')]).each do |file_name|
+  next if File.directory? file_name
+  logical_file_name = (file_name.split @splitter)[1]
+  %>
+
+  <%# TODO: sistemare il matching per far saltar fuori solo la parte del path... (ie #{file_name}/arc/condiv/6/studi/jsdscon.idx) (init) %>
+  <%# TODO: sistemare il matching per far saltar fuori solo parte del path... (fine) %>
+
+# using sha256: <%= (Digest::SHA256.file file_name).hexdigest %> * <%= ENV["COMPUTERNAME"] %> <%= file_name %>
+    control "#{file_name}/<%= logical_file_name %>" do
+      let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/<%= logical_file_name %>").hexdigest  }
+
+      it "/<%= logical_file_name %> should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
+        expect(thisfile_sha256).to match(/<%= (Digest::SHA256.file file_name).hexdigest %>/)
+      end
+    end
+
+<% end %>
+
+<% end %>
+
+<%# fine zona parametrizzata %>
+
+end
+
+end
+end
