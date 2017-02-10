@@ -5,7 +5,23 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 # in attesa di capire come fare ad usare directory di recipe
-node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+#node.normal['currentdir']['root'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+#cookbookdir = File.expand_path("../../", __FILE__)
+#cookbookdir = Dir.pwd
+#cookbookdir =
+if platform?('windows')
+	cookbookdir = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\bpoint-generator"
+	cookbookdir = cookbookdir.to_s().gsub('/','\\\\') if platform?('windows')
+	parentcookbookdir = File.expand_path('..', cookbookdir)
+	parentcookbookdir = parentcookbookdir.to_s().gsub('/','\\\\') if platform?('windows')
+else
+	cookbookdir = ENV['HOME'] + '/chef-repo/cookbooks/bpoint-generator'
+	parentcookbookdir = File.expand_path('..', cookbookdir)
+end
+
+
+node.normal['currentdir']['root'] = "#{cookbookdir}"
+node.normal['currentdir']['parentroot'] = "#{parentcookbookdir}"
 
 node.normal['lastdesiredrelease'] = {
 	'version' => "16.30.00",
@@ -24,16 +40,17 @@ node.normal['release_list_complex'] = [
 
 node.normal['splitter'] = 'default/'
 
-node.normal['filerootpath'] = "C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\dtb\\**\\*"
+node.normal['filerootpath'] = "#{node['currentdir']['parentroot']}/tabelle/files/default/dtb/**/*"
 
 node.normal['filerootpathlist'] = [
-	"C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\arc\\**\\*",
-	"C:\\Work\\Projects\\chef\\chef-repo\\cookbooks\\tabelle\\files\\default\\dtb\\**\\*"
+	"#{node['currentdir']['parentroot']}/tabelle/files/default/arc/**/*",
+	"#{node['currentdir']['parentroot']}/tabelle/files/default/dtb/**/*"
 ]
 
 
 
 directory "#{node['currentdir']['root']}/target/tabelle/files/recipes" do
+#directory "target/tabelle/files/recipes" do
 	recursive true
 	action :create
 end
@@ -41,12 +58,14 @@ end
 
 
 directory "#{node['currentdir']['root']}/target/tabelle/files/test/integration/default/serverspec" do
+#directory "target/tabelle/files/test/integration/default/serverspec" do
 	recursive true
 	action :create
 end
 
 # recipe di audit mode costruito con sha256 di tutti i file dentro la recipe ...
 template "#{node['currentdir']['root']}/target/tabelle/files/recipes/RecipeDTBTabelle.rb" do
+#template "target/tabelle/files/recipes/RecipeDTBTabelle.rb" do
   source "tabelle/RecipeDTBTabelle.rb.erb"
   variables({
 
@@ -63,6 +82,7 @@ end
 
 # default test serverspec costruito con sha256 di tutti i file dentro la recipe ...
 template "#{node['currentdir']['root']}/target/tabelle/files/test/integration/default/serverspec/default_spec.rb" do
+#template "target/tabelle/files/test/integration/default/serverspec/default_spec.rb" do
   source "tabelle/test-default_spec.rb.erb"
   variables({
 
@@ -79,6 +99,7 @@ end
 
 # recipe di audit mode costruito con sha256 di tutti i file dentro la recipe ...
 template "#{node['currentdir']['root']}/target/tabelle/files/recipes/AuditDTBTabelle.rb" do
+#template "target/tabelle/files/recipes/AuditDTBTabelle.rb" do
   source "tabelle/AuditDTBTabelle.rb.erb"
   variables({
 

@@ -5,7 +5,7 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 #
 #  file has been created by the chef recipe "bpoint-generator::bpoint"
-#              node ip address is "10.11.200.19"
+#              node ip address is "192.168.0.13"
 #              node fully qualified domain name is "munariw8.siaer.prv"
 #
 #
