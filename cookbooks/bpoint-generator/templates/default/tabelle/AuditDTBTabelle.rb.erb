@@ -35,7 +35,7 @@ control_group 'Audit Mode tabelle' do
     control "#{file_name}/<%= logical_file_name %>" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/<%= logical_file_name %>").hexdigest  }
 
-      it "/<%= logical_file_name %> should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
+      it "/<%= logical_file_name %> should be '<%= (Digest::SHA256.file file_name).hexdigest %>'" do
         expect(thisfile_sha256).to match(/<%= (Digest::SHA256.file file_name).hexdigest %>/)
       end
     end
