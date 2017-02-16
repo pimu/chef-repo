@@ -71,7 +71,7 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 	end
 end
 
-<%  elsif %r"default[/\\].arc".match(@filerootpath) != nil  %>
+<%  elsif %r"default[/\\]arc".match(@filerootpath) != nil  %>
 
 (Dir['/usr2/*'] & provlist).each do |file_name|
 	remote_directory "#{file_name}/arc/condiv/" do
