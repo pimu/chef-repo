@@ -47,6 +47,20 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 
 
 (Dir['/usr2/*'] & provlist).each do |file_name|
+	remote_directory "#{file_name}/arc/condiv/" do
+#	source 'file:/var/nfs_share/tabelle/dtb/tabelle/'
+  source 'arc/condiv'
+	files_mode '0777'
+#	files_owner 'siscna'
+	mode '0777'
+#	owner 'siscna'
+	action :create
+	overwrite
+	end
+end
+
+
+(Dir['/usr2/*'] & provlist).each do |file_name|
 	remote_directory "#{file_name}/dtb/tabelle/" do
 #	source 'file:/var/nfs_share/tabelle/dtb/tabelle/'
   source 'dtb/tabelle'
