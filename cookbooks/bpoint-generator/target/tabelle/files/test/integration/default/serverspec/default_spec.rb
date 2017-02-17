@@ -39,9 +39,9 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 
 
 
-# using sha256: 8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/6/studi/jsdscon
+# using sha256: ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/6/studi/jsdscon
 describe file("#{file_name}/arc/condiv/6/studi/jsdscon") do
-  its(:sha256sum) { should eq '8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b' }
+  its(:sha256sum) { should eq 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18' }
 end
 
 # using sha256: e591f4c138dda2647d1315fed124e72d0d4ac5f6256b4f76140d2205b86f8beb * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/6/studi/jsdscon.idx
@@ -49,9 +49,9 @@ describe file("#{file_name}/arc/condiv/6/studi/jsdscon.idx") do
   its(:sha256sum) { should eq 'e591f4c138dda2647d1315fed124e72d0d4ac5f6256b4f76140d2205b86f8beb' }
 end
 
-# using sha256: 8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/7/studi/jsdscon
+# using sha256: ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/7/studi/jsdscon
 describe file("#{file_name}/arc/condiv/7/studi/jsdscon") do
-  its(:sha256sum) { should eq '8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b' }
+  its(:sha256sum) { should eq 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18' }
 end
 
 # using sha256: e591f4c138dda2647d1315fed124e72d0d4ac5f6256b4f76140d2205b86f8beb * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/7/studi/jsdscon.idx
@@ -141,9 +141,9 @@ describe file("#{file_name}/dtb/tabelle/base/pconst.idx") do
   its(:sha256sum) { should eq '8a7b2612fe4e9dd52557790bd4e6ce26cacd3e573260625f83a109cb158ff83a' }
 end
 
-# using sha256: c7312d5d2c83c06a87df62cf10d6570ed37742b97861efd611ed2e49270b4560 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut
+# using sha256: 4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut
 describe file("#{file_name}/dtb/tabelle/base/pdcaut") do
-  its(:sha256sum) { should eq 'c7312d5d2c83c06a87df62cf10d6570ed37742b97861efd611ed2e49270b4560' }
+  its(:sha256sum) { should eq '4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a' }
 end
 
 # using sha256: 0364d5b13ba648cb73cc8a0038ca9eceb09ed06bf48fb92ec55070a59b1ee2c7 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut.idx
@@ -151,9 +151,9 @@ describe file("#{file_name}/dtb/tabelle/base/pdcaut.idx") do
   its(:sha256sum) { should eq '0364d5b13ba648cb73cc8a0038ca9eceb09ed06bf48fb92ec55070a59b1ee2c7' }
 end
 
-# using sha256: 0a5f4af3b965c46e7991f11957be1971c75ebd4b94bce5628f7a7088545cf7da * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcedit
+# using sha256: eb811b02858c5e5f100b1802f7b34a6c83baa11e542a767d8bb295d6fb71c829 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcedit
 describe file("#{file_name}/dtb/tabelle/base/pdcedit") do
-  its(:sha256sum) { should eq '0a5f4af3b965c46e7991f11957be1971c75ebd4b94bce5628f7a7088545cf7da' }
+  its(:sha256sum) { should eq 'eb811b02858c5e5f100b1802f7b34a6c83baa11e542a767d8bb295d6fb71c829' }
 end
 
 # using sha256: 941c4ea65a7a05b6df493bc6ee6e2ca9ba8bdb0c341c492abbc3a1231f18809b * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcedit.idx

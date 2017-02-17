@@ -22,12 +22,12 @@ control_group 'Audit Mode tabelle' do
 
 
 
-# using sha256: 8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/6/studi/jsdscon
+# using sha256: ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/6/studi/jsdscon
     control "#{file_name}/arc/condiv/6/studi/jsdscon" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/arc/condiv/6/studi/jsdscon").hexdigest  }
 
-      it "/arc/condiv/6/studi/jsdscon should be '8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b'" do
-        expect(thisfile_sha256).to match(/8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b/)
+      it "/arc/condiv/6/studi/jsdscon should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
+        expect(thisfile_sha256).to match(/ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18/)
       end
     end
 
@@ -44,12 +44,12 @@ control_group 'Audit Mode tabelle' do
 
 
 
-# using sha256: 8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/7/studi/jsdscon
+# using sha256: ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/arc/condiv/7/studi/jsdscon
     control "#{file_name}/arc/condiv/7/studi/jsdscon" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/arc/condiv/7/studi/jsdscon").hexdigest  }
 
-      it "/arc/condiv/7/studi/jsdscon should be '8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b'" do
-        expect(thisfile_sha256).to match(/8241565a66829380c0c849b5bdaf1755904a1f2cd308597361f24fb4f47f0a8b/)
+      it "/arc/condiv/7/studi/jsdscon should be 'ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18'" do
+        expect(thisfile_sha256).to match(/ba952b78e7e565aeed852041f10fa8b179558bad0a4c7215eb55f6a9daeaea18/)
       end
     end
 
@@ -244,12 +244,12 @@ control_group 'Audit Mode tabelle' do
 
 
 
-# using sha256: c7312d5d2c83c06a87df62cf10d6570ed37742b97861efd611ed2e49270b4560 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut
+# using sha256: 4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcaut
     control "#{file_name}/dtb/tabelle/base/pdcaut" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/base/pdcaut").hexdigest  }
 
-      it "/dtb/tabelle/base/pdcaut should be 'c7312d5d2c83c06a87df62cf10d6570ed37742b97861efd611ed2e49270b4560'" do
-        expect(thisfile_sha256).to match(/c7312d5d2c83c06a87df62cf10d6570ed37742b97861efd611ed2e49270b4560/)
+      it "/dtb/tabelle/base/pdcaut should be '4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a'" do
+        expect(thisfile_sha256).to match(/4c853497e0739b20f60c24d2bd5841a3638b3b8fd84722ca957aa6de258ee90a/)
       end
     end
 
@@ -266,12 +266,12 @@ control_group 'Audit Mode tabelle' do
 
 
 
-# using sha256: 0a5f4af3b965c46e7991f11957be1971c75ebd4b94bce5628f7a7088545cf7da * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcedit
+# using sha256: eb811b02858c5e5f100b1802f7b34a6c83baa11e542a767d8bb295d6fb71c829 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pdcedit
     control "#{file_name}/dtb/tabelle/base/pdcedit" do
       let(:thisfile_sha256) { (Digest::SHA256.file "#{file_name}/dtb/tabelle/base/pdcedit").hexdigest  }
 
-      it "/dtb/tabelle/base/pdcedit should be '0a5f4af3b965c46e7991f11957be1971c75ebd4b94bce5628f7a7088545cf7da'" do
-        expect(thisfile_sha256).to match(/0a5f4af3b965c46e7991f11957be1971c75ebd4b94bce5628f7a7088545cf7da/)
+      it "/dtb/tabelle/base/pdcedit should be 'eb811b02858c5e5f100b1802f7b34a6c83baa11e542a767d8bb295d6fb71c829'" do
+        expect(thisfile_sha256).to match(/eb811b02858c5e5f100b1802f7b34a6c83baa11e542a767d8bb295d6fb71c829/)
       end
     end
 
