@@ -1,8 +1,6 @@
 Ohai.plugin(:Bpoint) do
   provides 'bpoint','bpointX','bpointconfig'
 
-  neededufficiaskeys = false
-
   def from_cmd(cmd)
     so = shell_out(cmd)
     so.stdout.split(' ')[0]
@@ -103,16 +101,6 @@ Ohai.plugin(:Bpoint) do
 
         currentprg[:name] = prgroot
 
-        [["cat #{prgroot}/prg/etc/sisver", :release, 0], ["cat #{prgroot}/prg/etc/ambver", :ambrelease, 0],
-        ["cat #{prgroot}/prg/etc/ambver", :ambdate, 1], ["cat #{prgroot}/prg/etc/ambver", :ambtime, 2],
-        ['date +%s -r  /var/tmp/wkisetup-last.log', :lastmodifiedtime, 0]].each do |cmd, property, idx|
-          Ohai::Log.debug("going to exec #{cmd} for property #{property} on #{prgroot}")
-          so = shell_out(cmd)
-          currentprg[property] = so.stdout.split(' ')[idx]
-        end
-
-        uffici = []
-
         if File::exists?("#{prgroot}/prg/etc/krunprg-cna.sis")
 
           contenttemp = IO.readlines("#{prgroot}/prg/etc/krunprg-cna.sis")
@@ -132,23 +120,9 @@ Ohai.plugin(:Bpoint) do
             currentuff[:location] = location
             currentuff[:bookmark] = bookmark
 
-            if File::exists?("#{location}/julticvr")
-              Ohai::Log.debug("reading file '#{location}/julticvr'")
-              julticvrcontent = IO.readlines("#{location}/julticvr")
-              lastreleaserec = julticvrcontent[0].sub(/[\n\r\f]/,"")
-
-              currentuff[:lastrelease] = lastreleaserec
-              currentuff[:julticvrcontent] = julticvrcontent
-            else
-              Ohai::Log.error("#{ufficio}:  file '#{location}/julticvr' not found !!!")
-            end
-
-            currentprg[ufficio] = currentuff if neededufficiaskeys
-
-            uffici << currentuff
+            currentprg[ufficio] = currentuff
           end
 
-          currentprg[:uffici] = uffici
         end
 
         bpointconfig[prgroot] = currentprg

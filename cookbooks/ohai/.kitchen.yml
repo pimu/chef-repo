@@ -1,0 +1,33 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+#  name: chef_solo
+  name: chef_zero
+
+platforms:
+#  - name: ubuntu-14.04
+#  - name: centos-7.1
+
+  - name: test-chefbpoint
+
+    driver:
+      name: ssh
+      hostname: 10.13.6.81
+      port: 35781
+      username: example_chef
+      password: chef_example
+      ssh_key: "~/.ssh/id_rsa_example_chef"
+
+      synced_folders:
+        - ["data", "/opt/instance_data"]
+
+suites:
+
+  - name: default
+    run_list:
+    - recipe[ohai]
+
+    attributes:
+
