@@ -29,10 +29,10 @@ Ohai.plugin(:Bpoint) do
     end
 
     # modifica del 19-dic-2016 (per evitare ""\n"...)
-    bpoint[:fullrelease] = from_cmdfull('cat /usr1/prg/etc/ambver').sub(/[\n\r\f]/,"")
+    bpoint[:fullrelease] = from_cmdfull('cat /usr1/prg/etc/ambver').gsub(/[\n\r\f]/,"")
 
     # modifica del 19-dic-2016 (per evitare ""\n"...)
-    bpoint[:lastmodified] = from_cmdfull('date -r /var/tmp/wkisetup-last.log').sub(/[\n\r\f]/,"")
+    bpoint[:lastmodified] = from_cmdfull('date -r /var/tmp/wkisetup-last.log').gsub(/[\n\r\f]/,"")
 
     bpoint
   end
@@ -43,7 +43,7 @@ Ohai.plugin(:Bpoint) do
     if File::exists?( '/usr3/sisagg_batch/path_prg' )
       prgstemp = IO.readlines('/usr3/sisagg_batch/path_prg')
       prgs = []
-      prgstemp.each do |l| prgs << l.sub(/[\n\r\f]/,"") end
+      prgstemp.each do |l| prgs << l.gsub(/[\n\r\f]/,"") end
     else
       # '/usr1' is default if not exists file and for backward compatbility
       prgs = ['/usr1']
@@ -69,7 +69,7 @@ Ohai.plugin(:Bpoint) do
       end
 
       # modifica del 19-dic-2016 ( + ....sub(/[\n\r\f]/,"") )(per evitare ""\n"...)
-      currentprg[:fullrelease] = from_cmdfull("cat #{prgroot}/prg/etc/ambver").sub(/[\n\r\f]/,"")
+      currentprg[:fullrelease] = from_cmdfull("cat #{prgroot}/prg/etc/ambver").gsub(/[\n\r\f]/,"")
 #      bpoint[:fullrelease] = currentprg[:fullrelease] if isfirst
 
       currentprg[:lastmodified] = from_cmdfull('date -r /var/tmp/wkisetup-last.log')
@@ -88,7 +88,7 @@ Ohai.plugin(:Bpoint) do
       if File::exists?( '/usr3/sisagg_batch/path_prg' )
         prgstemp = IO.readlines('/usr3/sisagg_batch/path_prg')
         prgs = []
-        prgstemp.each do |l| prgs << l.sub(/[\n\r\f]/,"") end
+        prgstemp.each do |l| prgs << l.gsub(/[\n\r\f]/,"") end
       else
         # '/usr1' is default if not exists file and for backward compatbility
         prgs = ['/usr1']
@@ -117,7 +117,7 @@ Ohai.plugin(:Bpoint) do
 
           contenttemp = IO.readlines("#{prgroot}/prg/etc/krunprg-cna.sis")
           content = []
-          contenttemp.each do |l| content << l.sub(/[\n\r\f]/,"") unless /^#|^\s$/.match(l) end
+          contenttemp.each do |l| content << l.gsub(/[\n\r\f]/,"") unless /^#|^\s$/.match(l) end
 
           content.each do |line|
 
@@ -135,7 +135,7 @@ Ohai.plugin(:Bpoint) do
             if File::exists?("#{location}/julticvr")
               Ohai::Log.debug("reading file '#{location}/julticvr'")
               julticvrcontent = IO.readlines("#{location}/julticvr")
-              lastreleaserec = julticvrcontent[0].sub(/[\n\r\f]/,"")
+              lastreleaserec = julticvrcontent[0].gsub(/[\n\r\f]/,"")
 
               currentuff[:lastrelease] = lastreleaserec
               currentuff[:julticvrcontent] = julticvrcontent

@@ -21,12 +21,12 @@ node.normal['currentdir']['root'] = "#{cookbookdir}"
 node.normal['currentdir']['parentroot'] = "#{parentcookbookdir}"
 
 node.normal['lastdesiredrelease'] = {
-	'version' => "17.10.10",
-	'versioncode' => "xyzbcf"
+	'version' => "17.10.30",
+	'versioncode' => "xyzbch"
 }
 
 #node.normal['release_list'] = ['16.50.00','16.60.00','16.70.00','16.70.10',"17.00.00","17.10.10"]
-node.normal['release_list'] = ["17.00.00","17.10.00","17.10.10"]
+node.normal['release_list'] = ["17.00.00","17.10.00","17.10.10","17.10.20","17.10.30"]
 node.normal['release_list_complex'] = [
 #	{'version' => '16.50.00', 'versioncode' => "xyzbcf"},
 #	{'version' => '16.60.00', 'versioncode' => "xyzbcg"},
@@ -34,9 +34,10 @@ node.normal['release_list_complex'] = [
 #	{'version' => '16.70.10', 'versioncode' => "xyzbch"},
 	{'version' => '17.00.00', 'versioncode' => "xyzbcl"},
 	{'version' => '17.10.00', 'versioncode' => "xyzbco"},
-	{'version' => '17.10.10', 'versioncode' => "xyzbcp"}
+	{'version' => '17.10.10', 'versioncode' => "xyzbcp"},
+	{'version' => '17.10.20', 'versioncode' => "xyzbcg"},
+	{'version' => '17.10.30', 'versioncode' => "xyzbch"}
 ]
-
 
 
 directory "#{node['currentdir']['root']}/target/bpoint/files/recipes" do

@@ -57,14 +57,15 @@ end
 
 include_recipe 'bpoint::release-17.00.00'
 include_recipe 'bpoint::release-17.10.00'
-# last
 include_recipe 'bpoint::release-17.10.10'
+include_recipe 'bpoint::release-17.10.20'
+# last
+include_recipe 'bpoint::release-17.10.30'
 
 
 case node[:platform]
 
 when 'redhat', 'centos'
-
 
 control_group 'Audit Mode bpoint' do
 
@@ -83,16 +84,16 @@ control_group 'Audit Mode bpoint' do
 
     # versione "ufficiale"
     control "bpoint version by ohai - #{prgroot}" do
-      it 'should be version 17.10.10' do
-        expect(bpointstatus[prgroot]['release']).to  match(/17\.10\.10/)
+      it 'should be version 17.10.30' do
+        expect(bpointstatus[prgroot]['release']).to  match(/17\.10\.30/)
       end
     end
 
     control "sisver file - #{prgroot}" do
       let(:sisver_file) { file("#{prgroot}/prg/etc/sisver") }
 
-      it 'should contain required version 17.10.10' do
-        expect(sisver_file.content).to match(/17\.10\.10/)
+      it 'should contain required version 17.10.30' do
+        expect(sisver_file.content).to match(/17\.10\.30/)
       end
     end
 

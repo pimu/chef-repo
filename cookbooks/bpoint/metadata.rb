@@ -4,7 +4,7 @@ maintainer_email 'PMunari@sixtema-ict.it'
 license 'all_rights'
 description 'Installs/Configures bpoint'
 long_description 'Installs/Configures bpoint'
-version '17.10.10'
+version '17.10.30'
 
 depends "ohai", "< 4.0.0" 
 
