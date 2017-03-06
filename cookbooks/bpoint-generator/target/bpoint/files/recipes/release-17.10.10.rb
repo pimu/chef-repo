@@ -18,8 +18,8 @@ node.normal['bpoint']['thisrelease'] = "17.10.10"
 #node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
 node.normal['bpoint']['thisrelease_sourcedir'] = "17.10.10"
 
-node.normal['bpoint']['thisambrelease'] = "xyzbcp"
-allprgroots = node.bpointX
+node.normal['bpoint']['thisambrelease'] = "x"
+allprgroots = node.bpointconfig
 # end of "attributi per questa recipe di questa release"
 
 

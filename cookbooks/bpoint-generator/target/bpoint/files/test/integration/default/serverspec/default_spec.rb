@@ -10,7 +10,7 @@ case os[:family]
 
 when 'redhat', 'centos'
 
-  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointX`
+  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointconfig`
   bpointstatus = JSON.parse(bpointoutput)
 
   bpointstatus.keys.each do |prgroot|
@@ -22,28 +22,50 @@ when 'redhat', 'centos'
 	  #    skip 'Replace this with meaningful tests'
   		it  { should match /default/ }
 	  #  end
-	end
-
+    end
 
 
     # versione "ufficiale" obsolete obsolete
     describe command('ohai -d /etc/chef/ohai_plugins bpoint/release') do
-      its(:stdout) { should match /17.10.30/ }
-	end
+      its(:stdout) { should match /17.10.40/ }
+    end
 
     describe "bpoint['#{prgroot}']['release']" do
-      it "should match '17.10.30'" do
-        expect(bpointstatus["#{prgroot}"]['release']).to match(/17.10.30/)
+      it "should match '17.10.40'" do
+        expect(bpointstatus["#{prgroot}"]['release']).to match(/17.10.40/)
       end
-	end
+    end
 
-	# cosa accade dietro le quinte...
+    # cosa accade dietro le quinte... [sisver]
     describe command("cat #{prgroot}/prg/etc/sisver") do
-      its(:stdout) { should match /17.10.30/ }
-	end
+      its(:stdout) { should match /17.10.40/ }
+    end
 
+    describe "bpoint['#{prgroot}']['ambrelease']" do
+      it "should match 'xq1l16'" do
+        expect(bpointstatus["#{prgroot}"]['ambrelease']).to match(/xq1l16/)
+      end
+    end
+
+    # cosa accade dietro le quinte... [ambver]
     describe command("cat #{prgroot}/prg/etc/ambver") do
-  	  its(:stdout) { should match /x/ }
+  	  its(:stdout) { should match /xq1l16/ }
+    end
+
+    # qui inizia la parte di check dei diversi uffici (o installazioni seguendo terminologia CRT)
+    currentvers = bpointstatus[prgroot]['release'] + bpointstatus[prgroot]['ambrelease']
+
+    bpointstatus[prgroot]['uffici'].each do |uff|
+
+#      currentvers = bpointstatus[prgroot]['release'] + bpointstatus[prgroot]['ambrelease']
+      expectedvers = uff['bookmark'] + currentvers
+
+      describe "#{uff['lastrelease']}" do
+        it "bpoint['#{prgroot}']['#{uff['ufficio']}']['lastrelease'] should match '#{expectedvers}'" do
+          expect(uff['lastrelease']).to match(/#{Regexp.quote(expectedvers)}/)
+        end
+      end
+
     end
 
   end

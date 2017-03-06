@@ -59,8 +59,10 @@ include_recipe 'bpoint::release-17.00.00'
 include_recipe 'bpoint::release-17.10.00'
 include_recipe 'bpoint::release-17.10.10'
 include_recipe 'bpoint::release-17.10.20'
-# last
 include_recipe 'bpoint::release-17.10.30'
+# last
+include_recipe 'bpoint::release-17.10.40'
+include_recipe 'bpoint::release-17.10.40p14'
 
 
 case node[:platform]
@@ -71,7 +73,7 @@ control_group 'Audit Mode bpoint' do
 
   ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
 
-  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointX`
+  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointconfig`
   bpointstatus = JSON.parse(bpointoutput)
 
   bpointstatus.keys.each do |prgroot|
@@ -79,21 +81,29 @@ control_group 'Audit Mode bpoint' do
     prgenv = bpointstatus[prgroot]
 
 #    Chef::Log.info("chef::log::audit: access to release  -> #{prgenv[:release]}")
-#    Chef::Log.info("chef::log::audit: |ohai -d /etc/chef/ohai_plugins bpointX|  -> #{bpointoutput}")
+#    Chef::Log.info("chef::log::audit: |ohai -d /etc/chef/ohai_plugins bpointconfig|  -> #{bpointoutput}")
 #    Chef::Log.info("chef::log::audit: |JSON.parse(...)|  -> #{bpointstatus}")
 
-    # versione "ufficiale"
+    # versione "ufficiale" [sisver]
     control "bpoint version by ohai - #{prgroot}" do
-      it 'should be version 17.10.30' do
-        expect(bpointstatus[prgroot]['release']).to  match(/17\.10\.30/)
+      it 'should be version 17.10.40' do
+        expect(bpointstatus[prgroot]['release']).to  match(/17\.10\.40/)
       end
     end
 
     control "sisver file - #{prgroot}" do
       let(:sisver_file) { file("#{prgroot}/prg/etc/sisver") }
 
-      it 'should contain required version 17.10.30' do
-        expect(sisver_file.content).to match(/17\.10\.30/)
+      it 'should contain required version 17.10.40' do
+        expect(sisver_file.content).to match(/17\.10\.40/)
+      end
+    end
+
+
+    # versione "ufficiale" [ambver]
+    control "bpoint ambver by ohai - #{prgroot}" do
+      it 'should be version xq1l16' do
+        expect(bpointstatus[prgroot]['ambrelease']).to  match(/xq1l16/)
       end
     end
 
@@ -101,8 +111,23 @@ control_group 'Audit Mode bpoint' do
       let(:ambver_file) { file("#{prgroot}/prg/etc/ambver") }
 
       it 'should contain start with x' do
-        expect(ambver_file.content).to match(/x/)
+        expect(ambver_file.content).to match(/xq1l16/)
       end
+    end
+
+    # qui inizia la parte di check dei diversi uffici (o installazioni seguendo terminologia CRT)
+    currentvers = bpointstatus[prgroot]['release'] + bpointstatus[prgroot]['ambrelease']
+
+    bpointstatus[prgroot]['uffici'].each do |uff|
+
+      expectedvers = uff['bookmark'] + currentvers
+
+      describe "#{uff['lastrelease']}" do
+        it "bpoint['#{prgroot}']['#{uff['ufficio']}']['lastrelease'] should match '#{expectedvers}'" do
+          expect(uff['lastrelease']).to match(/#{Regexp.quote(expectedvers)}/)
+        end
+      end
+
     end
 
   end

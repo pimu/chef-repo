@@ -73,7 +73,7 @@ control_group 'Audit Mode bpoint' do
 
   ohaioutput = `ohai -d /etc/chef/ohai_plugins bpoint/release`
 
-  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointX`
+  bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointconfig`
   bpointstatus = JSON.parse(bpointoutput)
 
   bpointstatus.keys.each do |prgroot|
@@ -81,10 +81,10 @@ control_group 'Audit Mode bpoint' do
     prgenv = bpointstatus[prgroot]
 
 #    Chef::Log.info("chef::log::audit: access to release  -> #{prgenv[:release]}")
-#    Chef::Log.info("chef::log::audit: |ohai -d /etc/chef/ohai_plugins bpointX|  -> #{bpointoutput}")
+#    Chef::Log.info("chef::log::audit: |ohai -d /etc/chef/ohai_plugins bpointconfig|  -> #{bpointoutput}")
 #    Chef::Log.info("chef::log::audit: |JSON.parse(...)|  -> #{bpointstatus}")
 
-    # versione "ufficiale"
+    # versione "ufficiale" [sisver]
     control "bpoint version by ohai - #{prgroot}" do
       it 'should be version <%= @version %>' do
         expect(bpointstatus[prgroot]['release']).to  match(/<%= @version.gsub('.','\.') %>/)
@@ -99,12 +99,35 @@ control_group 'Audit Mode bpoint' do
       end
     end
 
+
+    # versione "ufficiale" [ambver]
+    control "bpoint ambver by ohai - #{prgroot}" do
+      it 'should be version <%= @versioncode %>' do
+        expect(bpointstatus[prgroot]['ambrelease']).to  match(/<%= @versioncode %>/)
+      end
+    end
+
     control "ambver file - #{prgroot}" do
       let(:ambver_file) { file("#{prgroot}/prg/etc/ambver") }
 
       it 'should contain start with x' do
-        expect(ambver_file.content).to match(/x/)
+        expect(ambver_file.content).to match(/<%= @versioncode %>/)
       end
+    end
+
+    # qui inizia la parte di check dei diversi uffici (o installazioni seguendo terminologia CRT)
+    currentvers = bpointstatus[prgroot]['release'] + bpointstatus[prgroot]['ambrelease']
+
+    bpointstatus[prgroot]['uffici'].each do |uff|
+
+      expectedvers = uff['bookmark'] + currentvers
+
+      describe "#{uff['lastrelease']}" do
+        it "bpoint['#{prgroot}']['#{uff['ufficio']}']['lastrelease'] should match '#{expectedvers}'" do
+          expect(uff['lastrelease']).to match(/#{Regexp.quote(expectedvers)}/)
+        end
+      end
+
     end
 
   end
