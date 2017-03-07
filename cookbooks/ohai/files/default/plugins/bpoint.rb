@@ -147,9 +147,9 @@ Ohai.plugin(:Bpoint) do
 
             uffici << currentuff
           end
-
-          currentprg[:uffici] = uffici
         end
+
+        currentprg[:uffici] = uffici
 
         bpointconfig[prgroot] = currentprg
       end
