@@ -1,5 +1,5 @@
 Ohai.plugin(:Bpoint) do
-  provides 'bpoint','bpointX','bpointconfig'
+  provides 'bpoint','bpointX','bpointconfig','bpointsavinginfo'
 
   neededufficiaskeys = false
 
@@ -157,7 +157,28 @@ Ohai.plugin(:Bpoint) do
       bpointconfig
     end
 
+# new new new new new new
+    def init_bpointsavinginfo
+      
+      # read data form system about last "backup" 
+      Ohai::Log.debug("into init_bpointsavinginfo..")
 
+      hostname = from_cmd("hostname")
+      Ohai::Log.debug("precisely on #{hostname}")
+      
+      bpointsavinginfo Mash.new
+            
+      [["tail -32 /usr3/tmp/LOG1 | grep 'tmp/FINESUP' | wc -l", :numFINESUPinLOG1, 0], ["date +'%x %X' -r /usr3/tmp/LOG1", :dateFINESUPinLOG1, 0..1],
+       ["date +'%x %X' -r /usr3/recdata/PACCO."+"#{hostname}", :datePACCO, 0..1], ["ls -s /usr3/recdata/PACCO.#{hostname}", :sizePACCO, 0],
+       ["date +'%x %X' -r /usr3/recdata/.asp.LOG2.#{hostname}", :dateLOG2PACCO, 0..1], ["ls -s /usr3/recdata/.asp.LOG2.#{hostname}", :sizeLOG2PACCO, 0]
+      ].each do |cmd, property, idx|
+        Ohai::Log.debug("going to exec #{cmd} for property #{property}")
+        so = shell_out(cmd)
+        bpointsavinginfo[property] = [so.stdout.split(' ')[idx]].join(' ')
+      end     
+      
+      bpointsavinginfo
+    end
 
   collect_data(:linux) do
     begin
@@ -167,6 +188,8 @@ Ohai.plugin(:Bpoint) do
       bpointX init_bpointsX
 
       bpointconfig init_bpointconfig
+
+      bpointsavinginfo init_bpointsavinginfo
 
 #      bpointrelease from_cmd('cat /usr1/prg/etc/ambver')
 #      bpointfullrelease from_cmdfull('cat /usr1/prg/etc/ambver')

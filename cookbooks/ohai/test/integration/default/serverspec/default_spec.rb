@@ -25,3 +25,12 @@ describe command("ohai -d #{plugin_directory} bpointX") do
   its(:stdout) { should match(/fullrelease/) }
   its(:stdout) { should match(/lastmodified/) }
 end
+
+describe command("ohai -d #{plugin_directory} bpointsavinginfo") do
+  its(:stdout) { should match(/numFINESUPinLOG1/) }
+  its(:stdout) { should match(/dateFINESUPinLOG1/) }
+  its(:stdout) { should match(/datePACCO/) }
+  its(:stdout) { should match(/sizePACCO/) }
+  its(:stdout) { should match(/dateLOG2PACCO/) }
+  its(:stdout) { should match(/sizeLOG2PACCO/) }
+end
