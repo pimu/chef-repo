@@ -31,6 +31,8 @@ allprgroots = node.bpointconfig
 #
 #desired_version = node['bpoint']['thisrelease']
 desired_version = node.bpoint.thisrelease
+desired_ambversion = node.bpoint.thisambrelease
+
 desired_version_folder = "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}"
 desired_version_package = "#{Chef::Config[:file_cache_path]}/rilasci/#{node.bpoint.thisrelease}/sisagg"
 
@@ -64,8 +66,8 @@ allprgroots.each do |prgroot,currentenv|
     Chef::Log.info("chef::log current version: #{currentenv.release}")
     Chef::Log.info("chef::log next version: #{desired_version}")
     notifies :run, 'ruby_block[log_versions]', :immediately
-
-    if currentenv.release < desired_version
+	realdesired_version = desired_version[0..7]
+    if (currentenv.release < realdesired_version) || (currentenv.release == realdesired_version && currentenv.ambrelease < desired_ambversion)
 
       cwd "#{desired_version_folder}"
 #     user 'rbenv'
@@ -77,7 +79,7 @@ allprgroots.each do |prgroot,currentenv|
         echo "version #{desired_version} installed on #{prgroot}"
       EOH
 
-      Chef::Log.info("version #{desired_version} installed on #{prgroot}")
+      Chef::Log.info("version #{desired_version} (#{realdesired_version} #{desired_ambversion}) installed on #{prgroot}")
       notifies :run, 'ruby_block[log_versions]', :immediately
 
       # rem: per fare refresh dei valori degli attributi di bpoint..
@@ -86,7 +88,7 @@ allprgroots.each do |prgroot,currentenv|
    else
 
       code <<-EOH
-        echo "version #{desired_version} not to be installed on #{prgroot} (present #{currentenv.release})"
+        echo "version #{desired_version} (#{realdesired_version} #{desired_ambversion}) not to be installed on #{prgroot} (present #{currentenv.release})"
       EOH
 
       Chef::Log.info("version #{desired_version} not to be installed on #{prgroot} (present #{currentenv.release})")

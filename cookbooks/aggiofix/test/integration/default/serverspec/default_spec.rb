@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'json'
+
 
 
 def is_bpoint_already_updated?
@@ -17,8 +19,6 @@ def is_bpoint_already_updated?
 end
 
 
-describe "Verifying file coherence..." do
-
 
 describe 'aggiofix::default' do
   # Serverspec examples can be found at
@@ -29,33 +29,47 @@ describe 'aggiofix::default' do
 #  end
 end
 
-# the right way, probably
-fileroot = '/usr1/prg' 
+describe "Verifying file coherence..." do
 
-
-if is_bpoint_already_updated?
-
-# versione "ufficiale"
-describe command('ohai -d /etc/chef/ohai_plugins bpoint/release') do
-  its(:stdout) { should >= '18.00.00' }
-end
-
-else
-
-
-
-
-# using sha256: a0878b5a38ecd83bf4679ca31a41a485fbb271b340af2bb7db4d908cee9547af * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/target/aggiofix/aggiofix-pre180000/files/default/aggiofix-pre180000/prg/e/r/rfabrip.int
-describe file("#{fileroot}/e/r/rfabrip.int") do
-  its(:sha256sum) { should eq 'a0878b5a38ecd83bf4679ca31a41a485fbb271b340af2bb7db4d908cee9547af' }
-end
-
-# using sha256: 80f33f0e2a4b6cbbd88ea5c1e32634178e370a025464f6d193e84634a9cad349 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/target/aggiofix/aggiofix-pre180000/files/default/aggiofix-pre180000/prg/etc/ambver
-describe file("#{fileroot}/etc/ambver") do
-  its(:sha256sum) { should eq '80f33f0e2a4b6cbbd88ea5c1e32634178e370a025464f6d193e84634a9cad349' }
-end
-
-
-end
+  # case node[:platform]
+  case os[:family]
+  
+  when 'redhat', 'centos'
+  
+    bpointoutput = `ohai -d /etc/chef/ohai_plugins bpointconfig`
+    bpointstatus = JSON.parse(bpointoutput)
+  
+    bpointstatus.keys.each do |prgroot|
+  
+	  fileroot = "#{prgroot}/prg"
+	
+    #  if is_bpoint_already_updated?
+      if bpointstatus["#{prgroot}"]['release']  >= '18.00.00'
+    
+        # versione "ufficiale"
+        describe "bpoint['#{prgroot}']['release']" do
+          it "should >= '18.00.00'" do
+    #        expect(bpointstatus["#{prgroot}"]['release']).to match(/18./)
+            expect(bpointstatus["#{prgroot}"]['release']).to >= '18.00.00'
+          end
+        end
+    
+      else    
+    
+        # using sha256: a0878b5a38ecd83bf4679ca31a41a485fbb271b340af2bb7db4d908cee9547af * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/target/aggiofix/aggiofix-pre180000/files/default/aggiofix-pre180000/prg/e/r/rfabrip.int
+        describe file("#{fileroot}/e/r/rfabrip.int") do
+          its(:sha256sum) { should eq 'a0878b5a38ecd83bf4679ca31a41a485fbb271b340af2bb7db4d908cee9547af' }
+        end
+        
+        # using sha256: 80f33f0e2a4b6cbbd88ea5c1e32634178e370a025464f6d193e84634a9cad349 * MUNARIW8 C:/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/target/aggiofix/aggiofix-pre180000/files/default/aggiofix-pre180000/prg/etc/ambver
+        describe file("#{fileroot}/etc/ambver") do
+          its(:sha256sum) { should eq '80f33f0e2a4b6cbbd88ea5c1e32634178e370a025464f6d193e84634a9cad349' }
+        end
+        
+      end
+  
+    end
+  
+  end
 
 end

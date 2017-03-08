@@ -35,7 +35,8 @@ platforms:
       username: example_chef
       password: chef_example
 #      ssh_key: "/c/Users/Munari/.ssh/id_rsa_example_chef"
-      ssh_key: "c:\\Users\\Munari\\.ssh\\id_rsa_example_chef"
+#      ssh_key: "c:\\Users\\Munari\\.ssh\\id_rsa_example_chef"
+      ssh_key: <%= ENV['HOME'] + '/.ssh/id_rsa_example_chef' %>
 
       synced_folders:
          - ["data", "/opt/instance_data"]
