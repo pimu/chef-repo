@@ -5,8 +5,8 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 #
 #  file has been created by the chef recipe "bpoint-generator::bpoint"
-#              node ip address is "10.11.200.19"
-#              node fully qualified domain name is "munariw8.siaer.prv"
+#              node ip address is "10.11.2.237"
+#              node fully qualified domain name is "angelachefwork.siaer.prv"
 #
 #
 
@@ -18,8 +18,8 @@ node.normal['bpoint']['thisrelease'] = "17.10.10"
 #node.normal['bpoint']['thisrelease_sourcedir'] = "%251610.40"
 node.normal['bpoint']['thisrelease_sourcedir'] = "17.10.10"
 
-node.normal['bpoint']['thisambrelease'] = "xyzbcp"
-allprgroots = node.bpointX
+node.normal['bpoint']['thisambrelease'] = "x"
+allprgroots = node.bpointconfig
 # end of "attributi per questa recipe di questa release"
 
 

@@ -60,9 +60,10 @@ include_recipe 'bpoint::release-17.10.00'
 include_recipe 'bpoint::release-17.10.10'
 include_recipe 'bpoint::release-17.10.20'
 include_recipe 'bpoint::release-17.10.30'
-# last
 include_recipe 'bpoint::release-17.10.40'
 include_recipe 'bpoint::release-17.10.40p14'
+# last
+include_recipe 'bpoint::release-17.20.00'
 
 
 case node[:platform]
@@ -86,24 +87,24 @@ control_group 'Audit Mode bpoint' do
 
     # versione "ufficiale" [sisver]
     control "bpoint version by ohai - #{prgroot}" do
-      it 'should be version 17.10.40' do
-        expect(bpointstatus[prgroot]['release']).to  match(/17\.10\.40/)
+      it 'should be version 17.20.00' do
+        expect(bpointstatus[prgroot]['release']).to  match(/17\.20\.00/)
       end
     end
 
     control "sisver file - #{prgroot}" do
       let(:sisver_file) { file("#{prgroot}/prg/etc/sisver") }
 
-      it 'should contain required version 17.10.40' do
-        expect(sisver_file.content).to match(/17\.10\.40/)
+      it 'should contain required version 17.20.00' do
+        expect(sisver_file.content).to match(/17\.20\.00/)
       end
     end
 
 
     # versione "ufficiale" [ambver]
     control "bpoint ambver by ohai - #{prgroot}" do
-      it 'should be version xq1l16' do
-        expect(bpointstatus[prgroot]['ambrelease']).to  match(/xq1l16/)
+      it 'should be version x' do
+        expect(bpointstatus[prgroot]['ambrelease']).to  match(/x/)
       end
     end
 
@@ -111,7 +112,7 @@ control_group 'Audit Mode bpoint' do
       let(:ambver_file) { file("#{prgroot}/prg/etc/ambver") }
 
       it 'should contain start with x' do
-        expect(ambver_file.content).to match(/xq1l16/)
+        expect(ambver_file.content).to match(/x/)
       end
     end
 
