@@ -1,0 +1,824 @@
+# Logfile created on 2016-09-02 13:24:39 +0200 by logger.rb/44203
+[2016-09-02T13:24:39+02:00] INFO: Auto-discovered chef repository at C:/Work/Projects/chef/chef-repo
+[2016-09-02T13:24:39+02:00] DEBUG: Sleeping for 0 seconds
+[2016-09-02T13:24:40+02:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at C:/Work/Projects/chef/chef-repo
+  One version per cookbook
+
+[2016-09-02T13:24:45+02:00] INFO: *** Chef 12.5.1 ***
+[2016-09-02T13:24:45+02:00] INFO: Chef-client pid: 14724
+[2016-09-02T13:24:45+02:00] DEBUG: Chef-client request_id: 02628c52-7d11-4ab5-83d4-d6e42d10b4bf
+[2016-09-02T13:25:01+02:00] DEBUG: Client key is unspecified - skipping registration
+[2016-09-02T13:25:01+02:00] DEBUG: Building node object for munariw8.siaer.prv
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:25:01+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2016-09-02T13:25:03+02:00] INFO: Setting the run_list to [#<Chef::RunList::RunListItem:0x52e1128 @version=nil, @type=:recipe, @name="bpoint-generator::aggiofix">] from CLI options
+[2016-09-02T13:25:03+02:00] DEBUG: Applying attributes from json file
+[2016-09-02T13:25:03+02:00] DEBUG: Platform is windows version 10.0.10586
+[2016-09-02T13:25:03+02:00] INFO: Run List is [recipe[bpoint-generator::aggiofix]]
+[2016-09-02T13:25:03+02:00] INFO: Run List expands to [bpoint-generator::aggiofix]
+[2016-09-02T13:25:03+02:00] INFO: Starting Chef Run for munariw8.siaer.prv
+[2016-09-02T13:25:03+02:00] INFO: Running start handlers
+[2016-09-02T13:25:03+02:00] INFO: Start handlers complete.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:25:03+02:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+[2016-09-02T13:25:03+02:00] DEBUG: Reporting error starting run. URL: reports/nodes/munariw8.siaer.prv/runs Received 404. Disabling reporting for run.
+[2016-09-02T13:25:03+02:00] DEBUG: Checking for administrator privileges....
+[2016-09-02T13:25:03+02:00] DEBUG: chef-client has administrator privileges on node munariw8.siaer.prv.
+[2016-09-02T13:25:03+02:00] DEBUG: Synchronizing cookbooks
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:25:03+02:00] INFO: Loading cookbooks [bpoint-generator@0.1.0]
+[2016-09-02T13:25:03+02:00] DEBUG: Cookbooks detail: [#<Chef::CookbookVersion:0x78060d8 @name="bpoint-generator", @root_paths=[], @frozen=false, @attribute_filenames=[], @definition_filenames=[], @template_filenames=["aggiofix.rb.erb", "test-default_spec.rb.erb", "recipes-default.rb.erb", "recipes-last.rb.erb", "test-default_spec.rb.erb", "test-default_spec.rb.erb"], @file_filenames=["cxdel.int", "dcna900.int", "dcnaca90.int", "dcnanax.int", "dcnanay.int", "tducna01.int", "tducna02.int", "tducnawr.int"], @recipe_filenames=["aggiofix.rb", "bpoint.rb", "tabelle.rb"], @recipe_filenames_by_name={"aggiofix"=>"aggiofix.rb", "bpoint"=>"bpoint.rb", "tabelle"=>"tabelle.rb"}, @library_filenames=[], @resource_filenames=[], @provider_filenames=[], @metadata_filenames=[], @root_filenames=["a.log", "aggiofix.gz", "chefignore", "currentversion.json", "metadata.rb", "ohai.out", "param.rb", "params.json"], @status=:ready, @file_vendor=nil, @metadata=#<Chef::Cookbook::Metadata:0x7805c10 @name="bpoint-generator", @description="Installs/Configures bpoint-generator", @long_description="", @license="all_rights", @maintainer="The Authors", @maintainer_email="you@example.com", @platforms={}, @dependencies={}, @recommendations={}, @suggestions={}, @conflicting={}, @providing={"bpoint-generator::aggiofix"=>">= 0.0.0", "bpoint-generator::bpoint"=>">= 0.0.0", "bpoint-generator::tabelle"=>">= 0.0.0"}, @replacing={}, @attributes={}, @groupings={}, @recipes={"bpoint-generator::aggiofix"=>"", "bpoint-generator::bpoint"=>"", "bpoint-generator::tabelle"=>""}, @version="0.1.0", @source_url="", @issues_url="", @privacy=false, @errors=[]>, @chef_server_rest=nil, @attribute_filenames_by_short_filename={}, @cookbook_manifest=#<Chef::CookbookManifest:0x78056a0 @cookbook_version=#<Chef::CookbookVersion:0x78060d8 ...>, @policy_mode=false, @manifest={"recipes"=>[{"name"=>"aggiofix.rb", "path"=>"recipes/aggiofix.rb", "checksum"=>"2c2375523521c2e6622f9cd5d014cb9e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb"}, {"name"=>"bpoint.rb", "path"=>"recipes/bpoint.rb", "checksum"=>"2ef99a1e10297aa47815c0e1e3f10907", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/bpoint.rb"}, {"name"=>"tabelle.rb", "path"=>"recipes/tabelle.rb", "checksum"=>"78e62acc39d732b675a87a3459691449", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/tabelle.rb"}], "definitions"=>[], "libraries"=>[], "attributes"=>[], "files"=>[{"name"=>"cxdel.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int", "checksum"=>"eef372c06c6b4f98d12fbc4081049d78", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"}, {"name"=>"dcna900.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int", "checksum"=>"c2f38ca8dd26cb7f1af8478794ef3be0", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"}, {"name"=>"dcnaca90.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int", "checksum"=>"77ab12b507fb6a7d2565c2b764976448", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"}, {"name"=>"dcnanax.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int", "checksum"=>"d303b2d82977fed85d5a4351a8241764", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"}, {"name"=>"dcnanay.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int", "checksum"=>"71980a78e519d360d95597a052dd364f", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"}, {"name"=>"tducna01.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int", "checksum"=>"9e030c5406c130ec77ec0080d17e78ad", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"}, {"name"=>"tducna02.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int", "checksum"=>"37afc67b80599e781795b4e78b872145", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"}, {"name"=>"tducnawr.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int", "checksum"=>"52235f37087af112552e1334217fb6fc", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"}], "templates"=>[{"name"=>"aggiofix.rb.erb", "path"=>"templates/default/aggiofix/aggiofix.rb.erb", "checksum"=>"306d7f67ab9437473be13d819ea0e986", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/aggiofix/test-default_spec.rb.erb", "checksum"=>"763c65ed53facc9a8c76dce53d583cdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb"}, {"name"=>"recipes-default.rb.erb", "path"=>"templates/default/bpoint/recipes-default.rb.erb", "checksum"=>"aec2c2582bf8628e811b5337f02196a3", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb"}, {"name"=>"recipes-last.rb.erb", "path"=>"templates/default/bpoint/recipes-last.rb.erb", "checksum"=>"d1cd0389c4248587e2a0a810b2088cf9", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/bpoint/test-default_spec.rb.erb", "checksum"=>"6d0eef11d3f0a4e69a4e6067ebb9f219", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/tabelle/test-default_spec.rb.erb", "checksum"=>"944e566adfe572a3ac6238ad56e0f972", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb"}], "resources"=>[], "providers"=>[], "root_files"=>[{"name"=>"a.log", "path"=>"a.log", "checksum"=>"97470dfb646afc55886e1c966be250a6", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log"}, {"name"=>"aggiofix.gz", "path"=>"aggiofix.gz", "checksum"=>"593ac8e54f7d3170ae85ab4871a5b490", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/aggiofix.gz"}, {"name"=>"chefignore", "path"=>"chefignore", "checksum"=>"93e7819804f96b11aa508ccb47711903", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/chefignore"}, {"name"=>"currentversion.json", "path"=>"currentversion.json", "checksum"=>"d7801798d3067a40bbb3a9425bb1a04b", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/currentversion.json"}, {"name"=>"metadata.rb", "path"=>"metadata.rb", "checksum"=>"b411f6384dc22c337c81da35a954bb15", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/metadata.rb"}, {"name"=>"ohai.out", "path"=>"ohai.out", "checksum"=>"1650722b1a01e8f5de45709497bfbfdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/ohai.out"}, {"name"=>"param.rb", "path"=>"param.rb", "checksum"=>"1255b7f54b0789c7fb62c95dcd5d003e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/param.rb"}, {"name"=>"params.json", "path"=>"params.json", "checksum"=>"ccd15f40e454982d91dd410e8de464df", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/params.json"}], "metadata"=>{"name"=>"bpoint-generator", "description"=>"Installs/Configures bpoint-generator", "long_description"=>"", "maintainer"=>"The Authors", "maintainer_email"=>"you@example.com", "license"=>"all_rights", "platforms"=>{}, "dependencies"=>{}, "recommendations"=>{}, "suggestions"=>{}, "conflicting"=>{}, "providing"=>{"bpoint-generator::aggiofix"=>">= 0.0.0", "bpoint-generator::bpoint"=>">= 0.0.0", "bpoint-generator::tabelle"=>">= 0.0.0"}, "replacing"=>{}, "attributes"=>{}, "groupings"=>{}, "recipes"=>{"bpoint-generator::aggiofix"=>"", "bpoint-generator::bpoint"=>"", "bpoint-generator::tabelle"=>""}, "version"=>"0.1.0", "source_url"=>"", "issues_url"=>"", "privacy"=>false}, "version"=>"0.1.0", "name"=>"bpoint-generator-0.1.0", "cookbook_name"=>"bpoint-generator", "frozen?"=>false, "chef_type"=>"cookbook_version", "json_class"=>"Chef::CookbookVersion"}, @checksums={"2c2375523521c2e6622f9cd5d014cb9e"=>nil, "2ef99a1e10297aa47815c0e1e3f10907"=>nil, "78e62acc39d732b675a87a3459691449"=>nil, "eef372c06c6b4f98d12fbc4081049d78"=>nil, "c2f38ca8dd26cb7f1af8478794ef3be0"=>nil, "77ab12b507fb6a7d2565c2b764976448"=>nil, "d303b2d82977fed85d5a4351a8241764"=>nil, "71980a78e519d360d95597a052dd364f"=>nil, "9e030c5406c130ec77ec0080d17e78ad"=>nil, "37afc67b80599e781795b4e78b872145"=>nil, "52235f37087af112552e1334217fb6fc"=>nil, "306d7f67ab9437473be13d819ea0e986"=>nil, "763c65ed53facc9a8c76dce53d583cdd"=>nil, "aec2c2582bf8628e811b5337f02196a3"=>nil, "d1cd0389c4248587e2a0a810b2088cf9"=>nil, "6d0eef11d3f0a4e69a4e6067ebb9f219"=>nil, "944e566adfe572a3ac6238ad56e0f972"=>nil, "97470dfb646afc55886e1c966be250a6"=>nil, "593ac8e54f7d3170ae85ab4871a5b490"=>nil, "93e7819804f96b11aa508ccb47711903"=>nil, "d7801798d3067a40bbb3a9425bb1a04b"=>nil, "b411f6384dc22c337c81da35a954bb15"=>nil, "1650722b1a01e8f5de45709497bfbfdd"=>nil, "1255b7f54b0789c7fb62c95dcd5d003e"=>nil, "ccd15f40e454982d91dd410e8de464df"=>nil}, @manifest_records_by_path={"recipes/aggiofix.rb"=>{"name"=>"aggiofix.rb", "path"=>"recipes/aggiofix.rb", "checksum"=>"2c2375523521c2e6622f9cd5d014cb9e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb"}, "recipes/bpoint.rb"=>{"name"=>"bpoint.rb", "path"=>"recipes/bpoint.rb", "checksum"=>"2ef99a1e10297aa47815c0e1e3f10907", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/bpoint.rb"}, "recipes/tabelle.rb"=>{"name"=>"tabelle.rb", "path"=>"recipes/tabelle.rb", "checksum"=>"78e62acc39d732b675a87a3459691449", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/tabelle.rb"}, "files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"=>{"name"=>"cxdel.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int", "checksum"=>"eef372c06c6b4f98d12fbc4081049d78", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"=>{"name"=>"dcna900.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int", "checksum"=>"c2f38ca8dd26cb7f1af8478794ef3be0", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"=>{"name"=>"dcnaca90.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int", "checksum"=>"77ab12b507fb6a7d2565c2b764976448", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"=>{"name"=>"dcnanax.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int", "checksum"=>"d303b2d82977fed85d5a4351a8241764", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"=>{"name"=>"dcnanay.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int", "checksum"=>"71980a78e519d360d95597a052dd364f", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"=>{"name"=>"tducna01.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int", "checksum"=>"9e030c5406c130ec77ec0080d17e78ad", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"=>{"name"=>"tducna02.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int", "checksum"=>"37afc67b80599e781795b4e78b872145", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"=>{"name"=>"tducnawr.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int", "checksum"=>"52235f37087af112552e1334217fb6fc", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"}, "templates/default/aggiofix/aggiofix.rb.erb"=>{"name"=>"aggiofix.rb.erb", "path"=>"templates/default/aggiofix/aggiofix.rb.erb", "checksum"=>"306d7f67ab9437473be13d819ea0e986", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb"}, "templates/default/aggiofix/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/aggiofix/test-default_spec.rb.erb", "checksum"=>"763c65ed53facc9a8c76dce53d583cdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb"}, "templates/default/bpoint/recipes-default.rb.erb"=>{"name"=>"recipes-default.rb.erb", "path"=>"templates/default/bpoint/recipes-default.rb.erb", "checksum"=>"aec2c2582bf8628e811b5337f02196a3", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb"}, "templates/default/bpoint/recipes-last.rb.erb"=>{"name"=>"recipes-last.rb.erb", "path"=>"templates/default/bpoint/recipes-last.rb.erb", "checksum"=>"d1cd0389c4248587e2a0a810b2088cf9", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb"}, "templates/default/bpoint/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/bpoint/test-default_spec.rb.erb", "checksum"=>"6d0eef11d3f0a4e69a4e6067ebb9f219", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb"}, "templates/default/tabelle/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/tabelle/test-default_spec.rb.erb", "checksum"=>"944e566adfe572a3ac6238ad56e0f972", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb"}, "a.log"=>{"name"=>"a.log", "path"=>"a.log", "checksum"=>"97470dfb646afc55886e1c966be250a6", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log"}, "aggiofix.gz"=>{"name"=>"aggiofix.gz", "path"=>"aggiofix.gz", "checksum"=>"593ac8e54f7d3170ae85ab4871a5b490", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/aggiofix.gz"}, "chefignore"=>{"name"=>"chefignore", "path"=>"chefignore", "checksum"=>"93e7819804f96b11aa508ccb47711903", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/chefignore"}, "currentversion.json"=>{"name"=>"currentversion.json", "path"=>"currentversion.json", "checksum"=>"d7801798d3067a40bbb3a9425bb1a04b", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/currentversion.json"}, "metadata.rb"=>{"name"=>"metadata.rb", "path"=>"metadata.rb", "checksum"=>"b411f6384dc22c337c81da35a954bb15", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/metadata.rb"}, "ohai.out"=>{"name"=>"ohai.out", "path"=>"ohai.out", "checksum"=>"1650722b1a01e8f5de45709497bfbfdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/ohai.out"}, "param.rb"=>{"name"=>"param.rb", "path"=>"param.rb", "checksum"=>"1255b7f54b0789c7fb62c95dcd5d003e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/param.rb"}, "params.json"=>{"name"=>"params.json", "path"=>"params.json", "checksum"=>"ccd15f40e454982d91dd410e8de464df", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/params.json"}}>>]
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/aggiofix.rb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/tabelle.rb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/bpoint.rb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/chefignore, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/currentversion.json, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/aggiofix.gz, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/metadata.rb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/param.rb, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/params.json, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:25:03+02:00] DEBUG: Streaming download from chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log to tempfile C:/Users/Munari/AppData/Local/Temp/chef-rest20160902-14724-123hyb0
+[2016-09-02T13:25:03+02:00] DEBUG: content_encoding = ''               initializing noop stream deflator.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::NoopInflater#handle_chunk
+[2016-09-02T13:25:03+02:00] DEBUG: Not storing cookbooks/bpoint-generator/ohai.out, as the cache is up to date.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2016-09-02T13:25:03+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_stream_complete
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_stream_complete
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_stream_complete
+[2016-09-02T13:25:03+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_stream_complete
+[2016-09-02T13:25:03+02:00] INFO: Storing updated cookbooks/bpoint-generator/a.log in the cache.
+[2016-09-02T13:25:03+02:00] DEBUG: Cookbooks to compile: [:"bpoint-generator"]
+[2016-09-02T13:25:03+02:00] DEBUG: Loading Recipe bpoint-generator::aggiofix via include_recipe
+[2016-09-02T13:25:03+02:00] DEBUG: Found recipe aggiofix in cookbook bpoint-generator
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic remote_file resource enabled on node include: [Chef::Resource::RemoteFile]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for remote_file is Chef::Resource::RemoteFile
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic powershell_script resource enabled on node include: [Chef::Resource::PowershellScript]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for powershell_script is Chef::Resource::PowershellScript
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic template resource enabled on node include: [Chef::Resource::Template]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for template is Chef::Resource::Template
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T13:25:03+02:00] DEBUG: Resources for generic template resource enabled on node include: [Chef::Resource::Template]
+[2016-09-02T13:25:03+02:00] DEBUG: Resource for template is Chef::Resource::Template
+[2016-09-02T13:25:03+02:00] DEBUG: Converging node munariw8.siaer.prv
+[2016-09-02T13:25:03+02:00] INFO: Processing directory[/C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100] action create (bpoint-generator::aggiofix line 45)
+[2016-09-02T13:25:03+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T13:25:03+02:00] DEBUG: Provider for action create on resource directory[/C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100] is Chef::Provider::Directory
+[2016-09-02T13:25:03+02:00] INFO: Processing remote_file[/C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz] action create (bpoint-generator::aggiofix line 50)
+[2016-09-02T13:25:03+02:00] DEBUG: remote_file[/C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz] checksumming file at /C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz.
+[2016-09-02T13:25:03+02:00] DEBUG: remote_file[/C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz] checking for changes
+[2016-09-02T13:25:03+02:00] DEBUG: remote_file[/C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz] staging /Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/aggiofix.gz to /C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz20160902-14724-18w2296
+[2016-09-02T13:25:03+02:00] DEBUG: calculating checksum of /C/Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofix-pre140100/aggiofix.gz20160902-14724-18w2296 to compare with ba9a0ccd4f95e1c2ab4807796680827c044271fdd06e44c01e619a77fae8b69f
+[2016-09-02T13:25:03+02:00] INFO: Processing powershell_script[unpack-aggiofix-pre140100/aggiofix.gz] action run (bpoint-generator::aggiofix line 56)
+[2016-09-02T13:25:03+02:00] DEBUG: Providers for generic powershell_script resource enabled on node include: [Chef::Provider::PowershellScript]
+[2016-09-02T13:25:03+02:00] DEBUG: Provider for action run on resource powershell_script[unpack-aggiofix-pre140100/aggiofix.gz] is Chef::Provider::PowershellScript
+[2016-09-02T13:25:03+02:00] DEBUG: powershell_script provider called with script code:
+
+		Set-Alias 7zip 'C:\Program Files\7-Zip\7z.exe'
+		7zip x "aggiofix.gz"
+		7zip x "aggiofix"
+		rm "aggiofix"
+
+
+[2016-09-02T13:25:03+02:00] DEBUG: powershell_script provider will execute transformed code:
+
+# Chef Client wrapper for powershell_script resources
+
+# LASTEXITCODE can be uninitialized -- make it explictly 0
+# to avoid incorrect detection of failure (non-zero) codes
+$global:LASTEXITCODE = 0
+
+# Catch any exceptions -- without this, exceptions will result
+# In a zero return code instead of the desired non-zero code
+# that indicates a failure
+trap [Exception] {write-error ($_.Exception.Message);exit 1}
+
+# Variable state that should not be accessible to the user code
+new-variable -name interpolatedexitcode -visibility private -value $false
+new-variable -name chefscriptresult -visibility private
+
+# Initialize a variable we use to capture $? inside a block
+$global:lastcmdlet = $null
+
+# Execute the user's code in a script block --
+$chefscriptresult =
+{
+ 		Set-Alias 7zip 'C:\Program Files\7-Zip\7z.exe'
+		7zip x "aggiofix.gz"
+		7zip x "aggiofix"
+		rm "aggiofix"
+
+
+ # This assignment doesn't affect the block's return value
+ $global:lastcmdlet = $?
+}.invokereturnasis()
+
+# Assume failure status of 1 -- success cases
+# will have to override this
+$exitstatus = 1
+
+# If convert_boolean_return is enabled, the block's return value
+# gets precedence in determining our exit status
+if ($interpolatedexitcode -and $chefscriptresult -ne $null -and $chefscriptresult.gettype().name -eq 'boolean')
+{
+  $exitstatus = [int32](!$chefscriptresult)
+}
+elseif ($lastcmdlet)
+{
+  # Otherwise, a successful cmdlet execution defines the status
+  $exitstatus = 0
+}
+elseif ( $LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0 )
+{
+  # If the cmdlet status is failed, allow the Win32 status
+  # in $LASTEXITCODE to define exit status. This handles the case
+  # where no cmdlets, only Win32 processes have run since $?
+  # will be set to $false whenever a Win32 process returns a non-zero
+  # status.
+  $exitstatus = $LASTEXITCODE
+}
+
+# If this script is launched with -File, the process exit
+# status of PowerShell.exe will be $exitstatus. If it was
+# launched with -Command, it will be 0 if $exitstatus was 0,
+# 1 (i.e. failed) otherwise.
+exit $exitstatus
+
+
+[2016-09-02T13:25:05+02:00] INFO: powershell_script[unpack-aggiofix-pre140100/aggiofix.gz] ran successfully
+[2016-09-02T13:25:05+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes] action create (bpoint-generator::aggiofix line 72)
+[2016-09-02T13:25:05+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T13:25:05+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes] is Chef::Provider::Directory
+[2016-09-02T13:25:05+02:00] INFO: Processing template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] action create (bpoint-generator::aggiofix line 78)
+[2016-09-02T13:25:05+02:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2016-09-02T13:25:05+02:00] DEBUG: Provider for action create on resource template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] is Chef::Provider::Template
+[2016-09-02T13:25:05+02:00] DEBUG: template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb.
+[2016-09-02T13:25:05+02:00] DEBUG: Not fetching cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:05+02:00] DEBUG: current checksum: 306d7f67ab9437473be13d819ea0e986; manifest checksum: 306d7f67ab9437473be13d819ea0e986)
+[2016-09-02T13:25:05+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb20160902-14724-1wbtau to compare with 8d598db2c3f27d4c13b6086bdccc367c2d8532d64b8c5b916b9bc73cee79fc27
+[2016-09-02T13:25:05+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec] action create (bpoint-generator::aggiofix line 98)
+[2016-09-02T13:25:05+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T13:25:05+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec] is Chef::Provider::Directory
+[2016-09-02T13:25:05+02:00] INFO: Processing template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] action create (bpoint-generator::aggiofix line 104)
+[2016-09-02T13:25:05+02:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2016-09-02T13:25:05+02:00] DEBUG: Provider for action create on resource template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] is Chef::Provider::Template
+[2016-09-02T13:25:05+02:00] DEBUG: template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb.
+[2016-09-02T13:25:05+02:00] DEBUG: Not fetching cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:25:05+02:00] DEBUG: current checksum: 763c65ed53facc9a8c76dce53d583cdd; manifest checksum: 763c65ed53facc9a8c76dce53d583cdd)
+[2016-09-02T13:25:05+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb20160902-14724-1ijlf31 to compare with 203b850d34ac7e4ee5a98a9827ccdf25b90feb720d5bf781cdc0765df2969992
+[2016-09-02T13:25:05+02:00] DEBUG: Saving the current state of node munariw8.siaer.prv
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:25:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:25:08+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:25:08+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:25:08+02:00] INFO: Chef Run complete in 4.857074 seconds
+[2016-09-02T13:25:08+02:00] INFO: Running report handlers
+[2016-09-02T13:25:08+02:00] INFO: Report handlers complete
+[2016-09-02T13:25:08+02:00] DEBUG: Server doesn't support resource history, skipping resource report.
+[2016-09-02T13:25:08+02:00] DEBUG: Audit Reports are disabled. Skipping sending reports.
+[2016-09-02T13:25:08+02:00] DEBUG: Exiting
+[2016-09-02T13:32:48+02:00] INFO: Auto-discovered chef repository at C:/Work/Projects/chef/chef-repo
+[2016-09-02T13:32:48+02:00] DEBUG: Sleeping for 0 seconds
+[2016-09-02T13:32:48+02:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at C:/Work/Projects/chef/chef-repo
+  One version per cookbook
+
+[2016-09-02T13:32:53+02:00] INFO: *** Chef 12.5.1 ***
+[2016-09-02T13:32:53+02:00] INFO: Chef-client pid: 15460
+[2016-09-02T13:32:53+02:00] DEBUG: Chef-client request_id: f774afb9-c296-4ed4-ac1b-1f2902056fed
+[2016-09-02T13:33:12+02:00] DEBUG: Client key is unspecified - skipping registration
+[2016-09-02T13:33:12+02:00] DEBUG: Building node object for munariw8.siaer.prv
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:33:12+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2016-09-02T13:33:13+02:00] INFO: Setting the run_list to [#<Chef::RunList::RunListItem:0x5322cf0 @version=nil, @type=:recipe, @name="bpoint-generator::aggiofix">] from CLI options
+[2016-09-02T13:33:13+02:00] DEBUG: Applying attributes from json file
+[2016-09-02T13:33:13+02:00] DEBUG: Platform is windows version 10.0.10586
+[2016-09-02T13:33:13+02:00] INFO: Run List is [recipe[bpoint-generator::aggiofix]]
+[2016-09-02T13:33:13+02:00] INFO: Run List expands to [bpoint-generator::aggiofix]
+[2016-09-02T13:33:13+02:00] INFO: Starting Chef Run for munariw8.siaer.prv
+[2016-09-02T13:33:13+02:00] INFO: Running start handlers
+[2016-09-02T13:33:13+02:00] INFO: Start handlers complete.
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:33:13+02:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+[2016-09-02T13:33:13+02:00] DEBUG: Reporting error starting run. URL: reports/nodes/munariw8.siaer.prv/runs Received 404. Disabling reporting for run.
+[2016-09-02T13:33:13+02:00] DEBUG: Checking for administrator privileges....
+[2016-09-02T13:33:13+02:00] DEBUG: chef-client has administrator privileges on node munariw8.siaer.prv.
+[2016-09-02T13:33:13+02:00] DEBUG: Synchronizing cookbooks
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:33:13+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:33:13+02:00] INFO: Loading cookbooks [bpoint-generator@0.1.0]
+[2016-09-02T13:33:13+02:00] DEBUG: Cookbooks detail: [#<Chef::CookbookVersion:0x7125d80 @name="bpoint-generator", @root_paths=[], @frozen=false, @attribute_filenames=[], @definition_filenames=[], @template_filenames=["aggiofix.rb.erb", "test-default_spec.rb.erb", "recipes-default.rb.erb", "recipes-last.rb.erb", "test-default_spec.rb.erb", "test-default_spec.rb.erb"], @file_filenames=["cxdel.int", "dcna900.int", "dcnaca90.int", "dcnanax.int", "dcnanay.int", "tducna01.int", "tducna02.int", "tducnawr.int"], @recipe_filenames=["aggiofix.rb", "bpoint.rb", "tabelle.rb"], @recipe_filenames_by_name={"aggiofix"=>"aggiofix.rb", "bpoint"=>"bpoint.rb", "tabelle"=>"tabelle.rb"}, @library_filenames=[], @resource_filenames=[], @provider_filenames=[], @metadata_filenames=[], @root_filenames=["a.log", "aggiofix.gz", "chefignore", "currentversion.json", "metadata.rb", "ohai.out", "param.rb", "params.json"], @status=:ready, @file_vendor=nil, @metadata=#<Chef::Cookbook::Metadata:0x71258b8 @name="bpoint-generator", @description="Installs/Configures bpoint-generator", @long_description="", @license="all_rights", @maintainer="The Authors", @maintainer_email="you@example.com", @platforms={}, @dependencies={}, @recommendations={}, @suggestions={}, @conflicting={}, @providing={"bpoint-generator::aggiofix"=>">= 0.0.0", "bpoint-generator::bpoint"=>">= 0.0.0", "bpoint-generator::tabelle"=>">= 0.0.0"}, @replacing={}, @attributes={}, @groupings={}, @recipes={"bpoint-generator::aggiofix"=>"", "bpoint-generator::bpoint"=>"", "bpoint-generator::tabelle"=>""}, @version="0.1.0", @source_url="", @issues_url="", @privacy=false, @errors=[]>, @chef_server_rest=nil, @attribute_filenames_by_short_filename={}, @cookbook_manifest=#<Chef::CookbookManifest:0x7125348 @cookbook_version=#<Chef::CookbookVersion:0x7125d80 ...>, @policy_mode=false, @manifest={"recipes"=>[{"name"=>"aggiofix.rb", "path"=>"recipes/aggiofix.rb", "checksum"=>"ac45befec7ef53ec1aacc407ce3c4ea6", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb"}, {"name"=>"bpoint.rb", "path"=>"recipes/bpoint.rb", "checksum"=>"2ef99a1e10297aa47815c0e1e3f10907", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/bpoint.rb"}, {"name"=>"tabelle.rb", "path"=>"recipes/tabelle.rb", "checksum"=>"78e62acc39d732b675a87a3459691449", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/tabelle.rb"}], "definitions"=>[], "libraries"=>[], "attributes"=>[], "files"=>[{"name"=>"cxdel.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int", "checksum"=>"eef372c06c6b4f98d12fbc4081049d78", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"}, {"name"=>"dcna900.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int", "checksum"=>"c2f38ca8dd26cb7f1af8478794ef3be0", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"}, {"name"=>"dcnaca90.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int", "checksum"=>"77ab12b507fb6a7d2565c2b764976448", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"}, {"name"=>"dcnanax.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int", "checksum"=>"d303b2d82977fed85d5a4351a8241764", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"}, {"name"=>"dcnanay.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int", "checksum"=>"71980a78e519d360d95597a052dd364f", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"}, {"name"=>"tducna01.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int", "checksum"=>"9e030c5406c130ec77ec0080d17e78ad", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"}, {"name"=>"tducna02.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int", "checksum"=>"37afc67b80599e781795b4e78b872145", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"}, {"name"=>"tducnawr.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int", "checksum"=>"52235f37087af112552e1334217fb6fc", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"}], "templates"=>[{"name"=>"aggiofix.rb.erb", "path"=>"templates/default/aggiofix/aggiofix.rb.erb", "checksum"=>"306d7f67ab9437473be13d819ea0e986", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/aggiofix/test-default_spec.rb.erb", "checksum"=>"763c65ed53facc9a8c76dce53d583cdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb"}, {"name"=>"recipes-default.rb.erb", "path"=>"templates/default/bpoint/recipes-default.rb.erb", "checksum"=>"aec2c2582bf8628e811b5337f02196a3", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb"}, {"name"=>"recipes-last.rb.erb", "path"=>"templates/default/bpoint/recipes-last.rb.erb", "checksum"=>"d1cd0389c4248587e2a0a810b2088cf9", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/bpoint/test-default_spec.rb.erb", "checksum"=>"6d0eef11d3f0a4e69a4e6067ebb9f219", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/tabelle/test-default_spec.rb.erb", "checksum"=>"944e566adfe572a3ac6238ad56e0f972", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb"}], "resources"=>[], "providers"=>[], "root_files"=>[{"name"=>"a.log", "path"=>"a.log", "checksum"=>"ac93cef3c859d4dc3317bcf94169184c", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log"}, {"name"=>"aggiofix.gz", "path"=>"aggiofix.gz", "checksum"=>"593ac8e54f7d3170ae85ab4871a5b490", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/aggiofix.gz"}, {"name"=>"chefignore", "path"=>"chefignore", "checksum"=>"93e7819804f96b11aa508ccb47711903", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/chefignore"}, {"name"=>"currentversion.json", "path"=>"currentversion.json", "checksum"=>"d7801798d3067a40bbb3a9425bb1a04b", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/currentversion.json"}, {"name"=>"metadata.rb", "path"=>"metadata.rb", "checksum"=>"b411f6384dc22c337c81da35a954bb15", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/metadata.rb"}, {"name"=>"ohai.out", "path"=>"ohai.out", "checksum"=>"1650722b1a01e8f5de45709497bfbfdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/ohai.out"}, {"name"=>"param.rb", "path"=>"param.rb", "checksum"=>"1255b7f54b0789c7fb62c95dcd5d003e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/param.rb"}, {"name"=>"params.json", "path"=>"params.json", "checksum"=>"ccd15f40e454982d91dd410e8de464df", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/params.json"}], "metadata"=>{"name"=>"bpoint-generator", "description"=>"Installs/Configures bpoint-generator", "long_description"=>"", "maintainer"=>"The Authors", "maintainer_email"=>"you@example.com", "license"=>"all_rights", "platforms"=>{}, "dependencies"=>{}, "recommendations"=>{}, "suggestions"=>{}, "conflicting"=>{}, "providing"=>{"bpoint-generator::aggiofix"=>">= 0.0.0", "bpoint-generator::bpoint"=>">= 0.0.0", "bpoint-generator::tabelle"=>">= 0.0.0"}, "replacing"=>{}, "attributes"=>{}, "groupings"=>{}, "recipes"=>{"bpoint-generator::aggiofix"=>"", "bpoint-generator::bpoint"=>"", "bpoint-generator::tabelle"=>""}, "version"=>"0.1.0", "source_url"=>"", "issues_url"=>"", "privacy"=>false}, "version"=>"0.1.0", "name"=>"bpoint-generator-0.1.0", "cookbook_name"=>"bpoint-generator", "frozen?"=>false, "chef_type"=>"cookbook_version", "json_class"=>"Chef::CookbookVersion"}, @checksums={"ac45befec7ef53ec1aacc407ce3c4ea6"=>nil, "2ef99a1e10297aa47815c0e1e3f10907"=>nil, "78e62acc39d732b675a87a3459691449"=>nil, "eef372c06c6b4f98d12fbc4081049d78"=>nil, "c2f38ca8dd26cb7f1af8478794ef3be0"=>nil, "77ab12b507fb6a7d2565c2b764976448"=>nil, "d303b2d82977fed85d5a4351a8241764"=>nil, "71980a78e519d360d95597a052dd364f"=>nil, "9e030c5406c130ec77ec0080d17e78ad"=>nil, "37afc67b80599e781795b4e78b872145"=>nil, "52235f37087af112552e1334217fb6fc"=>nil, "306d7f67ab9437473be13d819ea0e986"=>nil, "763c65ed53facc9a8c76dce53d583cdd"=>nil, "aec2c2582bf8628e811b5337f02196a3"=>nil, "d1cd0389c4248587e2a0a810b2088cf9"=>nil, "6d0eef11d3f0a4e69a4e6067ebb9f219"=>nil, "944e566adfe572a3ac6238ad56e0f972"=>nil, "ac93cef3c859d4dc3317bcf94169184c"=>nil, "593ac8e54f7d3170ae85ab4871a5b490"=>nil, "93e7819804f96b11aa508ccb47711903"=>nil, "d7801798d3067a40bbb3a9425bb1a04b"=>nil, "b411f6384dc22c337c81da35a954bb15"=>nil, "1650722b1a01e8f5de45709497bfbfdd"=>nil, "1255b7f54b0789c7fb62c95dcd5d003e"=>nil, "ccd15f40e454982d91dd410e8de464df"=>nil}, @manifest_records_by_path={"recipes/aggiofix.rb"=>{"name"=>"aggiofix.rb", "path"=>"recipes/aggiofix.rb", "checksum"=>"ac45befec7ef53ec1aacc407ce3c4ea6", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb"}, "recipes/bpoint.rb"=>{"name"=>"bpoint.rb", "path"=>"recipes/bpoint.rb", "checksum"=>"2ef99a1e10297aa47815c0e1e3f10907", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/bpoint.rb"}, "recipes/tabelle.rb"=>{"name"=>"tabelle.rb", "path"=>"recipes/tabelle.rb", "checksum"=>"78e62acc39d732b675a87a3459691449", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/tabelle.rb"}, "files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"=>{"name"=>"cxdel.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int", "checksum"=>"eef372c06c6b4f98d12fbc4081049d78", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"=>{"name"=>"dcna900.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int", "checksum"=>"c2f38ca8dd26cb7f1af8478794ef3be0", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"=>{"name"=>"dcnaca90.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int", "checksum"=>"77ab12b507fb6a7d2565c2b764976448", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"=>{"name"=>"dcnanax.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int", "checksum"=>"d303b2d82977fed85d5a4351a8241764", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"=>{"name"=>"dcnanay.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int", "checksum"=>"71980a78e519d360d95597a052dd364f", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"=>{"name"=>"tducna01.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int", "checksum"=>"9e030c5406c130ec77ec0080d17e78ad", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"=>{"name"=>"tducna02.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int", "checksum"=>"37afc67b80599e781795b4e78b872145", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"=>{"name"=>"tducnawr.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int", "checksum"=>"52235f37087af112552e1334217fb6fc", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"}, "templates/default/aggiofix/aggiofix.rb.erb"=>{"name"=>"aggiofix.rb.erb", "path"=>"templates/default/aggiofix/aggiofix.rb.erb", "checksum"=>"306d7f67ab9437473be13d819ea0e986", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb"}, "templates/default/aggiofix/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/aggiofix/test-default_spec.rb.erb", "checksum"=>"763c65ed53facc9a8c76dce53d583cdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb"}, "templates/default/bpoint/recipes-default.rb.erb"=>{"name"=>"recipes-default.rb.erb", "path"=>"templates/default/bpoint/recipes-default.rb.erb", "checksum"=>"aec2c2582bf8628e811b5337f02196a3", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb"}, "templates/default/bpoint/recipes-last.rb.erb"=>{"name"=>"recipes-last.rb.erb", "path"=>"templates/default/bpoint/recipes-last.rb.erb", "checksum"=>"d1cd0389c4248587e2a0a810b2088cf9", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb"}, "templates/default/bpoint/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/bpoint/test-default_spec.rb.erb", "checksum"=>"6d0eef11d3f0a4e69a4e6067ebb9f219", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb"}, "templates/default/tabelle/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/tabelle/test-default_spec.rb.erb", "checksum"=>"944e566adfe572a3ac6238ad56e0f972", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb"}, "a.log"=>{"name"=>"a.log", "path"=>"a.log", "checksum"=>"ac93cef3c859d4dc3317bcf94169184c", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log"}, "aggiofix.gz"=>{"name"=>"aggiofix.gz", "path"=>"aggiofix.gz", "checksum"=>"593ac8e54f7d3170ae85ab4871a5b490", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/aggiofix.gz"}, "chefignore"=>{"name"=>"chefignore", "path"=>"chefignore", "checksum"=>"93e7819804f96b11aa508ccb47711903", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/chefignore"}, "currentversion.json"=>{"name"=>"currentversion.json", "path"=>"currentversion.json", "checksum"=>"d7801798d3067a40bbb3a9425bb1a04b", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/currentversion.json"}, "metadata.rb"=>{"name"=>"metadata.rb", "path"=>"metadata.rb", "checksum"=>"b411f6384dc22c337c81da35a954bb15", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/metadata.rb"}, "ohai.out"=>{"name"=>"ohai.out", "path"=>"ohai.out", "checksum"=>"1650722b1a01e8f5de45709497bfbfdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/ohai.out"}, "param.rb"=>{"name"=>"param.rb", "path"=>"param.rb", "checksum"=>"1255b7f54b0789c7fb62c95dcd5d003e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/param.rb"}, "params.json"=>{"name"=>"params.json", "path"=>"params.json", "checksum"=>"ccd15f40e454982d91dd410e8de464df", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/params.json"}}>>]
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/tabelle.rb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/bpoint.rb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/aggiofix.gz, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/chefignore, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/currentversion.json, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/metadata.rb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/param.rb, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/params.json, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:33:14+02:00] DEBUG: Streaming download from chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb to tempfile C:/Users/Munari/AppData/Local/Temp/chef-rest20160902-15460-uv527j
+[2016-09-02T13:33:14+02:00] DEBUG: content_encoding = ''               initializing noop stream deflator.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::NoopInflater#handle_chunk
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_stream_complete
+[2016-09-02T13:33:14+02:00] INFO: Storing updated cookbooks/bpoint-generator/recipes/aggiofix.rb in the cache.
+[2016-09-02T13:33:14+02:00] DEBUG: Streaming download from chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log to tempfile C:/Users/Munari/AppData/Local/Temp/chef-rest20160902-15460-5ikztf
+[2016-09-02T13:33:14+02:00] DEBUG: content_encoding = ''               initializing noop stream deflator.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::NoopInflater#handle_chunk
+[2016-09-02T13:33:14+02:00] DEBUG: Not storing cookbooks/bpoint-generator/ohai.out, as the cache is up to date.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_stream_complete
+[2016-09-02T13:33:14+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_stream_complete
+[2016-09-02T13:33:14+02:00] INFO: Storing updated cookbooks/bpoint-generator/a.log in the cache.
+[2016-09-02T13:33:14+02:00] DEBUG: Cookbooks to compile: [:"bpoint-generator"]
+[2016-09-02T13:33:14+02:00] DEBUG: Loading Recipe bpoint-generator::aggiofix via include_recipe
+[2016-09-02T13:33:14+02:00] DEBUG: Found recipe aggiofix in cookbook bpoint-generator
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic remote_file resource enabled on node include: [Chef::Resource::RemoteFile]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for remote_file is Chef::Resource::RemoteFile
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic powershell_script resource enabled on node include: [Chef::Resource::PowershellScript]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for powershell_script is Chef::Resource::PowershellScript
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic template resource enabled on node include: [Chef::Resource::Template]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for template is Chef::Resource::Template
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T13:33:14+02:00] DEBUG: Resources for generic template resource enabled on node include: [Chef::Resource::Template]
+[2016-09-02T13:33:14+02:00] DEBUG: Resource for template is Chef::Resource::Template
+[2016-09-02T13:33:14+02:00] DEBUG: Converging node munariw8.siaer.prv
+[2016-09-02T13:33:14+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100] action create (bpoint-generator::aggiofix line 45)
+[2016-09-02T13:33:14+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T13:33:14+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100] is Chef::Provider::Directory
+[2016-09-02T13:33:14+02:00] INFO: directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100] created directory C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100
+[2016-09-02T13:33:14+02:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+[2016-09-02T13:33:14+02:00] INFO: Processing remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] action create (bpoint-generator::aggiofix line 50)
+[2016-09-02T13:33:14+02:00] DEBUG: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] checking for changes
+[2016-09-02T13:33:14+02:00] DEBUG: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] staging /Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/aggiofix.gz to C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz20160902-15460-34vj9b
+[2016-09-02T13:33:14+02:00] DEBUG: touching C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz to create it
+[2016-09-02T13:33:14+02:00] INFO: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] created file C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz
+[2016-09-02T13:33:14+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz20160902-15460-34vj9b to compare with 
+[2016-09-02T13:33:14+02:00] INFO: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] updated file contents C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz
+[2016-09-02T13:33:14+02:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+[2016-09-02T13:33:14+02:00] INFO: Processing powershell_script[unpack-aggiofix-pre140100-aggiofix.gz] action run (bpoint-generator::aggiofix line 56)
+[2016-09-02T13:33:14+02:00] DEBUG: Providers for generic powershell_script resource enabled on node include: [Chef::Provider::PowershellScript]
+[2016-09-02T13:33:14+02:00] DEBUG: Provider for action run on resource powershell_script[unpack-aggiofix-pre140100-aggiofix.gz] is Chef::Provider::PowershellScript
+[2016-09-02T13:33:14+02:00] DEBUG: powershell_script provider called with script code:
+
+		Set-Alias 7zip 'C:\Program Files\7-Zip\7z.exe'
+		7zip x "aggiofix.gz"
+		7zip x "aggiofix"
+		rm "aggiofix"
+
+
+[2016-09-02T13:33:14+02:00] DEBUG: powershell_script provider will execute transformed code:
+
+# Chef Client wrapper for powershell_script resources
+
+# LASTEXITCODE can be uninitialized -- make it explictly 0
+# to avoid incorrect detection of failure (non-zero) codes
+$global:LASTEXITCODE = 0
+
+# Catch any exceptions -- without this, exceptions will result
+# In a zero return code instead of the desired non-zero code
+# that indicates a failure
+trap [Exception] {write-error ($_.Exception.Message);exit 1}
+
+# Variable state that should not be accessible to the user code
+new-variable -name interpolatedexitcode -visibility private -value $false
+new-variable -name chefscriptresult -visibility private
+
+# Initialize a variable we use to capture $? inside a block
+$global:lastcmdlet = $null
+
+# Execute the user's code in a script block --
+$chefscriptresult =
+{
+ 		Set-Alias 7zip 'C:\Program Files\7-Zip\7z.exe'
+		7zip x "aggiofix.gz"
+		7zip x "aggiofix"
+		rm "aggiofix"
+
+
+ # This assignment doesn't affect the block's return value
+ $global:lastcmdlet = $?
+}.invokereturnasis()
+
+# Assume failure status of 1 -- success cases
+# will have to override this
+$exitstatus = 1
+
+# If convert_boolean_return is enabled, the block's return value
+# gets precedence in determining our exit status
+if ($interpolatedexitcode -and $chefscriptresult -ne $null -and $chefscriptresult.gettype().name -eq 'boolean')
+{
+  $exitstatus = [int32](!$chefscriptresult)
+}
+elseif ($lastcmdlet)
+{
+  # Otherwise, a successful cmdlet execution defines the status
+  $exitstatus = 0
+}
+elseif ( $LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0 )
+{
+  # If the cmdlet status is failed, allow the Win32 status
+  # in $LASTEXITCODE to define exit status. This handles the case
+  # where no cmdlets, only Win32 processes have run since $?
+  # will be set to $false whenever a Win32 process returns a non-zero
+  # status.
+  $exitstatus = $LASTEXITCODE
+}
+
+# If this script is launched with -File, the process exit
+# status of PowerShell.exe will be $exitstatus. If it was
+# launched with -Command, it will be 0 if $exitstatus was 0,
+# 1 (i.e. failed) otherwise.
+exit $exitstatus
+
+
+[2016-09-02T13:33:15+02:00] INFO: powershell_script[unpack-aggiofix-pre140100-aggiofix.gz] ran successfully
+[2016-09-02T13:33:15+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes] action create (bpoint-generator::aggiofix line 72)
+[2016-09-02T13:33:15+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T13:33:15+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes] is Chef::Provider::Directory
+[2016-09-02T13:33:15+02:00] INFO: Processing template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] action create (bpoint-generator::aggiofix line 78)
+[2016-09-02T13:33:15+02:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2016-09-02T13:33:15+02:00] DEBUG: Provider for action create on resource template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] is Chef::Provider::Template
+[2016-09-02T13:33:15+02:00] DEBUG: template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb.
+[2016-09-02T13:33:15+02:00] DEBUG: Not fetching cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:15+02:00] DEBUG: current checksum: 306d7f67ab9437473be13d819ea0e986; manifest checksum: 306d7f67ab9437473be13d819ea0e986)
+[2016-09-02T13:33:15+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb20160902-15460-xn1khr to compare with 8d598db2c3f27d4c13b6086bdccc367c2d8532d64b8c5b916b9bc73cee79fc27
+[2016-09-02T13:33:15+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec] action create (bpoint-generator::aggiofix line 98)
+[2016-09-02T13:33:15+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T13:33:15+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec] is Chef::Provider::Directory
+[2016-09-02T13:33:15+02:00] INFO: Processing template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] action create (bpoint-generator::aggiofix line 104)
+[2016-09-02T13:33:15+02:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2016-09-02T13:33:15+02:00] DEBUG: Provider for action create on resource template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] is Chef::Provider::Template
+[2016-09-02T13:33:15+02:00] DEBUG: template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb.
+[2016-09-02T13:33:15+02:00] DEBUG: Not fetching cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T13:33:15+02:00] DEBUG: current checksum: 763c65ed53facc9a8c76dce53d583cdd; manifest checksum: 763c65ed53facc9a8c76dce53d583cdd)
+[2016-09-02T13:33:15+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb20160902-15460-1ns1mrb to compare with 203b850d34ac7e4ee5a98a9827ccdf25b90feb720d5bf781cdc0765df2969992
+[2016-09-02T13:33:15+02:00] DEBUG: Saving the current state of node munariw8.siaer.prv
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T13:33:15+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T13:33:18+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T13:33:18+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T13:33:18+02:00] INFO: Chef Run complete in 5.071083 seconds
+[2016-09-02T13:33:18+02:00] INFO: Running report handlers
+[2016-09-02T13:33:18+02:00] INFO: Report handlers complete
+[2016-09-02T13:33:18+02:00] DEBUG: Server doesn't support resource history, skipping resource report.
+[2016-09-02T13:33:18+02:00] DEBUG: Audit Reports are disabled. Skipping sending reports.
+[2016-09-02T13:33:18+02:00] DEBUG: Exiting
+[2016-09-02T15:33:32+02:00] INFO: Auto-discovered chef repository at C:/Work/Projects/chef/chef-repo
+[2016-09-02T15:33:32+02:00] DEBUG: Sleeping for 0 seconds
+[2016-09-02T15:33:32+02:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at C:/Work/Projects/chef/chef-repo
+  One version per cookbook
+
+[2016-09-02T15:33:37+02:00] INFO: *** Chef 12.5.1 ***
+[2016-09-02T15:33:37+02:00] INFO: Chef-client pid: 5056
+[2016-09-02T15:33:37+02:00] DEBUG: Chef-client request_id: c8a16b87-2b4d-40ec-a902-8d7642c00bcb
+[2016-09-02T15:34:02+02:00] DEBUG: Client key is unspecified - skipping registration
+[2016-09-02T15:34:02+02:00] DEBUG: Building node object for munariw8.siaer.prv
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T15:34:02+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2016-09-02T15:34:04+02:00] INFO: Setting the run_list to [#<Chef::RunList::RunListItem:0x539df18 @version=nil, @type=:recipe, @name="bpoint-generator::aggiofix">] from CLI options
+[2016-09-02T15:34:04+02:00] DEBUG: Applying attributes from json file
+[2016-09-02T15:34:04+02:00] DEBUG: Platform is windows version 10.0.10586
+[2016-09-02T15:34:04+02:00] INFO: Run List is [recipe[bpoint-generator::aggiofix]]
+[2016-09-02T15:34:04+02:00] INFO: Run List expands to [bpoint-generator::aggiofix]
+[2016-09-02T15:34:04+02:00] INFO: Starting Chef Run for munariw8.siaer.prv
+[2016-09-02T15:34:04+02:00] INFO: Running start handlers
+[2016-09-02T15:34:04+02:00] INFO: Start handlers complete.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T15:34:04+02:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+[2016-09-02T15:34:04+02:00] DEBUG: Reporting error starting run. URL: reports/nodes/munariw8.siaer.prv/runs Received 404. Disabling reporting for run.
+[2016-09-02T15:34:04+02:00] DEBUG: Checking for administrator privileges....
+[2016-09-02T15:34:04+02:00] DEBUG: chef-client has administrator privileges on node munariw8.siaer.prv.
+[2016-09-02T15:34:04+02:00] DEBUG: Synchronizing cookbooks
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T15:34:04+02:00] INFO: Loading cookbooks [bpoint-generator@0.1.0]
+[2016-09-02T15:34:04+02:00] DEBUG: Cookbooks detail: [#<Chef::CookbookVersion:0x6e9e890 @name="bpoint-generator", @root_paths=[], @frozen=false, @attribute_filenames=[], @definition_filenames=[], @template_filenames=["aggiofix.rb.erb", "test-default_spec.rb.erb", "recipes-default.rb.erb", "recipes-last.rb.erb", "test-default_spec.rb.erb", "test-default_spec.rb.erb"], @file_filenames=["cxdel.int", "dcna900.int", "dcnaca90.int", "dcnanax.int", "dcnanay.int", "tducna01.int", "tducna02.int", "tducnawr.int"], @recipe_filenames=["aggiofix.rb", "bpoint.rb", "tabelle.rb"], @recipe_filenames_by_name={"aggiofix"=>"aggiofix.rb", "bpoint"=>"bpoint.rb", "tabelle"=>"tabelle.rb"}, @library_filenames=[], @resource_filenames=[], @provider_filenames=[], @metadata_filenames=[], @root_filenames=["a.log", "aggiofix.gz", "chefignore", "currentversion.json", "metadata.rb", "ohai.out", "param.rb", "params.json"], @status=:ready, @file_vendor=nil, @metadata=#<Chef::Cookbook::Metadata:0x6e9e3c8 @name="bpoint-generator", @description="Installs/Configures bpoint-generator", @long_description="", @license="all_rights", @maintainer="The Authors", @maintainer_email="you@example.com", @platforms={}, @dependencies={}, @recommendations={}, @suggestions={}, @conflicting={}, @providing={"bpoint-generator::aggiofix"=>">= 0.0.0", "bpoint-generator::bpoint"=>">= 0.0.0", "bpoint-generator::tabelle"=>">= 0.0.0"}, @replacing={}, @attributes={}, @groupings={}, @recipes={"bpoint-generator::aggiofix"=>"", "bpoint-generator::bpoint"=>"", "bpoint-generator::tabelle"=>""}, @version="0.1.0", @source_url="", @issues_url="", @privacy=false, @errors=[]>, @chef_server_rest=nil, @attribute_filenames_by_short_filename={}, @cookbook_manifest=#<Chef::CookbookManifest:0x6e9de58 @cookbook_version=#<Chef::CookbookVersion:0x6e9e890 ...>, @policy_mode=false, @manifest={"recipes"=>[{"name"=>"aggiofix.rb", "path"=>"recipes/aggiofix.rb", "checksum"=>"76111dbbf849004bee1545f7acf256ce", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb"}, {"name"=>"bpoint.rb", "path"=>"recipes/bpoint.rb", "checksum"=>"2ef99a1e10297aa47815c0e1e3f10907", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/bpoint.rb"}, {"name"=>"tabelle.rb", "path"=>"recipes/tabelle.rb", "checksum"=>"78e62acc39d732b675a87a3459691449", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/tabelle.rb"}], "definitions"=>[], "libraries"=>[], "attributes"=>[], "files"=>[{"name"=>"cxdel.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int", "checksum"=>"eef372c06c6b4f98d12fbc4081049d78", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"}, {"name"=>"dcna900.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int", "checksum"=>"c2f38ca8dd26cb7f1af8478794ef3be0", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"}, {"name"=>"dcnaca90.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int", "checksum"=>"77ab12b507fb6a7d2565c2b764976448", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"}, {"name"=>"dcnanax.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int", "checksum"=>"d303b2d82977fed85d5a4351a8241764", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"}, {"name"=>"dcnanay.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int", "checksum"=>"71980a78e519d360d95597a052dd364f", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"}, {"name"=>"tducna01.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int", "checksum"=>"9e030c5406c130ec77ec0080d17e78ad", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"}, {"name"=>"tducna02.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int", "checksum"=>"37afc67b80599e781795b4e78b872145", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"}, {"name"=>"tducnawr.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int", "checksum"=>"52235f37087af112552e1334217fb6fc", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"}], "templates"=>[{"name"=>"aggiofix.rb.erb", "path"=>"templates/default/aggiofix/aggiofix.rb.erb", "checksum"=>"306d7f67ab9437473be13d819ea0e986", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/aggiofix/test-default_spec.rb.erb", "checksum"=>"763c65ed53facc9a8c76dce53d583cdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb"}, {"name"=>"recipes-default.rb.erb", "path"=>"templates/default/bpoint/recipes-default.rb.erb", "checksum"=>"aec2c2582bf8628e811b5337f02196a3", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb"}, {"name"=>"recipes-last.rb.erb", "path"=>"templates/default/bpoint/recipes-last.rb.erb", "checksum"=>"d1cd0389c4248587e2a0a810b2088cf9", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/bpoint/test-default_spec.rb.erb", "checksum"=>"6d0eef11d3f0a4e69a4e6067ebb9f219", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb"}, {"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/tabelle/test-default_spec.rb.erb", "checksum"=>"944e566adfe572a3ac6238ad56e0f972", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb"}], "resources"=>[], "providers"=>[], "root_files"=>[{"name"=>"a.log", "path"=>"a.log", "checksum"=>"2c6b69f7bac72b93f553c19aaed06bbb", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log"}, {"name"=>"aggiofix.gz", "path"=>"aggiofix.gz", "checksum"=>"593ac8e54f7d3170ae85ab4871a5b490", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/aggiofix.gz"}, {"name"=>"chefignore", "path"=>"chefignore", "checksum"=>"93e7819804f96b11aa508ccb47711903", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/chefignore"}, {"name"=>"currentversion.json", "path"=>"currentversion.json", "checksum"=>"d7801798d3067a40bbb3a9425bb1a04b", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/currentversion.json"}, {"name"=>"metadata.rb", "path"=>"metadata.rb", "checksum"=>"b411f6384dc22c337c81da35a954bb15", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/metadata.rb"}, {"name"=>"ohai.out", "path"=>"ohai.out", "checksum"=>"1650722b1a01e8f5de45709497bfbfdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/ohai.out"}, {"name"=>"param.rb", "path"=>"param.rb", "checksum"=>"1255b7f54b0789c7fb62c95dcd5d003e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/param.rb"}, {"name"=>"params.json", "path"=>"params.json", "checksum"=>"ccd15f40e454982d91dd410e8de464df", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/params.json"}], "metadata"=>{"name"=>"bpoint-generator", "description"=>"Installs/Configures bpoint-generator", "long_description"=>"", "maintainer"=>"The Authors", "maintainer_email"=>"you@example.com", "license"=>"all_rights", "platforms"=>{}, "dependencies"=>{}, "recommendations"=>{}, "suggestions"=>{}, "conflicting"=>{}, "providing"=>{"bpoint-generator::aggiofix"=>">= 0.0.0", "bpoint-generator::bpoint"=>">= 0.0.0", "bpoint-generator::tabelle"=>">= 0.0.0"}, "replacing"=>{}, "attributes"=>{}, "groupings"=>{}, "recipes"=>{"bpoint-generator::aggiofix"=>"", "bpoint-generator::bpoint"=>"", "bpoint-generator::tabelle"=>""}, "version"=>"0.1.0", "source_url"=>"", "issues_url"=>"", "privacy"=>false}, "version"=>"0.1.0", "name"=>"bpoint-generator-0.1.0", "cookbook_name"=>"bpoint-generator", "frozen?"=>false, "chef_type"=>"cookbook_version", "json_class"=>"Chef::CookbookVersion"}, @checksums={"76111dbbf849004bee1545f7acf256ce"=>nil, "2ef99a1e10297aa47815c0e1e3f10907"=>nil, "78e62acc39d732b675a87a3459691449"=>nil, "eef372c06c6b4f98d12fbc4081049d78"=>nil, "c2f38ca8dd26cb7f1af8478794ef3be0"=>nil, "77ab12b507fb6a7d2565c2b764976448"=>nil, "d303b2d82977fed85d5a4351a8241764"=>nil, "71980a78e519d360d95597a052dd364f"=>nil, "9e030c5406c130ec77ec0080d17e78ad"=>nil, "37afc67b80599e781795b4e78b872145"=>nil, "52235f37087af112552e1334217fb6fc"=>nil, "306d7f67ab9437473be13d819ea0e986"=>nil, "763c65ed53facc9a8c76dce53d583cdd"=>nil, "aec2c2582bf8628e811b5337f02196a3"=>nil, "d1cd0389c4248587e2a0a810b2088cf9"=>nil, "6d0eef11d3f0a4e69a4e6067ebb9f219"=>nil, "944e566adfe572a3ac6238ad56e0f972"=>nil, "2c6b69f7bac72b93f553c19aaed06bbb"=>nil, "593ac8e54f7d3170ae85ab4871a5b490"=>nil, "93e7819804f96b11aa508ccb47711903"=>nil, "d7801798d3067a40bbb3a9425bb1a04b"=>nil, "b411f6384dc22c337c81da35a954bb15"=>nil, "1650722b1a01e8f5de45709497bfbfdd"=>nil, "1255b7f54b0789c7fb62c95dcd5d003e"=>nil, "ccd15f40e454982d91dd410e8de464df"=>nil}, @manifest_records_by_path={"recipes/aggiofix.rb"=>{"name"=>"aggiofix.rb", "path"=>"recipes/aggiofix.rb", "checksum"=>"76111dbbf849004bee1545f7acf256ce", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb"}, "recipes/bpoint.rb"=>{"name"=>"bpoint.rb", "path"=>"recipes/bpoint.rb", "checksum"=>"2ef99a1e10297aa47815c0e1e3f10907", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/bpoint.rb"}, "recipes/tabelle.rb"=>{"name"=>"tabelle.rb", "path"=>"recipes/tabelle.rb", "checksum"=>"78e62acc39d732b675a87a3459691449", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/tabelle.rb"}, "files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"=>{"name"=>"cxdel.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int", "checksum"=>"eef372c06c6b4f98d12fbc4081049d78", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"=>{"name"=>"dcna900.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int", "checksum"=>"c2f38ca8dd26cb7f1af8478794ef3be0", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"=>{"name"=>"dcnaca90.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int", "checksum"=>"77ab12b507fb6a7d2565c2b764976448", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"=>{"name"=>"dcnanax.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int", "checksum"=>"d303b2d82977fed85d5a4351a8241764", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"=>{"name"=>"dcnanay.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int", "checksum"=>"71980a78e519d360d95597a052dd364f", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"=>{"name"=>"tducna01.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int", "checksum"=>"9e030c5406c130ec77ec0080d17e78ad", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"=>{"name"=>"tducna02.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int", "checksum"=>"37afc67b80599e781795b4e78b872145", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int"}, "files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"=>{"name"=>"tducnawr.int", "path"=>"files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int", "checksum"=>"52235f37087af112552e1334217fb6fc", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int"}, "templates/default/aggiofix/aggiofix.rb.erb"=>{"name"=>"aggiofix.rb.erb", "path"=>"templates/default/aggiofix/aggiofix.rb.erb", "checksum"=>"306d7f67ab9437473be13d819ea0e986", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb"}, "templates/default/aggiofix/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/aggiofix/test-default_spec.rb.erb", "checksum"=>"763c65ed53facc9a8c76dce53d583cdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb"}, "templates/default/bpoint/recipes-default.rb.erb"=>{"name"=>"recipes-default.rb.erb", "path"=>"templates/default/bpoint/recipes-default.rb.erb", "checksum"=>"aec2c2582bf8628e811b5337f02196a3", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb"}, "templates/default/bpoint/recipes-last.rb.erb"=>{"name"=>"recipes-last.rb.erb", "path"=>"templates/default/bpoint/recipes-last.rb.erb", "checksum"=>"d1cd0389c4248587e2a0a810b2088cf9", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb"}, "templates/default/bpoint/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/bpoint/test-default_spec.rb.erb", "checksum"=>"6d0eef11d3f0a4e69a4e6067ebb9f219", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb"}, "templates/default/tabelle/test-default_spec.rb.erb"=>{"name"=>"test-default_spec.rb.erb", "path"=>"templates/default/tabelle/test-default_spec.rb.erb", "checksum"=>"944e566adfe572a3ac6238ad56e0f972", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb"}, "a.log"=>{"name"=>"a.log", "path"=>"a.log", "checksum"=>"2c6b69f7bac72b93f553c19aaed06bbb", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log"}, "aggiofix.gz"=>{"name"=>"aggiofix.gz", "path"=>"aggiofix.gz", "checksum"=>"593ac8e54f7d3170ae85ab4871a5b490", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/aggiofix.gz"}, "chefignore"=>{"name"=>"chefignore", "path"=>"chefignore", "checksum"=>"93e7819804f96b11aa508ccb47711903", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/chefignore"}, "currentversion.json"=>{"name"=>"currentversion.json", "path"=>"currentversion.json", "checksum"=>"d7801798d3067a40bbb3a9425bb1a04b", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/currentversion.json"}, "metadata.rb"=>{"name"=>"metadata.rb", "path"=>"metadata.rb", "checksum"=>"b411f6384dc22c337c81da35a954bb15", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/metadata.rb"}, "ohai.out"=>{"name"=>"ohai.out", "path"=>"ohai.out", "checksum"=>"1650722b1a01e8f5de45709497bfbfdd", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/ohai.out"}, "param.rb"=>{"name"=>"param.rb", "path"=>"param.rb", "checksum"=>"1255b7f54b0789c7fb62c95dcd5d003e", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/param.rb"}, "params.json"=>{"name"=>"params.json", "path"=>"params.json", "checksum"=>"ccd15f40e454982d91dd410e8de464df", "specificity"=>"default", "url"=>"chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/params.json"}}>>]
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/bpoint.rb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/recipes/tabelle.rb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcna900.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnaca90.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna01.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducna02.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/c/cxdel.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanax.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/dcnanay.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/files/default/aggiofix/aggiofixNN/prg/e/t/tducnawr.int, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/recipes-default.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/recipes-last.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/bpoint/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/templates/default/tabelle/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/aggiofix.gz, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/chefignore, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/currentversion.json, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/metadata.rb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/param.rb, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Not storing cookbooks/bpoint-generator/params.json, as the cache is up to date.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Streaming download from chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/recipes/aggiofix.rb to tempfile C:/Users/Munari/AppData/Local/Temp/chef-rest20160902-5056-59v5d4
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: content_encoding = ''               initializing noop stream deflator.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::NoopInflater#handle_chunk
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2016-09-02T15:34:04+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_stream_complete
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_stream_complete
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_stream_complete
+[2016-09-02T15:34:04+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_stream_complete
+[2016-09-02T15:34:04+02:00] INFO: Storing updated cookbooks/bpoint-generator/recipes/aggiofix.rb in the cache.
+[2016-09-02T15:34:05+02:00] DEBUG: Streaming download from chefzero://localhost:8889/file_store/repo/cookbooks/bpoint-generator/a.log to tempfile C:/Users/Munari/AppData/Local/Temp/chef-rest20160902-5056-1cqhpvg
+[2016-09-02T15:34:05+02:00] DEBUG: content_encoding = ''               initializing noop stream deflator.
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::NoopInflater#handle_chunk
+[2016-09-02T15:34:05+02:00] DEBUG: Not storing cookbooks/bpoint-generator/ohai.out, as the cache is up to date.
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2016-09-02T15:34:05+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_stream_complete
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_stream_complete
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_stream_complete
+[2016-09-02T15:34:05+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_stream_complete
+[2016-09-02T15:34:05+02:00] INFO: Storing updated cookbooks/bpoint-generator/a.log in the cache.
+[2016-09-02T15:34:05+02:00] DEBUG: Cookbooks to compile: [:"bpoint-generator"]
+[2016-09-02T15:34:05+02:00] DEBUG: Loading Recipe bpoint-generator::aggiofix via include_recipe
+[2016-09-02T15:34:05+02:00] DEBUG: Found recipe aggiofix in cookbook bpoint-generator
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic remote_file resource enabled on node include: [Chef::Resource::RemoteFile]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for remote_file is Chef::Resource::RemoteFile
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic powershell_script resource enabled on node include: [Chef::Resource::PowershellScript]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for powershell_script is Chef::Resource::PowershellScript
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic template resource enabled on node include: [Chef::Resource::Template]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for template is Chef::Resource::Template
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2016-09-02T15:34:05+02:00] DEBUG: Resources for generic template resource enabled on node include: [Chef::Resource::Template]
+[2016-09-02T15:34:05+02:00] DEBUG: Resource for template is Chef::Resource::Template
+[2016-09-02T15:34:05+02:00] DEBUG: Converging node munariw8.siaer.prv
+[2016-09-02T15:34:05+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100] action create (bpoint-generator::aggiofix line 45)
+[2016-09-02T15:34:05+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T15:34:05+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100] is Chef::Provider::Directory
+[2016-09-02T15:34:05+02:00] INFO: Processing remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] action create (bpoint-generator::aggiofix line 50)
+[2016-09-02T15:34:05+02:00] DEBUG: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz.
+[2016-09-02T15:34:05+02:00] DEBUG: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] checking for changes
+[2016-09-02T15:34:05+02:00] DEBUG: remote_file[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz] staging /Work/Projects/chef/chef-repo/cookbooks/bpoint-generator/aggiofix.gz to C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz20160902-5056-13s7edn
+[2016-09-02T15:34:05+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/files/default/aggiofix-pre140100/aggiofix.gz20160902-5056-13s7edn to compare with ba9a0ccd4f95e1c2ab4807796680827c044271fdd06e44c01e619a77fae8b69f
+[2016-09-02T15:34:05+02:00] INFO: Processing powershell_script[unpack-aggiofix-pre140100-aggiofix.gz] action run (bpoint-generator::aggiofix line 56)
+[2016-09-02T15:34:05+02:00] DEBUG: Providers for generic powershell_script resource enabled on node include: [Chef::Provider::PowershellScript]
+[2016-09-02T15:34:05+02:00] DEBUG: Provider for action run on resource powershell_script[unpack-aggiofix-pre140100-aggiofix.gz] is Chef::Provider::PowershellScript
+[2016-09-02T15:34:05+02:00] DEBUG: powershell_script provider called with script code:
+
+		Set-Alias 7zip 'C:\Program Files\7-Zip\7z.exe'
+		7zip x "aggiofix.gz"
+		7zip x "aggiofix"
+		rm "aggiofix"
+
+
+[2016-09-02T15:34:05+02:00] DEBUG: powershell_script provider will execute transformed code:
+
+# Chef Client wrapper for powershell_script resources
+
+# LASTEXITCODE can be uninitialized -- make it explictly 0
+# to avoid incorrect detection of failure (non-zero) codes
+$global:LASTEXITCODE = 0
+
+# Catch any exceptions -- without this, exceptions will result
+# In a zero return code instead of the desired non-zero code
+# that indicates a failure
+trap [Exception] {write-error ($_.Exception.Message);exit 1}
+
+# Variable state that should not be accessible to the user code
+new-variable -name interpolatedexitcode -visibility private -value $false
+new-variable -name chefscriptresult -visibility private
+
+# Initialize a variable we use to capture $? inside a block
+$global:lastcmdlet = $null
+
+# Execute the user's code in a script block --
+$chefscriptresult =
+{
+ 		Set-Alias 7zip 'C:\Program Files\7-Zip\7z.exe'
+		7zip x "aggiofix.gz"
+		7zip x "aggiofix"
+		rm "aggiofix"
+
+
+ # This assignment doesn't affect the block's return value
+ $global:lastcmdlet = $?
+}.invokereturnasis()
+
+# Assume failure status of 1 -- success cases
+# will have to override this
+$exitstatus = 1
+
+# If convert_boolean_return is enabled, the block's return value
+# gets precedence in determining our exit status
+if ($interpolatedexitcode -and $chefscriptresult -ne $null -and $chefscriptresult.gettype().name -eq 'boolean')
+{
+  $exitstatus = [int32](!$chefscriptresult)
+}
+elseif ($lastcmdlet)
+{
+  # Otherwise, a successful cmdlet execution defines the status
+  $exitstatus = 0
+}
+elseif ( $LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0 )
+{
+  # If the cmdlet status is failed, allow the Win32 status
+  # in $LASTEXITCODE to define exit status. This handles the case
+  # where no cmdlets, only Win32 processes have run since $?
+  # will be set to $false whenever a Win32 process returns a non-zero
+  # status.
+  $exitstatus = $LASTEXITCODE
+}
+
+# If this script is launched with -File, the process exit
+# status of PowerShell.exe will be $exitstatus. If it was
+# launched with -Command, it will be 0 if $exitstatus was 0,
+# 1 (i.e. failed) otherwise.
+exit $exitstatus
+
+
+[2016-09-02T15:34:06+02:00] INFO: powershell_script[unpack-aggiofix-pre140100-aggiofix.gz] ran successfully
+[2016-09-02T15:34:06+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes] action create (bpoint-generator::aggiofix line 72)
+[2016-09-02T15:34:06+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T15:34:06+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes] is Chef::Provider::Directory
+[2016-09-02T15:34:06+02:00] INFO: Processing template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] action create (bpoint-generator::aggiofix line 78)
+[2016-09-02T15:34:06+02:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2016-09-02T15:34:06+02:00] DEBUG: Provider for action create on resource template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] is Chef::Provider::Template
+[2016-09-02T15:34:06+02:00] DEBUG: template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb.
+[2016-09-02T15:34:06+02:00] DEBUG: Not fetching cookbooks/bpoint-generator/templates/default/aggiofix/aggiofix.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:06+02:00] DEBUG: current checksum: 306d7f67ab9437473be13d819ea0e986; manifest checksum: 306d7f67ab9437473be13d819ea0e986)
+[2016-09-02T15:34:06+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/recipes/aggiofix-pre140100.rb20160902-5056-1jhez0o to compare with 8d598db2c3f27d4c13b6086bdccc367c2d8532d64b8c5b916b9bc73cee79fc27
+[2016-09-02T15:34:06+02:00] INFO: Processing directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec] action create (bpoint-generator::aggiofix line 100)
+[2016-09-02T15:34:06+02:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2016-09-02T15:34:06+02:00] DEBUG: Provider for action create on resource directory[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec] is Chef::Provider::Directory
+[2016-09-02T15:34:06+02:00] INFO: Processing template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] action create (bpoint-generator::aggiofix line 106)
+[2016-09-02T15:34:06+02:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2016-09-02T15:34:06+02:00] DEBUG: Provider for action create on resource template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] is Chef::Provider::Template
+[2016-09-02T15:34:06+02:00] DEBUG: template[C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb] checksumming file at C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb.
+[2016-09-02T15:34:06+02:00] DEBUG: Not fetching cookbooks/bpoint-generator/templates/default/aggiofix/test-default_spec.rb.erb, as the cache is up to date.
+[2016-09-02T15:34:06+02:00] DEBUG: current checksum: 763c65ed53facc9a8c76dce53d583cdd; manifest checksum: 763c65ed53facc9a8c76dce53d583cdd)
+[2016-09-02T15:34:06+02:00] DEBUG: calculating checksum of C:\Work\Projects\chef\chef-repo\cookbooks\bpoint-generator/target/aggiofix/aggiofix-pre140100/test/integration/default/serverspec/default_spec.rb20160902-5056-if72ws to compare with 203b850d34ac7e4ee5a98a9827ccdf25b90feb720d5bf781cdc0765df2969992
+[2016-09-02T15:34:06+02:00] DEBUG: Saving the current state of node munariw8.siaer.prv
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_request
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+[2016-09-02T15:34:06+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+[2016-09-02T15:34:09+02:00] DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONToModelOutput#handle_response
+[2016-09-02T15:34:09+02:00] DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+[2016-09-02T15:34:09+02:00] INFO: Chef Run complete in 5.311617 seconds
+[2016-09-02T15:34:09+02:00] INFO: Running report handlers
+[2016-09-02T15:34:09+02:00] INFO: Report handlers complete
+[2016-09-02T15:34:09+02:00] DEBUG: Server doesn't support resource history, skipping resource report.
+[2016-09-02T15:34:09+02:00] DEBUG: Audit Reports are disabled. Skipping sending reports.
+[2016-09-02T15:34:09+02:00] DEBUG: Exiting

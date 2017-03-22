@@ -1,0 +1,10 @@
+{
+  "chef": {
+    "node_name": "munari",
+    "client_key": "/Work/Projects/chef/.keys/munari.pem",
+    "validation_client_name": "sixtema-validator",
+    "validation_key_path": "/Work/Projects/chef/.keys/sixtema-validator.pem",
+    "chef_server_url": "https://chefserver.siaer.prv/organizations/sixtema"
+  }
+}
+ 

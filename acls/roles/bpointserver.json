@@ -1,0 +1,56 @@
+{
+  "create": {
+    "actors": [
+      "munari",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "read": {
+    "actors": [
+      "ceccherelli",
+      "munari",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "clients",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "ceccherelli",
+      "munari",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "ceccherelli",
+      "munari",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "ceccherelli",
+      "munari",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+active:      true
+id:          0fd93f84-4bee-4132-b00f-872b0dd74a32
+modified_at: 2016-03-30T09:45:18Z
+modified_by: munari
+name:        Validate network configuration and firewalls
+org_name:    sixtema
+rule:        rules 'Ensure the firewall is active'
+  rule on run_control
+  when
+    (name = 'enables the iptables service' or name = 'has iptables running') and status != 'success'
+  then
+    alert:error('Run control group "{{ message.name }}" failed on {{ message.run.node_name }}.')
+  end
+
+  rule on run_control
+  when
+    name = 'accepts SSH connections' and status != 'success'
+  then
+    alert:error('iptables does not allow SSH connections on {{ message.run.node_name }}.')
+  end
+
+  rule on run_control
+  when
+    name = 'accepts HTTP connections' and status != 'success'
+  then
+    alert:error('iptables does not allow HTTP connections on {{ message.run.node_name }}.')
+  end
+
+  rule on run_control
+  when
+    name = 'rejects all other connections' and status != 'success'
+  then
+    alert:error('iptables does not reject all other connections on {{ message.run.node_name }}.')
+  end
+
+  rule on run_control
+  when
+    name = 'permits all outbound traffic' and status != 'success'
+  then
+    alert:error('iptables does not permit all outbound traffic on {{ message.run.node_name }}.')
+  end
+end
+with:
+  priority: 0
+
+active:      true
+id:          9ddf7afc-3c2b-4616-8083-4a9306170b74
+modified_at: 2016-03-30T09:36:40Z
+modified_by: munari
+name:        Validate web services
+org_name:    sixtema
+rule:        rules 'Validate web services'
+  rule on run_control
+  when
+    name =~ 'is not owned by the root user$' and status != 'success'
+  then
+    alert:error('Run control group "{{ message.name }}" failed on {{ message.run.node_name }}.')
+  end
+end
+with:
+  priority: 0
+
+active:      true
+id:          dfe7d477-57bd-4436-ab40-c2996880f848
+modified_at: 2016-03-25T15:01:11Z
+modified_by: munari
+name:        alert_on_cookbook_upload
+org_name:    sixtema
+rule:        rules 'alert_on_cookbook_upload'
+  rule on action
+  when
+    (task = 'create' or task = 'update') and
+    parent_type = 'cookbook'
+  then
+    alert:info("{{ message.requestor_name }} uploaded cookbook {{ message.parent_name }} version {{ message.entity_name }} to {{ message.service_hostname }} at {{ message.recorded_at }}.")
+  end
+end
+with:
+  priority: 0
+
+active:      true
+id:          5b4be163-46e8-4612-a84a-c8ce179b9add
+modified_at: 2016-11-21T09:47:40Z
+modified_by: munari
+name:        alert_on_run_converge
+org_name:    sixtema
+rule:        rules 'alert_on_every_converge'
+  rule 'succeeded run' on run_converge
+  when
+    status = 'success' 
+  then
+    alert:info("{{ message.node_name }} successfully converged at {{ message.end_time }}. {{ message.updated_resource_count }}/{{ message.total_resource_count }} resources were updated.")
+  end
+
+  rule 'failed run' on run_converge
+  when
+    status = 'failure'
+  then
+    alert:error("{{ message.node_name }} failed to converge at {{ message.end_time }}. You can find the error log here: https://{{ message.chef_server_fqdn }}/organizations/{{ message.organization_name }}/runs/{{ message.run_id }}/error_log")
+  end
+
+  rule "Email notification" on run_converge
+  when
+    true or node_name != 'alfa1'
+  then
+    notify("notification-to-pm", "Run started on {{message.node_name}}")
+  end
+
+end
+with:
+  priority: 0
+
+active:      true
+id:          31791637-563f-4f34-ad00-48514804d114
+modified_at: 2016-11-21T09:47:34Z
+modified_by: munari
+name:        when_audits_fail
+org_name:    sixtema
+rule:        rules 'audit failed'
+  rule 'alert on audit failed' on run_control
+  when
+    status != 'success'
+  then
+    alert:error('pm - Run control group {{message.resource_type}} {{message.resource_name}} "{{ message.name }}" failed on {{ message.run.node_name }}.')
+  end
+
+  rule 'email on bpoint audit failed' on run_control
+  when
+    status != 'success'
+  then
+    notify("notification-to-pm", "audit failed at {{run.start_time}} on {{message.run.node_name}} - {{control_group.name}} ")
+  end
+
+end
+with:
+  priority: 0

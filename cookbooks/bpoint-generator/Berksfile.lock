@@ -1,0 +1,7 @@
+DEPENDENCIES
+  bpoint-generator
+    path: .
+    metadata: true
+
+GRAPH
+  bpoint-generator (0.1.0)

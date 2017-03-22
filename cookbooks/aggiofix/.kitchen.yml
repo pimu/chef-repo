@@ -1,0 +1,49 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+#  name: chef_zero ????
+  name: chef_solo
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+
+  - name: ubuntu-14.04
+    driver:
+      synced_folders:
+         - ["data", "/opt/instance_data"]
+
+  - name: centos-7.1
+    driver:
+      synced_folders:
+         - ["data", "/opt/instance_data"]
+
+  - name: rhel67test
+
+    provisioner:
+      name: chef_zero
+
+    driver:
+      name: ssh
+      hostname: 10.13.6.81
+      port: 35781
+      username: example_chef
+      password: chef_example
+#      ssh_key: "/c/Users/Munari/.ssh/id_rsa_example_chef"
+#      ssh_key: "c:\\Users\\Munari\\.ssh\\id_rsa_example_chef"
+      ssh_key: <%= ENV['HOME'] + '/.ssh/id_rsa_example_chef' %>
+
+      synced_folders:
+         - ["data", "/opt/instance_data"]
+
+
+suites:
+  - name: default
+    run_list:
+      - recipe[aggiofix::default]
+    attributes:

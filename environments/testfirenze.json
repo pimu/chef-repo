@@ -1,0 +1,7 @@
+{
+  "name": "testfirenze",
+  "description": "ambiente macchine di test",
+  "cookbook_versions": {
+    "tabelle": "= 0.1.4"
+  }
+}

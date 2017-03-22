@@ -1,0 +1,64 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+# to enable chef audit mode (default: disabled)
+# to have only chef audit mode use :audit_only
+  client_rb:
+# Uncomment the following verifier to have standard mode + audit mode
+    audit_mode: :enabled
+# Uncomment the following verifier to have only audit mode 
+#    audit_mode: :audit_only
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+#  - name: ubuntu-14.04
+#  - name: centos-6.5
+#    driver:
+#       synced_folders:
+#         - ["data", "/opt/instance_data"]
+#
+# - name: centos-6.6
+#   driver:
+#       synced_folders:
+#         - ["data", "/opt/instance_data"]
+#
+
+#  - name: centos-6.7
+#    driver:
+#       synced_folders:
+#         - ["data", "/opt/instance_data"]
+#
+
+  - name: rhel67test
+    driver:
+      name: ssh
+      hostname: 10.13.6.81
+      port: 35781
+      username: example_chef
+      password: chef_example
+#      ssh_key: "/c/Users/Munari/.ssh/id_rsa_example_chef"
+#      ssh_key: "c:\\Users\\Munari\\.ssh\\id_rsa_example_chef"
+#      ssh_key: "~/.ssh/id_rsa_example_chef"
+#      ssh_key: "$env:HOME/.ssh/id_rsa_example_chef"
+      ssh_key: <%= ENV['HOME'] + '/.ssh/id_rsa_example_chef' %>
+
+      synced_folders:
+         - ["data", "/opt/instance_data"]
+
+# questa va associata a virtualbox provider...
+#       driver:
+#          customize:
+#             memory: 256
+
+suites:
+  - name: default
+    run_list:
+    - recipe[bpoint::default]
+    attributes:
