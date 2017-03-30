@@ -39,66 +39,36 @@ provlist=['/usr2/an','/usr2/bo','/usr2/bs','/usr2/bz','/usr2/co','/usr2/fc','/us
 
 
 
-
-
-# using sha256: 9148d68db9aa823648fe5cd3121b2ac362cc525c369ab4564c8cb61d1190687c *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/6/cont/pacored
-describe file("#{file_name}/dtb/tabelle/6/cont/pacored") do
-  its(:sha256sum) { should eq '9148d68db9aa823648fe5cd3121b2ac362cc525c369ab4564c8cb61d1190687c' }
+# using sha256: a89e090592b03a2574bd6aa0d068280abf35893e18bfe820ce9a9901e111490e *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/arc/condiv/jvalcon
+describe file("#{file_name}/arc/condiv/jvalcon") do
+  its(:sha256sum) { should eq 'a89e090592b03a2574bd6aa0d068280abf35893e18bfe820ce9a9901e111490e' }
 end
 
-# using sha256: d628f372147308584f9026d80735712ba8a66452a9568a57d73020cc62a89195 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/6/cont/pacored.idx
-describe file("#{file_name}/dtb/tabelle/6/cont/pacored.idx") do
-  its(:sha256sum) { should eq 'd628f372147308584f9026d80735712ba8a66452a9568a57d73020cc62a89195' }
+# using sha256: a67574543583dad65b11a2b35bf4879b9d9f3fce37b6e6f4443064adb9a2f45e *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/arc/condiv/jvalcon.idx
+describe file("#{file_name}/arc/condiv/jvalcon.idx") do
+  its(:sha256sum) { should eq 'a67574543583dad65b11a2b35bf4879b9d9f3fce37b6e6f4443064adb9a2f45e' }
 end
 
-# using sha256: cfc747391aa3199cda6aa8ecd492751b06ce34751689d4e49b4938d793dac075 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/6/red/jadconau
-describe file("#{file_name}/dtb/tabelle/6/red/jadconau") do
-  its(:sha256sum) { should eq 'cfc747391aa3199cda6aa8ecd492751b06ce34751689d4e49b4938d793dac075' }
-end
 
-# using sha256: cfb5c12af1dd2a55b1bb28deea5d493dcc05306627175d9bae5e364fcde83b42 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/6/red/jadconau.idx
-describe file("#{file_name}/dtb/tabelle/6/red/jadconau.idx") do
-  its(:sha256sum) { should eq 'cfb5c12af1dd2a55b1bb28deea5d493dcc05306627175d9bae5e364fcde83b42' }
-end
 
-# using sha256: 49478df93e09d8d70e153c6aaa5892577e239a6ff3316efa68dece224ceb6b9e *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/7/cont/pacored
-describe file("#{file_name}/dtb/tabelle/7/cont/pacored") do
-  its(:sha256sum) { should eq '49478df93e09d8d70e153c6aaa5892577e239a6ff3316efa68dece224ceb6b9e' }
-end
-
-# using sha256: 8fd9c4dcfb1da2df131cd658e432aa5fa6d2c0a41636c4516455776f841aa029 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/7/cont/pacored.idx
-describe file("#{file_name}/dtb/tabelle/7/cont/pacored.idx") do
-  its(:sha256sum) { should eq '8fd9c4dcfb1da2df131cd658e432aa5fa6d2c0a41636c4516455776f841aa029' }
-end
-
-# using sha256: cfc747391aa3199cda6aa8ecd492751b06ce34751689d4e49b4938d793dac075 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/7/red/jadconau
-describe file("#{file_name}/dtb/tabelle/7/red/jadconau") do
-  its(:sha256sum) { should eq 'cfc747391aa3199cda6aa8ecd492751b06ce34751689d4e49b4938d793dac075' }
-end
-
-# using sha256: cfb5c12af1dd2a55b1bb28deea5d493dcc05306627175d9bae5e364fcde83b42 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/7/red/jadconau.idx
-describe file("#{file_name}/dtb/tabelle/7/red/jadconau.idx") do
-  its(:sha256sum) { should eq 'cfb5c12af1dd2a55b1bb28deea5d493dcc05306627175d9bae5e364fcde83b42' }
-end
-
-# using sha256: 41e6a5cf7fd134c49c0097e898dc28c5da0912bea4192baa57aeb38c0baf23db *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst
+# using sha256: 4246b0614a254606e226640462ca628489642cad9d0c43e2aa074c21a3174294 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst
 describe file("#{file_name}/dtb/tabelle/base/pconst") do
-  its(:sha256sum) { should eq '41e6a5cf7fd134c49c0097e898dc28c5da0912bea4192baa57aeb38c0baf23db' }
+  its(:sha256sum) { should eq '4246b0614a254606e226640462ca628489642cad9d0c43e2aa074c21a3174294' }
 end
 
-# using sha256: 3c0603bac287f7cee455491b8acbbf71462d10b444fa659861f711d54991795f *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst.idx
+# using sha256: 249bfce4452167ab4313583002a1c3ac8249f3eb6c2333fe03346bf06c555d1b *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/base/pconst.idx
 describe file("#{file_name}/dtb/tabelle/base/pconst.idx") do
-  its(:sha256sum) { should eq '3c0603bac287f7cee455491b8acbbf71462d10b444fa659861f711d54991795f' }
+  its(:sha256sum) { should eq '249bfce4452167ab4313583002a1c3ac8249f3eb6c2333fe03346bf06c555d1b' }
 end
 
-# using sha256: e36c2544b3d7f3190abc107fd6c90f6b77154d5003f186de82545a7133287679 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi
+# using sha256: 622e56c89ed19e0786f9f0f3dbabb698f13911703721069251e7b1494dfd2ea8 *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi
 describe file("#{file_name}/dtb/tabelle/cont/bilabbi") do
-  its(:sha256sum) { should eq 'e36c2544b3d7f3190abc107fd6c90f6b77154d5003f186de82545a7133287679' }
+  its(:sha256sum) { should eq '622e56c89ed19e0786f9f0f3dbabb698f13911703721069251e7b1494dfd2ea8' }
 end
 
-# using sha256: 1bb94601764a555cf3d50b4730108cdf8187a2b0ca70de725801a15c3cc56a4c *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi.idx
+# using sha256: c83c665663642df7614cd13cdc605544cf0f75d677287085f7e5ed9e142b9f8c *  /home/ceccherelli/chef-repo/cookbooks/tabelle/files/default/dtb/tabelle/cont/bilabbi.idx
 describe file("#{file_name}/dtb/tabelle/cont/bilabbi.idx") do
-  its(:sha256sum) { should eq '1bb94601764a555cf3d50b4730108cdf8187a2b0ca70de725801a15c3cc56a4c' }
+  its(:sha256sum) { should eq 'c83c665663642df7614cd13cdc605544cf0f75d677287085f7e5ed9e142b9f8c' }
 end
 
 
