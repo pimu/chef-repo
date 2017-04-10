@@ -21,25 +21,27 @@ node.normal['currentdir']['root'] = "#{cookbookdir}"
 node.normal['currentdir']['parentroot'] = "#{parentcookbookdir}"
 
 node.normal['lastdesiredrelease'] = {
-	'version' => "17.20.00",
+	'version' => "17.20.10",
 	'versioncode' => "x"
 }
 
 #node.normal['release_list'] = ['16.50.00','16.60.00','16.70.00','16.70.10',"17.00.00","17.10.10"]
-node.normal['release_list'] = ["17.00.00","17.10.00","17.10.10","17.10.20","17.10.30","17.10.40","17.10.40p14","17.20.00"]
+#node.normal['release_list'] = ["17.00.00","17.10.00","17.10.10","17.10.20","17.10.30","17.10.40","17.10.40p14","17.20.00","17.20.10"]
+node.normal['release_list'] = ["17.20.00","17.20.10"]
 node.normal['release_list_complex'] = [
 #	{'version' => '16.50.00', 'versioncode' => "xyzbcf"},
 #	{'version' => '16.60.00', 'versioncode' => "xyzbcg"},
 #	{'version' => '16.70.00', 'versioncode' => "xyzbch"},
 #	{'version' => '16.70.10', 'versioncode' => "xyzbch"},
-	{'version' => '17.00.00', 'versioncode' => "x"},
-	{'version' => '17.10.00', 'versioncode' => "x"},
-	{'version' => '17.10.10', 'versioncode' => "x"},
-	{'version' => '17.10.20', 'versioncode' => "x"},
-	{'version' => '17.10.30', 'versioncode' => "x"},
-	{'version' => '17.10.40', 'versioncode' => "x"},
-	{'version' => '17.10.40p14', 'versioncode' => "xq1l16"},
-	{'version' => '17.20.00', 'versioncode' => "x"}
+#	{'version' => '17.00.00', 'versioncode' => "x"},
+#	{'version' => '17.10.00', 'versioncode' => "x"},
+#	{'version' => '17.10.10', 'versioncode' => "x"},
+#	{'version' => '17.10.20', 'versioncode' => "x"},
+#	{'version' => '17.10.30', 'versioncode' => "x"},
+#	{'version' => '17.10.40', 'versioncode' => "x"},
+#	{'version' => '17.10.40p14', 'versioncode' => "xq1l16"},
+	{'version' => '17.20.00', 'versioncode' => "x"},
+	{'version' => '17.20.10', 'versioncode' => "x"}
 ]
 
 

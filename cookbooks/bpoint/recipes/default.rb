@@ -55,15 +55,9 @@ end
 # end
 
 
-include_recipe 'bpoint::release-17.00.00'
-include_recipe 'bpoint::release-17.10.00'
-include_recipe 'bpoint::release-17.10.10'
-include_recipe 'bpoint::release-17.10.20'
-include_recipe 'bpoint::release-17.10.30'
-include_recipe 'bpoint::release-17.10.40'
-include_recipe 'bpoint::release-17.10.40p14'
-# last
 include_recipe 'bpoint::release-17.20.00'
+# last
+include_recipe 'bpoint::release-17.20.10'
 
 
 case node[:platform]
@@ -87,16 +81,16 @@ control_group 'Audit Mode bpoint' do
 
     # versione "ufficiale" [sisver]
     control "bpoint version by ohai - #{prgroot}" do
-      it 'should be version 17.20.00' do
-        expect(bpointstatus[prgroot]['release']).to  match(/17\.20\.00/)
+      it 'should be version 17.20.10' do
+        expect(bpointstatus[prgroot]['release']).to  match(/17\.20\.10/)
       end
     end
 
     control "sisver file - #{prgroot}" do
       let(:sisver_file) { file("#{prgroot}/prg/etc/sisver") }
 
-      it 'should contain required version 17.20.00' do
-        expect(sisver_file.content).to match(/17\.20\.00/)
+      it 'should contain required version 17.20.10' do
+        expect(sisver_file.content).to match(/17\.20\.10/)
       end
     end
 

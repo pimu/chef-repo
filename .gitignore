@@ -17,6 +17,7 @@ cookbooks/audit
 cookbooks/webserver
 
 to-push-to-teamfound.txt
+to-push*.txt
 nodes/*.json
 cookbooks/tabelle/.kitchen-nude.yml
 cookbooks/tabelle/.kitchen-previous.yml

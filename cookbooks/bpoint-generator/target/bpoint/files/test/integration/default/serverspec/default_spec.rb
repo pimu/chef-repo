@@ -27,18 +27,18 @@ when 'redhat', 'centos'
 
     # versione "ufficiale" obsolete obsolete
     describe command('ohai -d /etc/chef/ohai_plugins bpoint/release') do
-      its(:stdout) { should match /17.20.00/ }
+      its(:stdout) { should match /17.20.10/ }
     end
 
     describe "bpoint['#{prgroot}']['release']" do
-      it "should match '17.20.00'" do
-        expect(bpointstatus["#{prgroot}"]['release']).to match(/17.20.00/)
+      it "should match '17.20.10'" do
+        expect(bpointstatus["#{prgroot}"]['release']).to match(/17.20.10/)
       end
     end
 
     # cosa accade dietro le quinte... [sisver]
     describe command("cat #{prgroot}/prg/etc/sisver") do
-      its(:stdout) { should match /17.20.00/ }
+      its(:stdout) { should match /17.20.10/ }
     end
 
     describe "bpoint['#{prgroot}']['ambrelease']" do
